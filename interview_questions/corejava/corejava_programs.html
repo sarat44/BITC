@@ -959,7 +959,66 @@ public class Factorial
 
                             <div id="collapseTwentyThree" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>package com.collections;
+public class Animal {
+	public void move() {
+		System.out.println("Animal moving");
+	}
+}
+
+package com.collections;
+public class Fish extends Animal {
+	@Override
+	public void move() {
+		System.out.println("Fish swimming");
+	}
+}
+
+package com.collections;
+public class Bird extends Fish {
+	@Override
+	public void move() {
+		System.out.println("Bird flaying");
+	}
+}
+
+package com.collections;
+public class SongBird  extends Bird{
+	public void sing(){
+		System.out.println("Song Bird Singing");
+	}
+}
+
+package com.collections;
+/**
+ * @author BrighITCareer.com Animal is parent Class with move() method, Bird and
+ *         Fish are the Sub Classes of Animal Class with overriding move()
+ *         methods SongBird is the Sub Class of Bird Class with Sing() method
+ */
+ public class AnimalsWithSongBird {
+	public static void main(String[] args) {
+		Animal animal = new Bird();
+		animal.move();
+		Animal animalSongBird = new SongBird();
+
+		// Creating a reference
+		Animal myAnimal= new SongBird();
+				
+		// Creating an instance of SongBird 
+		SongBird sb=new SongBird();
+		sb.sing();
+
+		sb= (SongBird)myAnimal;
+		sb.sing();
+		
+		Animal myAnimal1= new SongBird();
+		((SongBird)myAnimal1).sing();	
+	}
+	public void sing() {
+		System.out.println("Song Bird Singing");
+	}
+}</pre>
+</p>
                                 </div>
                             </div>
                         </div>
