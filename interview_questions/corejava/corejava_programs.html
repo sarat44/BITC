@@ -917,7 +917,7 @@ public class Factorial
 
                             <div id="collapsetwentytwo" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre></pre></p>
                                 </div>
                             </div>
                         </div>
@@ -959,66 +959,7 @@ public class Factorial
 
                             <div id="collapseTwentyThree" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre>package com.collections;
-public class Animal {
-	public void move() {
-		System.out.println("Animal moving");
-	}
-}
-
-package com.collections;
-public class Fish extends Animal {
-	@Override
-	public void move() {
-		System.out.println("Fish swimming");
-	}
-}
-
-package com.collections;
-public class Bird extends Fish {
-	@Override
-	public void move() {
-		System.out.println("Bird flaying");
-	}
-}
-
-package com.collections;
-public class SongBird  extends Bird{
-	public void sing(){
-		System.out.println("Song Bird Singing");
-	}
-}
-
-package com.collections;
-/**
- * @author BrighITCareer.com Animal is parent Class with move() method, Bird and
- *         Fish are the Sub Classes of Animal Class with overriding move()
- *         methods SongBird is the Sub Class of Bird Class with Sing() method
- */
- public class AnimalsWithSongBird {
-	public static void main(String[] args) {
-		Animal animal = new Bird();
-		animal.move();
-		Animal animalSongBird = new SongBird();
-
-		// Creating a reference
-		Animal myAnimal= new SongBird();
-				
-		// Creating an instance of SongBird 
-		SongBird sb=new SongBird();
-		sb.sing();
-
-		sb= (SongBird)myAnimal;
-		sb.sing();
-		
-		Animal myAnimal1= new SongBird();
-		((SongBird)myAnimal1).sing();	
-	}
-	public void sing() {
-		System.out.println("Song Bird Singing");
-	}
-}</pre>
-</p>
+                                    <p></p>
                                 </div>
                             </div>
                         </div>
@@ -2019,7 +1960,49 @@ package com.collections;
                                 </div>
                             </div>
                         </div>
-                            
+						  <div class="panel panel-default">
+                            <div class="panel-heading panel-heading-faq">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseeightytwo">
+								    List of objects with different DataTypes       
+                                    </a>
+                                   
+                                </h4>
+                            </div>
+
+                            <div id="collapseeightytwo" class="panel-collapse collapse">
+                                <div class="panel-body panel-faq">
+                                    <p><pre>package com.collections;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+/**
+ * List with objects of different DataTypes
+ */
+public class ListDiffDataTypes {
+	public static void main(String[] args) {
+		List<Object> list = new ArrayList<Object>();
+		list.add(123);
+		list.add("Bright IT Career");
+		list.add(122.212f);
+
+		for (Object o : list) {
+			System.out.println("Object :" + o.getClass());
+
+			if (o.getClass() == String.class)
+				System.out.println("It is String Class");
+		}
+		Iterator<Object> ite = list.iterator();// Print all the objects using Iterator
+		while (ite.hasNext()) {
+			System.out.println(ite.next());
+		}
+	}
+}</pre></p>
+                                </div>
+                            </div>
+                        </div>
+						
+						
 <!--//////////  Toggle End//////////-->
 					</div>
 					</div><!-- /col-md-10 -->
