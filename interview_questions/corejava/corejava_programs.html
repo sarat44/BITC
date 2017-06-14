@@ -1044,7 +1044,29 @@ public class OverLoading {
 
                             <div id="collapseTwentysix" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>abstract class Base
+{
+    abstract void fun();
+}	
+class Derived extends Base 
+{
+    void fun() 
+    {
+           System.out.println("Derived fun() called"); 
+    }
+}
+class Main 
+{
+    public static void main(String args[]) 
+    { 
+        // Uncommenting the following line will cause compiler error as the 
+        // line tries to create an instance of abstract class.
+        // Base b = new Base();
+        // We can have references of Base type.
+        Base b = new Derived();
+        b.fun(); 
+    }
+}</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1997,17 +2019,191 @@ public class OverLoading {
                                 </div>
                             </div>
                         </div>
-						  <div class="panel panel-default">
+						<div class="panel panel-default">
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseeightytwo">
-								    List of objects with different DataTypes       
+								     Do Static members get inherited
                                     </a>
                                    
                                 </h4>
                             </div>
 
                             <div id="collapseeightytwo" class="panel-collapse collapse">
+                                <div class="panel-body panel-faq">
+                                    <p><pre>/**
+Static members are not inherited in java as they are the properties of class and they are loaded in class area,
+they had nothing to do with object creation. However only the child classes can access the static members of their parent classes.
+*/
+
+package com.core;
+public class StaticSuper {
+	public static int i = 10;
+	public static String name = "BrightITCareer";
+	public static void display() {
+		System.out.println("i  : +" + i);
+	}
+}
+package com.core;
+public class StaticSub extends StaticSuper{
+
+	public static void main(String[] args){
+		System.out.println("In Sub Class: "+i);
+		System.out.println("In Sub Class: "+name);
+		display();
+	}
+}</pre></p>
+                                </div>
+                            </div>
+                        </div>
+						
+						<div class="panel panel-default">
+                            <div class="panel-heading panel-heading-faq">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseeightythree">
+								     Write a Java program on Comparator to sort Objects
+                                    </a>
+                                </h4>
+                            </div>
+
+                            <div id="collapseeightythree" class="panel-collapse collapse">
+                                <div class="panel-body panel-faq">
+                                    <p><pre>package com.sort;
+public class Price {
+int price;
+String brand;
+Price(int price, String brand) {
+	this.price = price;
+	this.brand = brand;
+}
+public String getBrand() {
+	return brand;
+}
+public void setBrand(String brand) {
+	this.brand = brand;
+}
+public void setPrice(int price) {
+	this.price = price;
+}
+public int getPrice() {
+	return price;
+}
+}
+
+package com.sort;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+public class PriceComparator {
+public static void main(String[] args) {
+	naturalOrderingNumbers();
+	naturalOrderingStrings();
+	comparatorSortIntegers();
+    comparatorSortStrings();
+}
+// Sorting the Strings using comparable, Natural ordering
+private static void naturalOrderingNumbers() {
+	List<Integer> intList = new ArrayList<Integer>();
+	intList.add(10);
+	intList.add(23);
+	intList.add(11);
+	intList.add(19);
+	intList.add(23);
+	Collections.sort(intList);
+	System.out.println("Sort in order of Price -Natural Ordering ");
+	for (Integer i : intList) {
+		System.out.println(i);
+	}
+	System.out.println("\n");
+}
+// Sorting the numbers using comparable, Natural ordering
+private static void naturalOrderingStrings() {
+	List<String> strList = new ArrayList<String>();
+	strList.add("Audi");
+	strList.add("BMW");
+	strList.add("Hyndai");
+	strList.add("Suzuki");
+	strList.add("BMW");
+	strList.add("Ford");
+	System.out.println("Sort in order of Make -Natural Ordering ");
+	Collections.sort(strList);
+	for (String str : strList) {
+		System.out.println(str);
+	}
+	System.out.println("\n");
+}
+// Sorting in order of price using Comparator and anonymous inner class
+private static void comparatorSortIntegers() {
+	List<Price> plist = new ArrayList<Price>();
+	plist.add(new Price(10, "Audi"));
+	plist.add(new Price(20, "BMW"));
+	plist.add(new Price(36, "Hyundai"));
+	plist.add(new Price(23, "Audi"));
+	plist.add(new Price(27, "Benz"));
+	Collections.sort(plist, new Comparator<Price>() {
+		@Override
+		public int compare(Price p1, Price p2) {
+			if (p1 == null || p2 == null) {
+			throw new NullPointerException("Objects are null");
+			} else if (!p1.getClass().equals(p2.getClass())) {
+				throw new ClassCastException("Objects are not of the same Type, Not mutually comparable");
+			} else if (p1.getPrice() > p2.getPrice()) {
+				return 1;
+			} else if (p1.getPrice() < p2.getPrice()) {
+				return -1;
+			} else
+				return 0;
+		}
+	});
+	System.out.println("Sort in order of Price -Comparator and anonymous Inner class ");
+	for (Price i : plist) {
+			System.out.println(i.getPrice());
+	}
+	System.out.println("\n");
+}
+	// Sorting in order of Make using Comparator and anonymous inner class
+private static void comparatorSortStrings() {
+	List<Price> plist = new ArrayList<Price>();
+	Price p1 = new Price(10, "Audi");
+	plist.add(new Price(20, "BMW"));
+	plist.add(new Price(36, "Hyundai"));
+	plist.add(new Price(23, "Audi"));
+	plist.add(new Price(27, "Benz"));
+	plist.add(p1);
+	Collections.sort(plist, new Comparator<Price>() {
+		@Override
+		public int compare(Price p1, Price p2) {
+			if (p1 == null || p2 == null)
+				throw new NullPointerException("Object is null");
+			else if (!p1.getClass().equals(p2.getClass()))
+				throw new ClassCastException("Objects are not mutually comparable");
+			else
+				return (p1.getBrand().compareTo(p2.getBrand()));
+		}
+	});
+		System.out.println("Sort in order of Make -Comparator and anonymous Inner class ");
+	for (Price p : plist)
+		System.out.println(p.getBrand());
+	System.out.println("\n");
+}
+}</pre></p>
+                                </div>
+                            </div>
+                        </div>
+						
+						
+						  <div class="panel panel-default">
+                            <div class="panel-heading panel-heading-faq">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseeightyone">
+								    List of objects with different DataTypes       
+                                    </a>
+                                   
+                                </h4>
+                            </div>
+
+                            <div id="collapseeightyone" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
                                     <p><pre>package com.collections;
 import java.util.ArrayList;
@@ -2038,6 +2234,7 @@ public class ListDiffDataTypes {
                                 </div>
                             </div>
                         </div>
+						  
 						
 						
 <!--//////////  Toggle End//////////-->
@@ -2047,7 +2244,7 @@ public class ListDiffDataTypes {
 			</div>
 
 			</section>
-		</section>
+	</section>
 		
 		
 		<div id="newsletter-faq">
