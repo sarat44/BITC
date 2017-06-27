@@ -140,6 +140,13 @@
                               <a href="../../testing/testing_main.html">Linux</a>
                           </li>
                           
+						  <li>
+								<a href="../../testing/github/github.html">Git Hub</a>
+						  </li>
+						  
+						   <li>
+								<a href="../../testing/jenkin/maven_project.html">Maven</a>
+						  </li>
                       </ul>
                   </li>
 				  
@@ -187,14 +194,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-sm-4">
-                    <h1>Jenkins</h1>
+                    <h1>Maven project</h1>
                 </div>
                 <div class="col-lg-8 col-sm-8">
                     <ol class="breadcrumb pull-right">
                         <li><a href="../../index.html">Home</a></li>
                         <li><a href="../../testing/testing_main.html">Testing</a></li>
 						
-                        <li class="active">Jenkins</li>
+                        <li class="active">Maven</li>
                     </ol>
                 </div>
             </div>
@@ -213,77 +220,65 @@
             <div class="row">
               
               <div class="col-lg-10 col-sm-10">
-                <h1>
-                  <p> Jenkins Configuration
-                             </h1>
-                	<big>Jenkins Configuration</big>
-				<p><b>Step:1</b>
-				<p><b>Download stable version of Jenkins.war file from any browser and copy into  your local folder.</b>
-				<p><img src="img/jenkins/j1.png">
-				<p><b>Next browser show the below pic.</b>
-				<p><img src="img/jenkins/j2.png">
-				<p><b>After downloading Jenkins software. You install that one.</b>
-				<p><b>Step:2</b>
-				<p><b>Open cmd prompt and type java -jar  and copy the path of the war file. Please find the screen shot.</b>
-				<p><img src="img/jenkins/j3.png">
-				<p><b>Step:3</b></p>
-				<p><b>After entering the path please press enter key from keyboard and observe that “Jenkins fully up and running</b>
-				<p><img src="img/jenkins/j4.png">
-				<p><b>Step:5</b>
-				<p><b>After that we access the jenkins applicaiton and type <u>“http://localhost:8080”</u> in web browser.Next i wwill get below page</b>.
-				<p><img src="img/jenkins/j5.png">
-				<p><b>Jenkins application asks the Administrator password.we can get the password in command prompt and click the continu button in below.</b>
-				<p><img src="img/jenkins/j6.png">
-				<p><b>Step:6</b>
-				<p><b>we past the password in Administrator password box.</b>
-				<p><b>After that we get below page.</b>
-				<p><img src="img/jenkins/j7.png">
-				<p><b>we click or select the Install Suggested plugins option.</b>
-				<p><b>Next we get below page.</b>
-				<p><img src="img/jenkins/j8.png">
-				<p><b>Once we can check the command prompt.it's running like below pic.</b>
-				<p><img src="img/jenkins/j9.png">
-				<p><b>Step:7</b>
-				<p><b>It takes some time.After completing installing all the plugins.we get below like page.</b>
-				<p><img src="img/jenkins/j10.png">
-				<p><b>we will enter the details name,password and etc. and click the  <u>Save and Finish</u> button.</b>
-				<p><b>Next we can get the below page.</b>
-				<p><img src="img/jenkins/j11.png">
-				<p><b>we can click the <u>Start using Jenkins</u> button.</b>
-				<p><b>Step:8</b>
-				<p><b>Next jenkins applicaiton will start.</p>
-				<p><img src="img/jenkins/j12.png">
-				<p><b>It is initial page of the jenkins applicaion.
-				<p><b>Next we will find the <u>Manage jenkins</u> button and click it.</b>
-				<p><img src="img/jenkins/j13.png">
-				<p><b>Setp: 8</b>
-				<p><b>we can click the Manage jenkins button.it will make the jenkins as windows service and clike on Install as Windows Service</b>
-				<p><b>And now we need to provide a directoye where it is stored.we click the Install button.</b>
-				<p><img src="img/jenkins/j14.png">
-				<p><b>After inistalation of the windows service.we will open the notepad and weite the HelloWorld Program.</b>
-				<p><img src="img/jenkins/j15.png">
-				<p><b>Setp: 9</b>
-				<p><b>we can store this program inside the folder. and compile the HolloWorld program.</b>
-				<p><b>Then we will go to jenkins directoye and clike the <u>New item</u> button.</b>
-				<p><img src="img/jenkins/j12.png">
-				<p><b>Then we will write the name of the program.</b>
-				<p><b>Setp: 10</b>
-				<p><img src="img/jenkins/j17.png">
-				<p><b>After that we will select the <u>Freestyle project</u> and <u>OK</u> button in bottom.</b>
-				<p><b>It will created the new job.Now will click the Add Build step and select the Execute Windows batch command.</b>
-				<p><b>Below we see the  Execute Windows batch command box.</b>
-				<p><img src="img/jenkins/j18.png">
-				<p><b>Here we will give the commands.first write the location of the java file and then write the javac HelloWorld.java and then we wil copy the java HelloWorld.Let us test it.</b>
-				<p><b>we will click the <u>Apply</u> button and click the <u>ok</u> button.</b>
-				<p><img src="img/jenkins/j19.png">
-				<p><b>Setp: 11</b>		
-				<p><b>Then we will click the  <u>Build Now</u> button</b>
-				<p><img src="img/jenkins/j20.png">
-				<p><b>Look at the console output.</b>
-				<p><b>we get the Console output.It was able to runnable program.</b> 
-				<p><img src="img/jenkins/j21.png">
-				<p><b>So, we have successfully Configure.</b>
-
+                <h1>  Maven Project </h1>
+			    <p>Maven is a build tool, released by apache as an open source.
+				<p>Before Maven, industry has used ANT(Anoter next tool). It is also a build tool from apache.
+				<p>The Maven tool will support java developers by doing the following thinds.
+				<ol type="1">
+					<li>It can compile the source code.</li>
+					<li>It can create a jar/war/ear for a project.</li>
+					<li>It can automatically download a project dependencies</li>
+					<li>It can generate this selection of test cases, it can compile and run test case</li>
+					<li>It can automatically deploy a project in a server</li>
+					<li>It can automatically generate java documentation for project</li>
+					<li>It can create a site with project information </li>
+				</ol>
+				<big><b3>Maven project in Eclipse</b3></big>
+				<ol type="I">
+					<li>Click on the <big>eclipse.exe</big> and Open Eclipse.</li>
+				 <p>Select  <big>File ->New -> Others -></big> Option (or) Select <big>File ->New -> Maven Project.</big>
+				 <br><br>
+				 <img src="../../testing/jenkin/img/maven_1.png" height="500" width="800">
+				 <br><br>
+					<li>Click on the Maven Project and click the next button</li>
+				 
+				 <img src="../../testing/jenkin/img/maven_2.png" height="500" width="800">
+				 <br>
+					<li>Next click the check box (creat the simple maven project) and click next button.</li>
+				 <br><br>
+				 <img src="../../testing/jenkin/img/maven_3.png" height="500" width="800">
+				 <br><br>		
+				  <li>After that write the Group Id and Artifact Id.(remaing fields are optional).Then Click one finish button</li>
+				 <img src="../../testing/jenkin/img/maven_4.png" height="500" width="800">
+				 <br><br>
+				 <li>Eclipse will carete maven project for us.Maven project will created at Project Explorer</li>
+				 <br><br>
+				 <img src="../../testing/jenkin/img/maven_5.png" height="500" width="800">
+				 <br><br>
+				 <li>We will show the below files.You will place your Java code in /src/main/java,resources in /src/main/resources, your testing code and resources in /src/test/java and /src/test/resources respectively.</li>
+				 <br><br>
+				 <img src="../../testing/jenkin/img/maven_6.png" height="500" width="800">
+				 <br><br>
+				 <li>Click and Open the pom.xml file to view the structure Maven has set up. In this file, you can see the information entered in 
+				 step IV. You may also use the tabs at the bottom of the window to change to view Dependencies,
+				 we can directly get jar files in our project implicitly.</li>
+				 <br><br>
+				 <img src="../../testing/jenkin/img/maven_7.png" height="500" width="800">
+				 <br><br>
+				 <li>Click on the pom.xml button and you can directly copy the any Repository code and get the jar file directly.</li>
+				 <br><br>
+				 <img src="../../testing/jenkin/img/maven_8.png" height="500" width="800">
+				 <br><br>
+				  <li>How to cratre the<big><b> jar file in maven project</b></big>. Go to <big>project -> Right Click -> Click on the RunAS</big> </li>
+				  <br><br>
+				  <img src="../../testing/jenkin/img/maven_9.png" height="500" width="800">
+				  <br><br>
+				  <li>Next One page will come.we find the Goals field,then enter the <big>install</big> and Click on the <big>Run</big>.</li>
+				  <br><br>
+				  <img src="../../testing/jenkin/img/maven_10.png" height="500" width="800">
+				  <br><br>
+				  <p>It will carete the jar file at local eclipse work path.
+				 </ol>
               </div>
             </div>
           </div>

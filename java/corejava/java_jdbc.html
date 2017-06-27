@@ -8,7 +8,7 @@
     <meta name="keywords" content="IT Career, JOBS, Training, Selenium, JAVA, webdriver,testing, automation, Appium, SQL, Career,guarantee,ETL Testing, Mobile, SOAP,Hyderabad, interview, questions,Part time,Fresher, experienced,ISTQB,OCJP, SCJP, dumps,certifications  ">
     <link rel="shortcut icon" href="../../img/favicon.png">
 
-    <title>BrightITCareer |JAVA inheritance</title>
+    <title>BrightITCareer |JAVA Jdbc</title>
 	
     <!-- Bootstrap core CSS -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
@@ -139,7 +139,8 @@
 						  <li> 
                               <a href="../../testing/testing_main.html">Linux</a>
                           </li>
-                          <li>
+                          
+						  <li>
 								<a href="../../testing/github/github.html">Git Hub</a>
 						  </li>
 						  
@@ -151,7 +152,7 @@
 				  
 				  <!-- Testing header end-->
 				  
-				<!-- Interview Questions header start-->
+				  <!-- Interview Questions header start-->
 				  
                   <li class="dropdown">
                       <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
@@ -193,14 +194,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-sm-4">
-                    <h1>Core Java</h1>
+                    <h1>Core Java(jdbc)</h1>
                 </div>
                 <div class="col-lg-8 col-sm-8">
                     <ol class="breadcrumb pull-right">
                         <li><a href="../../index.html">Home</a></li>
                         <li><a href="../../java/corejava/java_installation.html">Java</a></li>
 						
-                        <li class="active">Core java</li>
+                        <li class="active">Jdbc Connection</li>
                     </ol>
                 </div>
             </div>
@@ -219,248 +220,74 @@
             <div class="row">
               
               <div class="col-lg-10 col-sm-10">
-                <h1>
-                  
-                    
-					<p>Inheritance in Java
-                  
-                </h1>
-		<p>Inheritance is one of the core concepts of Object Oriented Programming. It is used when we have is-a relationship between objects. Inheritance in Java is implemented using extends keyword.
-		<p>By using Inheritance between Superclass and Subclass, a IS-A Relationship is formed which means you can use any subclass object in place of the super class object e.g. if a method expects a superclass object, you can pass a subclass object to it. Inheritance in Java is also used to provide a concrete implementation of abstract class and interface in Java.
-		<p>Here are some important points about Inheritance in Java which is worth remembering:
-		<p>1. One subclass can extend only one super class in Java but it can implement the multiple interfaces.
-		<p>2. A private member of the super class can not be inherited in subclass e.g. private field and private methods.
-		<p>3. Default member can only be inherited in same package subclass, not in another package.
-		<p>4. The constructor in Java is not inherited by the subclass.
-		<p>5. If a class implements Interface or extends an abstract class, it needs to override all abstract methods untile it is not abstract.
-		<p>6. Multiple inheritances are not supported in java but we can achieve this by using interface.One class can implement multiple interfaces
-		<p>7. In Java class never extends the interface rather it implements interface
-		<p>8. One interface can extend another interface in Java.
-		<p>Simple inheritance: The simple inheritance is superclass inherited by subclass. In simple inheritance one class extend one class only.<br><br>
-		<br><img border="0" src="img/inheritance.jpg" widht="550" height="400"><br><br>
-	<p><b>Example of simple inheritance:</b>
-	<pre>class SimpleInherit 
-{
-	int a;
-	int b;
-	int get(int p, int q) 
-	{
-		a = p;
-		b= q;
-		return(0);
-	}
-	void Show()
-	 {
-		System.out.println(a);
-	}
-}
-public class SimpleInheritText extends SimpleInherit 
-{
-	public static void main(String args[]) 
-	{
-		SimpleInherit text = new SimpleInherit();
-		text.get(25,26);
-		text.Show();
-	}
-}</pre>
-<pre>Output:
-25</pre>
-	<p><b>Multilevel inheritance:</b> The Multilevel inheritance is inheriting features of more than one class into a single class. Multiple inheritance in Java can be achieved by interface. In this example we have used multilevel inheritance to create one-to-one ladder. "super" keyword is used to inherit features of a superclass into subclass in Multilevel inheritance.
-	<pre>class College 
-{
-public void branch(String str) 
-{
-        System.out.println("Branch is MCA ");
-}
-}
-classAnji extends College 
-{
-    public void branch(String str) 
-    {
-        System.out.println("Anji Branch is BAC:);
-   }
-}
-class Gopal extends College 
-{
-    public void branch(String str) 
-    {
-        System.out.println("Gopal Branch is MBA ");
-    }
-}
-class Sarat extends College 
-{
-    public void branch(String str) 
-    {
-        System.out.println("Sarat Branch is B.Tech ");
-    }
-}
-public class Student {
-    public static void main(String[] args) 
-    {
-        Anji a = new Anji();
-        Gopal c = new Gopal();
-        Sarat s = new Sarat();
-         a.branch("MCA");
-         c.branch("BCA");
-         s.branch("MBA");
-    }
-}</pre>
-<pre>Output:
-Anji Branch is BAC
-Gopal Branch is MBA
-Sarat Branch is B.Tech
+                <h1> <p>Jdbc Connection</p></h1>
+                <p>Steps to interact with oracle database
+				<ol type="I">
+					<li>Download or find <big>ojdbc14.jar/ojdbc6.jar</big> file</li>
+					<li>We have to set the class path for the jar file</li>
+					<ol>
+						<li>My computer ->properties -> advanced system settings -> click on Environment Variables button -> click on new button from user variables</li>
+						<br><br>
+						<img src="../../java/corejava/img/jdbc_1.png" height="300" width="500">
+					</ol><br>
+					<li>Find out the <big>SID Name</big> of database </li>
+						<ol>
+							<li>Select INSTANCE_NAME from v$instance;</li>
+							<li>Select name from v$database;</li>
+						</ol>
+					<p>Note: The above two commands are run only in administrator user (system/manager)
+					<li>What is 1521 port over Here?</li>
+						<ol>
+							<li> 1521 is the default port number of oracle. It allows oracle client connections to the database.</li>
+						</ol>
+						<li><big>To Connect with database. we have to follow the below Steps.</big></li>
+						<br>
+						<p><big>Steps 1: </big> import the package.
+						<pre>import java.sql.*;
+import javax.sql.*;
 </pre>
-<p><b>Hierarchical inheritance:</b> Hierarchical inheritance, a superclass is extended by more than one class in a tree structure.
-<p>Syntax of hierarchical inheritance:
-<pre>class A//A is superclass class
-{
-	body declaration 
-}
-class B extends A
-{
-	//body declaration 
-}
-class c extends B
-{
-	'//body declaration 
-}
-class D
-{
-	public static void main (string args[])
-	{
-	// body declaration 
-	}
-}</pre>
-<big>This keyword in java</big>
-<p>Keyword "this"in Java is a reference variable that refers to the current object.
-<p>The various usage of keyword Java 'THIS' in Java is as per the below,
-	<pre>It can be used to refer current class instance variable
-It can be used to invoke or initiate current class constructor
-It can be passed as an argument in the method call
-It can be passed as argument in the constructor call
-It can be used to return the current class instance</pre>
-<p><b>Example of this</b>
-<pre>class Box
- {
-   Double width, weight, dept; 
-   Box (double w, double h, double d)
- {
-  this.width = w;
-  this.height = h;
-  this.depth = d;
-}
-}</pre>
-<big><b>Super keyword in java</b></big>
-<p>The super keyword in java is a reference variable that is used to refer parent class objects.  The keyword "super" came into the picture with the concept of Inheritance. It is majorly used in the following contexts
-<p>Example:
-<pre>public class SuperEmp
-{
-	public SuperEmp(String str) 
-	{
-		System.out.println("Base Class Constructor " + str);
-	}
-}
-class SubClass extends SuperEmp
-{
-	public SubClass(String str,String str1) 
-	{
-		super(str);
-		System.out.println("Sub Class Constructor " + str1);
-	}
-}
-class MainClass 
-{
-	public static void main(String args[]) 
-	{
-		SubClass obj = new SubClass("Hello" ,"Hai");
-	}
-}</pre>
-<pre>Output:
-Base Class Constructor Hello
-Sub Class constructor Hai</pre>
-<p>Example 2:
-<pre>public class SuperEmp1 
-{
-	int a = 100;
-}
-class SubClass extends SuperEmp1
-{
-	void display() 
-	{
-		int a = super.a;
-		System.out.println("The value is : " + a);
-	}
-}
-class MainClass 
-{
-public static void main(String args[]) 
-	{
-		SubClass obj = new SubClass();
-		obj.display();
-	}
-}</pre>
-<pre>Output:
-100
+						<p><big>Steps 2: </big> Load the driver.
+						<pre>Class.forName(“oracle.jdbc.driver.OracleDriver”);</pre>
+						<p><big>Steps 3: </big>Establish the database connection.
+						<pre>Connection con=DriverManager.getConnection(“jdbc:oracle:thin:@PC3:1521:XE”,”scott”,”tiger”);
+						</pre>
+						<p><big>Steps 4: </big> Create the statement object and send the commands to the database
+						<pre>Statement stmt=con.createStatement();
+						</pre>
+						<p><big>Steps 5: </big>	Send the commands(Querys) and get the results by using the methods of Statement object
+						<pre>ResultSet rs=stmt.executeQuery(“select command”);
+boolean flag=stmt.execute(“any  command”);
+int i=stmt.executeUpdate(“only dml commands”);
+int i[]=stmt.executeBatch()
 </pre>
-<p><big>Method Overriding</big>
-<p><b>Method overriding is having the same signature but with a different implementation.</b>It occurs when a class declares a method that has the same type signature as a method declared by one of its superclasses.
-<p>Signature is a combination of a method name and the sequence of its parameter types.
-<p>When a method in the subclass overrides a method in a superclass, the method in the superclass is hidden relative to the subclass object.
-<p>The implementation in the subclass overrides (replaces) the implementation in the superclass by providing a method that has the same name, same parameters or signature, and same return type as the method in the parent class.
-<p><b>Method Overriding</b>is a very important feature of java because it forms the basis for <b>run-time polymorphism.</b> 
-<br>
-	<pre>class ParentClass
-{
-	public int add(int num1,int num2)
-	{
-		int sum=num1+num2;
-		System.out.println("Result of parent class method is "+sum); return sum;
-	}
-}
-class SubClass extends ParentClass
-{
-		public int add(int num1,int num2)
-		{
-			int sub=num1-num2;
-			System.out.println("Result of overridden method is "+sub);
+					<p><big>Steps 6:</big>	Close the database connection
+					<pre>con.close();
+					</pre>
+				</ol>
+				<p><big>Example Code:</big><pre>import java.sql.*;
+import static java.lang.System.*;
+class DbCon
+{	
+	public static void main(String args[])throws Exception
+	{	Class.forName("oracle.jdbc.driver.OracleDriver");
+		out.println("Loaded....");
+		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:ORCL","scott","tiger");
+		out.println("Connected...");
+		Statement stmt=con.createStatement();
+		ResultSet rs=stmt.executeQuery("select * from  emp");
+		while(rs.next())
+		{	for(int i=1;i<=4;i++)
+			{out.print(rs.getString(i)+"\t");
+			}
+			out.println();
 		}
-}
-class MainMethodOverriding
-{
-	public static void main(String[] args)
-	{
-		ParentClass obj1= new ParentClass ();
-		obj1.add(7,5);
-		SubClass obj2=new SubClass ();
-		obj2.add(7,5);
+		con.close();
 	}
-}
-</pre>
-<br>
-<p><b>Example:</b>
-<p>One of the simplest example – Here One class extends Two class. Both the classes have a common method void get(). 
-One class is giving its own implementation to the get() method or in other words it is overriding the method get().
-<br>
-<pre>class Two
-{
-   public void get()
-   {
-      System.out.println("Two is geting");
-   }
-}
-class One extends Two
-{
-   public void get()
-   {
-      System.out.println("One is geting");
-   }
-   public static void main( String args[]) {
-      One obj = new One();
-      obj.get();
-   }
-}
-</pre>
-              </div>
+}</pre>
+<p><big>Note:</big> Before that we need to have Database.
+				
+
+	</div>
             </div>
           </div>
 
@@ -472,25 +299,14 @@ class One extends Two
  
             <div class="blog-post">
               <h3><b>
-             Core Java </b>
+             Database Connection </b>
               </h3>
               
               <div class="media">
-                  <a href="../../java/corejava/java_installation.html">Java Installation and setup</a><p></p>
-                  <a href="../../java/corejava/java_introduction.html">Introduction </a><p></p>
-				  <a href="../../java/corejava/java_control_statements.html">Control Statements</a><p></p>
-				  <a href="../../java/corejava/java_string_math.html">String,Math,Data and Time Class </a><p></p>
-				  <a href="../../java/corejava/java_method.html">Methods </a><p></p>
+                  <a href="../../java/corejava/java_jdbc.html">Java Connection_Oracle</a><p></p>
+                  <a href="../../java/corejava/java_jdbcSql.html">Java Connection_SQL </a><p></p>
 				  
-				  <a href="../../java/corejava/java_interface_package.html">Interface, package, Access Modifiers</a><p></p>
-				  <a href="../../java/corejava/java_static_final.html">Static and Non Static, final</a><p></p>
-				  <a href="../../java/corejava/java_inheritacne.html">Inheritance </a><p></p>
-				 <a href="../../java/corejava/java_poly_abstraction.html">Polymorphism, Abstraction </a><p></p>
-				 <a href="../../java/corejava/java_abstract.html">Abstract Classes</a><p></p>
-				 <a href="../../java/corejava/java_io_stream.html">IO Streams </a><p></p>
-				 <a href="../../java/corejava/java_exception.html">Exception Handling</a><p></p>
-				 <a href="../../java/corejava/java_collections.html">Collections</a><p></p>
-				  <a href="../../java/corejava/java_jdbc.html">Jdbc Connection</a><p></p>
+				  
               </div>
               </div>
             </div>
