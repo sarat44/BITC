@@ -166,7 +166,7 @@
 								<a href="../../interview_questions/soap_ui/interview_soap_ui.html">SOAP UI</a>
 						  </li>
                           <li>
-                              <a href="../../testing/testing_main.html">Selenium</a>
+                              <a href="../../interview_questions/selenium/interview_Selenium.html">Selenium</a>
                           </li>
                           <li>
                               <a href="../../testing/testing_main.html">Appium</a>
@@ -342,6 +342,46 @@ Size of char array: 4
 Printing last element of array: a
 
 	</pre>
+	<p><h2>String Tonkeinzer</h2>
+	<p>The String Tonkenizer class is used to break a given string into token(Substrings)(words,numbers,operators or whatever).The Tokens are separated by one or more delimiters(characters).
+	<p>A StringTonkenizer constructor takes a string to break into tokens and returns a StringTonkenizer object for that String.The java.util.StringTokenizer class allows you to break a string into tokens.
+	<p>There are three StringTokenizer class.
+	<table border="2">
+		<tr><th>Constructor</th><th>Description</th></tr>
+		<tr><td>StringTokenizer(String str)</td><td>creates StringTokenizer with specified string.</td></tr>
+		<tr><td>StringTokenizer(String str, String delim)</td><td>creates StringTokenizer with specified string and delimeter.</td></tr>
+		<tr><td>StringTokenizer(String str, String delim, boolean returnValue)</td><td>creates StringTokenizer with specified string, delimeter and returnValue. If return value is true, delimiter characters are considered to be tokens. If it is false, delimiter characters serve to separate tokens.</td></tr>
+	</table><br>
+	<p>StringTokenizer class have below Methods:
+	<table border="2">
+		<tr><th>Methods</th><th>Description</th></tr>
+		<tr><td>boolean hasMoreTokens()</td><td>checks if there is more tokens available.</td></tr>
+		<tr><td>String nextToken()</td><td>returns the next token from the StringTokenizer object.</td></tr>
+		<tr><td>String nextToken(String delim)</td><td>returns the next token based on the delimeter.</td></tr>
+		<tr><td>boolean hasMoreElements()</td><td>same as hasMoreTokens() method.</td></tr>
+		<tr><td>Object nextElement()</td><td>same as nextToken() but its return type is Object.</td></tr>
+		<tr><td>int countTokens()</td><td>returns the total number of tokens.</td></tr>
+	</table>
+	<br>
+	<p>Example:
+	<pre>import java.util.*;
+import static java.lang.System.*;
+public class String_Demo
+{
+	public static void main(String ar[])
+	{
+		Scanner s=new Scanner(in);
+		out.println("Enter the String");
+		String string=s.next();
+		StringTokenizer stringToken=new StringTokenizer(string,"1s");
+		out.println(stringToken.countTokens());
+		while(stringToken.hasMoreTokens())
+		{	
+			out.println(stringToken.nextToken());
+		}
+	}
+}
+</pre>
 	<p><h2>Math class</h4>
 	<p>Methods in Math class are used to perform basic operations such as the elementary exponential, logarithm, square root, and trigonometric functions. 
 	<br>
@@ -551,8 +591,8 @@ private static final DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss"
                      <address>
                          <p><i class="fa fa-home pr-10"></i>Address: Madhapur, silicon valley</p>
                          <p><i class="fa fa-globe pr-10"></i>Hyderabad, India</p>
-                         <p><i class="fa fa-mobile pr-10"></i>Mobile : (123) 456-7890</p>
-                         <p><i class="fa fa-phone pr-10"></i>Phone : (123) 456-7890</p>
+                         
+                         <p><i class="fa fa-phone pr-10"></i>Phone : 79899 39242</p>
                          <p><i class="fa fa-envelope pr-10"></i>Email : <a href="javascript:;">support@BrightITCareer.com</a></p>
                      </address>
                  </div>
