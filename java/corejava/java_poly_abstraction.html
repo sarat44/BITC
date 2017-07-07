@@ -229,9 +229,9 @@
 					<p>Polymorphism and Abstraction in Java
                   
                 </h1>
-		<p>A java object that passes more than one IS-A test considered as polymorphic.
-		<p>So, all the objects in except type Object are polymorphic as they passes IS-A test for own type and Object type. ( Detailed reading : Inheritance, IS-A and Has-A )
-		<p>You are accessing a object stored in Heap by reference variable. A reference variable type of class can reference object of any subtype of that class. For example,
+		<p>A the java object that passes more than one IS-A test considered as polymorphic.
+		<p>So, all the objects in except type Object are polymorphic as they pass IS-A test for own type and Object type. ( Detailed reading : Inheritance, IS-A and Has-A )
+		<p>You are accessing an object stored in Heap by reference variable. A reference variable type of class can reference object of any subtype of that class. For example,
 	<pre>class Animal 
 {
 public void name() 
@@ -259,15 +259,15 @@ class Horse extends Animal implements Running
      	      System.out.println("This is Horse.");
    	}
 }</pre>
-<big>Overloading in java</big>
-<p>Like method overloading we can overload constructors also. Along with default constructor, we can have constructors with parameters. The no of parameters can be same, and it can have different datatypes. Below example gives sample code for constructors overloading. 
+<big>Overloading in Java</big>
+<p>Like method overloading, we can overload constructors also. Along with default constructor, we can have constructors with parameters. The no of parameters can be same, and it can have different datatypes. Below example gives sample code for constructors overloading. 
 <p>Over loading Syntex:
 <pre>import java.util.Date;  
 public class MethodOverloadingDemo 
 {     
  /* 
   * Method Overloading occurs when methods are having same name, but a 
-  * difference in the number of their parameters or type of their parameters 
+  * difference in the number of their parameters or the type of their parameters 
   * or both. 
   */  
 public void getEmpName(int empId) 
@@ -321,7 +321,7 @@ Inside double parameter constructor
 Inside single parameter constructor with String object
 </pre>
 <big>Overriding in java</big>
-<p>Method overriding in Java is a concept based on polymorphism OOPS concept which allows programmer to create two methods with same name and method signature on interface and its various implementation and actual method is called at runtime depending upon type of object at runtime. Method overriding allows you to write flexible and extensible code in Java because you can introduce new functionality with minimal code change. Method overriding is different than method overloading in Java which we have discussed in last article. In method overloading, Only name of two overloaded methods are same but method signature must be different while in method overriding, method signature must be same. method overriding represent true polymorphic behaviour, where only name needs to be same underlying method logic can be different
+<p>Method overriding in Java is a concept based on polymorphism OOPS concept which allows the programmer  to create two methods with same name and method signature on the interface and its various implementation and actual method is called at runtime depending upon the type of object at runtime. Method overriding allows you to write flexible and extensible code in Java because you can introduce new functionality with minimal code change. Method overriding is different than method overloading in Java which we have discussed in last article. In method overloading, the Only name of two overloaded methods are same but method signature must be different while in method overriding, method signature must be same. method overriding represent true polymorphic behavior, where the only name needs to be same underlying method logic can be different
 <p>Example:
 <pre>// Method overriding. 
 class A

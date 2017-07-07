@@ -242,15 +242,15 @@
 				  
 <p><h3>1) What is a Class and an Object </h3></p>
 	<big>Class: </big>
-	<p>In Java everything is encapsulated under classes. Class is the core of Java language. Class can be defined as a template/ blueprint that describe the behaviors /states of a particular entity. A class defines new data type. Once defined this new type can be used to create object of that type. Object is an instance of class. You may also call it as physical existence of a logical template class.
+	<p>In Java, everything is encapsulated under classes.The Class is the core of Java language.The Class can be defined as a template/ blueprint that describes the behaviors /states of a particular entity. A class defines the new data type. Once defined this new type can be used to create an object of that type.The Object is an instance of the class. You may also call it as physical existence of a logical template class.
 
-A class is declared using class keyword. A class contain both data and code that operate on that data. The data or variables defined within a class are called instance variables and the code that operates on this data is known as methods.<p><br>
+A class is declared using class keyword. A class contains both data and code that operate on that data. The data or variables defined within a class are called instance variables and the code that operates on this data is known as methods.<p><br>
 	<p><h4>Rules for Java Class
 	</h4>
 	
 	
 	<ul> 
-	<p><li>A class can have only public or default(no modifier) access specifier.</li>
+	<p><li>A class can have only public or default(no modifier) access, specifier.</li>
 	<li>It can be either abstract, final or concrete (normal class).</li>
 	<li>It must have the class keyword, and class must be followed by a legal identifier.</li>
 	<li>It may optionally extend one parent class. By default, it will extend java.lang.Object.</li>
@@ -265,10 +265,10 @@ A class is declared using class keyword. A class contain both data and code that
 <p><big>&lt; Access Modifier &gt; class &lt; Class_Name&gt; extends
                        &lt; Super_Class_Name&gt; implements &lt; Interface_Name&gt;</p></big><br></pre>
 
-		<p><big>Access Modifier :</big> Defines who in the Java world can access this class and members of the class.</p>
-		<p><big>CLASS_NAME :</big> Unique name for the class in a specific package.</p>
-		<p><big>SUPER_CLASS_NAME :</big> Name of the class which given class extends.( extends keyword is used for this purpose)</p>
-		<p><big>INTERFACE_NAME :</big> Name of an Interface which above class implements.( implements keyword is used for this purpose)</p>
+		<p><big>Access Modifier:</big> Defines who in the Java world can access this class and members of the class.</p>
+		<p><big>CLASS_NAME:</big> Unique name for the class in a specific package.</p>
+		<p><big>SUPER_CLASS_NAME:</big> Name of the class which given class extends.( extends keyword is used for this purpose)</p>
+		<p><big>INTERFACE_NAME:</big> Name of an Interface which above class implements.( implements keyword is used for this purpose)</p>
 	<big><p>Eg: </p></big>
 	<pre>class Student.
 {
@@ -280,13 +280,13 @@ A class is declared using class keyword. A class contain both data and code that
 	<big>Object: </big>	
 	
 		
-	<p> There is often confusion on the difference between Class and Objects. Class is the creation of a prototype and Object is the actual implementation of that prototype. Technically, Class is a template which describes what  state and behavior of an instance this class can have. Object implements the state and behavior in the form of variables and methods and requires some memory allocated. <br></p>
+	<p> There is often confusion on the difference between Class and Objects.The Class is the creation of a prototype and Object is the actual implementation of that prototype. Technically, Class is a template which describes what  state and behavior of an instance this class can have. Object implements the state and behavior in the form of variables and methods and requires some memory allocated. <br></p>
 	<big>How to Create an Object of a Class</big><br>
 	
 	<p>To create an Object of  a Class <new> Keyword can be used.</p>
 	<p><h4>Syntax:</h4>
 	<h4><p> &lt; Class_Name &gt;  ClassObjectReference = new  &lt; Class_Name &gt;();  </h4>
-	<p>Here the constructor of the Class(Class_Name) will be executed and an Object will be created(ClassObjectReference will hold the reference of the created Object in memory).</p>
+	<p>Here the constructor of the Class(Class_Name) will be executed and an Object will be created(ClassObjectReference will hold the reference to the created Object in memory).</p>
 	<h4>Example</h4>
 	<pre>package com;
 public class World 
@@ -302,10 +302,10 @@ public class World
 	<p><h2>2)  Java Comments</h2>
 	<p>The java comments are statements that are not executed by the compiler and interpreter. The comments can be used to provide information or explanation about the variable, method, class or any statement. It can also be used to hide program code for specific time.
 	<p><big>Types of Java Comments</big>
-	<p>There are 3 types of comments in java.
+	<p>There are 3 types of comments in Java.
 
 		<p><b>1. Single Line Comment
-		<p>2. Multi Line Comment
+		<p>2. Multi-Line Comment
 		<p>3. Documentation Comment</b><br><br>
 	<p><big><b>1)  Java Single Line Comment</b></big>
 	<p>The single line comment is used to comment only one line.
@@ -323,7 +323,7 @@ public class World
 	<p>Output:44
 	<p>
 	<p><big><b>2) Java Multi Line Comment</b></big>
-	<p>The multi line comment is used to comment multiple lines of code.
+	<p>The multi-line comment is used to comment multiple lines of code.
 	<p><big>Syntax:</big>
 	<pre>/*
 This
@@ -342,7 +342,7 @@ public static void main(String[] args) {
  }	
 	<p>Output: 44</pre>
 	<big><p><b>3) Java Documentation Comment</b></big>
-	<p>The documentation comment is used to create documentation API. To create documentation API, you need to use javadoc tool.
+	<p>The documentation comment is used to create documentation API. To create documentation API, you need to use Javadoc tool.
 	<big>Syntax:</big>
 	<pre>/**
 This
@@ -381,7 +381,7 @@ public static int sub(int a, int b){return a-b;}
 		<p><b>Subtraction (-):  </b> Subtracts two operands
 		<p><b>Multiplication (*): </b>  Multiplies two operands
 		<p><b>Division (/):</b> Divides the first operand by the second.
-		<p><b>Modulus (%): </b> Returns the remainder when first operand is divided by the second
+		<p><b>Modulus (%): </b> Returns the remainder when the first operand is divided by the second
 		<p><b>Increment (++): </b> Increment the value of an integer. When placed before the variable name (also called pre-increment operator), its value is incremented instantly. For example, ++x.And when it is placed after the variable name (also called post-increment operator), its value is preserved temporarily until the execution of this statement and it gets updated before the execution of the next statement. For example, x++.
 		<p><b>Decrement (-): </b> Decrement the value of an integer. When placed before the variable name (also called pre-decrement operator), its value is decremented instantly. For example, -x.
 		<p>And when it is placed after the variable name (also called post-decrement operator), its value is preserved temporarily until the execution of this statement and it gets updated before the execution of the next statement. For example, x-.
@@ -531,9 +531,9 @@ public static void main(String args[])
 		<tr><td>false</td><td>true</td><td>true</td><td>false</td><td>false</td><td>false</td></tr>
 		</table></pre>	<br>
 		<p><big><b>BITWISE OPERATORS</b></big>
-		<p>Java provides Bit wise operators to manipulate the contents of variables at the bit level.
+		<p>Java provides Bitwise operators to manipulate the contents of variables at the bit level.
 		   These variables must be of numeric data type ( char, short, int, or long). Java provides seven bitwise
-		operators. They are AND, OR, Exclusive-OR, Complement, Left-shift, Signed Right-shift, and Unsigned Right-shift. An example program is shown below that demonstrates the different Bit wise operators in java.</p>
+		operators. They are AND, OR, Exclusive-OR, Complement, Left-shift, Signed Right-shift, and Unsigned Right-shift. An example program is shown below that demonstrates the different Bitwise operators in java.</p>
 		<h4>Eg:</h4>
 		<pre>public class BitwiseOperatorsDemo 
 { 
@@ -589,7 +589,7 @@ public static void main(String args[])
 }
 }</pre>
 		<p><big><b>CONDITIONAL OPERATORS</b></big>	
-		<p>The Conditional operator is the only ternary (operator takes three arguments) operator in Java. The operator evaluates the first argument and, if true, evaluates the second argument. If the first argument evaluates to false, then the third argument is evaluated. The conditional operator is the expression equivalent of the if-else statement. The conditional expression can be nested and the conditional operator associates from right to left: (a?b?c?d:e:f:g) evaluates as (a?(b?(c?d:e):f):g)
+		<p>The Conditional Operator is the only ternary (operator takes three arguments) operator in Java. The operator evaluates the first argument and, if true, evaluates the second argument. If the first argument evaluates to false, then the third argument is evaluated. The conditional operator is the expression equivalent of the if-else statement. The conditional expression can be nested and the conditional operator associates from right to left: (a?b?c?d:e:f:g) evaluates as (a?(b?(c?d:e):f):g)
 		An example program is shown below that demonstrates the Ternary operator in java.
 		<h4>Eg:</h4>
 		<pre>public class TernaryOperatorsDemo 
@@ -607,8 +607,10 @@ public static void main(String args[])
 		<h2>5)   DataTypes in Java</h2><br>
 		<p>Data type specifies the size and type of values that can be stored in an identifier. The Java language is rich in its data types. Different data types allow you to select the type appropriate to the needs of the application.
 		Data types in Java are classified into two types:
-		<p>1)  Primitive:which include Integer, Character, Boolean, and Floating Point.
-    		<p>2)  Non-primitive:which include Classes, Interfaces, and Arrays.
+		<p>1) Primitive: which include Integer, Character, Boolean, and Floating Point.
+		<p>2) Non-primitive: which include Classes, Interfaces, and Arrays.
+
+
 		
 		<p><b><h4>Primitive Data Types</b></h4><br><br>
 		<p><img src="img/java_data.gif" border="0" widht=><br><br>
@@ -619,13 +621,13 @@ public static void main(String args[])
 		<p>Floating point data types are used to represent numbers with a fractional part. Single precision floating point numbers occupy 4 bytes and Double precision floating point numbers occupy 8 bytes. There are two subtypes:
 		<p> <img src="img/floatdatatypes.png" border="0" width="500" height="200">
         		<p><big><b>3.  Character</b></big>
-		<p>It stores character constants in the memory. It assumes a size of 2 bytes, but basically it can hold only a single character because char stores unicode character sets. It has a minimum value of  <b>&apos;u0000&apos;</b> (or 0) and a maximum value of <b>&apos;uffff&apos;</b>  (or 65,535, inclusive).<br>
+		<p>It stores character constants in the memory. It assumes a size of 2 bytes, but basically, it can hold only a single character because char stores Unicode character sets. It has a minimum value of  <b>&apos;u0000&apos;</b> (or 0) and a maximum value of <b>&apos;uffff&apos;</b>  (or 65,535, inclusive).<br>
 		<p><big>4. Boolean </big>
 		<p>Boolean data types are used to store values with two states: true or false.
-		<h2>4)  Arrays in java</h2>
-		<p>Concept of Array in Java
-		An array is a collection of similar data types. Array is a container object that hold values of homogenous type. It is also known as static data structure because size of an array must be specified at the time of its declaration.
-		An array can be either primitive or reference type. It gets memory in heap area. Index of array starts from zero to size-1.
+		<h2>4)  Arrays in Java</h2>
+		<p>The Concept of Array in Java
+		An array is a collection of similar data types.An Array is a container object that holds values of the homogeneous type. It is also known as static data structure because the size of an array must be specified at the time of its declaration.
+		An array can be either primitive or reference type. It gets memory in heap area. Index of an array starts from zero to size-1.
 		<p><img src="img/array.gif" border="0" width="600" height="200">
 		<pre>Array Declaration</pre>
 		<h4>Syntax :</h4>
@@ -663,7 +665,7 @@ for (int count=0;count<7;count++)
 }
 }</pre>
 		<h4><b>Multidimensional arrays</b></h4>
-		<p>Multidimensional arrays, are arrays of arrays.
+		<p>Multidimensional arrays are arrays of arrays.
 		<p>To declare a multidimensional array variable, specify each additional index using another set of square brackets.
 		<h4>Eg:</h4>
 		 <pre>int twoD[ ][ ] = new int[4][5] ;</pre>
@@ -700,7 +702,7 @@ for(int i=0;i<3;i++)
 1 2 3
 2 3 4
 3 4 5</big></pre>
-		<h2><b>6. Run a java program from command prompt</b></h2>		
+		<h2><b>6. Run a java program from command Prompt.</b></h2>		
 		<p>This instructable will teach you how to: 
 		<p><b>1. Install the Java Development Kit.
 		<p>2. Set system variables to easily be able to compile and execute java files.
@@ -711,7 +713,7 @@ for(int i=0;i<3;i++)
 		<p><img src="img/command.jpg" border="0"><br>
 		<p>1.Follow this link: http://www.oracle.com/technetwork/java/javase/downloads/index.html
 		<p>2. Click Download JDK under the download Java Standard Edition panel.
-		<p>3. Choose your operating System and agree to the terms of service. **
+		<p>3. Choose your Operating System and agree to the terms of service. **
 		<p>** This will  probably be Windows since your using Command Prompt.	
 
 		<h4>Step 2: Setting Path for Command Prompt</h4><br><br>
@@ -720,9 +722,9 @@ for(int i=0;i<3;i++)
 		<p>1. Open the Command Prompt .
 		<p>2. Type "set Path=C:\Program Files\Javajdk1.8.0_121\bin" .*
 		<p>3. Type  " set HomePath= C:\Program Files\Java\ jdk1.8.0_121 *
-		<p>* If you have a later jdk ( i.e. jdk 1.6.0_22) replace the portion that says jdk1.6.0_21 with it.
-		<p>** If you don't know which jdk you have go to: start pane( at bottom left corner of you screen)>click run> click browse>Then  go to C:\Program Files\Java
-		<p>*** Do not type quotation marks in steps 1-3  at command prompt.
+		<p>* If you have a later JDK ( i.e. JDK 1.6.0_22) replace the portion that says jdk1.6.0_21 with it.
+		<p>** If you don't know which jdk you have to go to start pane( at bottom left corner of your screen)>click run> click browse>Then  go to C:\Program Files\Java
+		<p>*** Do not type quotation marks in steps 1-3  at the command prompt.
 		<h4>Step 3: Creating a Simple Java Program</h4><br>
 		<img src="img/cmd3.jpg" border="0" width="700" height="350"><br><br>
 		<p>Create Program
@@ -736,8 +738,8 @@ public static void main(String[] args)
 }
 }
 		</pre>
-		<p>3. a.Save file as: helloworld.java 
-		<p> b.Make sure "save as type" under where you typed the file name as "All Files" (as opposed to the default "Text-File").
+		<p>3. a.Save the file as helloworld.java 
+		<p> b.Make sure "Save as type" under where you typed the file name as "All Files" (as opposed to the default "Text-File").
       		<p>c. You want to save your java file where  the Command Prompt  is set to open at.*
 		<p>*Such as C:\Users\Home 
 		<h4>Step 4: Compiling and Executing the Program</h4>

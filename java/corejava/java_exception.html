@@ -227,7 +227,7 @@
                     
 					<p>Exception Handling  in Java</h1>
 	<h4>Exception Handling:</h4>
-	<p>Exception Handling is the mechanism to handle runtime malfunctions. We need to handle such exceptions to prevent abrupt termination of program. The term exception means exceptional condition, it is a problem that may arise during the execution of program. A bunch of things can lead to exceptions, including programmer error, hardware failures, files that need to be opened cannot be found, resource exhaustion etc.
+	<p>Exception Handling is the mechanism to handle runtime malfunctions. We need to handle such exceptions to prevent abrupt termination of the program. The term exception means an exceptional condition, it is a problem that may arise during the execution of the program. A bunch of things can lead to exceptions, including programmer error, hardware failures, files that need to be opened cannot be found, resource exhaustion etc.
 	<h4>Exception</h4>
 	<p>A Java Exception is an object that describes the exception that occurs in a program. When an exceptional events occurs in java, an exception is said to be thrown. The code that's responsible for doing something about the exception is called an exception handler.
 	<h4>Error vs Exception</h4>
@@ -235,10 +235,10 @@
 	<p><b>RuntimeException :</b> RuntimeException  is a subclass of Exception. Exceptions under this class are automatically defined for programs.
 
 	<p><h4>How to handle Exception?</h4>
-	<p>i) There might be the list of the methods that had been called to get to the method where error occured. This ordered list of the methods is called Call Stack.
-	<p>ii) The runTime system searches the call stack to find the method that contains block of code that can handle the occured exception. The block of the code is called Exception handler.
-	<p>iii) The runTime system starts searching from the method in which exception occured, proceeds through call stack in the reverse order in which methods were called.
-	<p>vi) If it finds  appropriate handler then it passes the occured exception to it. Appropriate handler means the type of the exception object thrown matches the type of the exception object it can handle.
+	<p>i) There might be the list of the methods that had been called to get to the method where the error  occurred. This ordered list of the methods is called Call Stack.
+	<p>ii) The runTime system searches the call stack to find the method that contains the block of code that can handle the occurred exception. The block of the code is called Exception handler.
+	<p>iii) The runTime system starts searching from the method in which exception occurred, proceeds through call stack in the reverse order in which methods were called.
+	<p>vi) If it finds  appropriate handler then it passes the occurred exception to it. Appropriate handler means the type of the exception object thrown matches the type of the exception object it can handle.
 	<p>v) If runTime system searches all the methods on call stack and couldn&apos;t have found the appropriate handler then the runTime system and consequently the running program terminates.<br><br>
 	<img src="img/exception.png"><br><br>
 	<p>In java, exception handling is done using five keywords,
@@ -280,7 +280,7 @@ Exception thrown  :java.lang.ArrayIndexOutOfBoundsException: 3
 First element value: 6
 The finally statement is executed</pre>
 <p><b>Nested try statement</b>
-<p>try statement can be nested inside another block of try. Nested try block is used when a part of a block may cause one error while entire block may cause another error. In case if inner try block does not have a catch handler for a particular exception then the outer try is checked for match.
+<p>try statement can be nested inside another block of a try.The Nested try block is used when a part of a block may cause one error while entire block may cause another error. In case if inner try block does not have a catch handler for a particular exception then the outer try is checked for a match.
 <pre>class ExcepDemo
 {
     public static void main(String[] args)

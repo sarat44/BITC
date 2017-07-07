@@ -230,11 +230,11 @@
                  
                 </h1>
 	<h2>1.Java Interface</h2>
-	<p>Interface is a pure abstract class.They are syntactically similar to classes, but you cannot create instance of an Interface and their methods are declared without any body. Interface is used to achieve complete abstraction in Java. When you create an interface it defines what a class can do without saying anything about how the class will do it. 
+	<p>the Interface is a pure abstract class.They are syntactically similar to classes, but you cannot create an instance of an Interface and their methods are declared without anybody.The Interface is used to achieve complete abstraction in Java. When you create an interface it defines what a class can do without saying anything about how the class will do it. 
 	<p><b>Syntax :</b>
 	<pre>interface interface_name { }</pre>
 	<p>Java Interface Example
-	<p>In this example, showtable interface has only one method, its implementation is provided in the A class.
+	<p>In this example, show table interface has only one method, its implementation is provided in the A class.
 	<pre>interface showtable{  
 void show();  
 }  
@@ -312,8 +312,8 @@ public void Draw2()
 	Drawing Circle here:shape3
 </pre>
 <h2>2. Java Package </h2>
-<p>Java is an object oriented programming language. We know that the object oriented programming provides different types of advantages. The one of the most important advantage is Encapsulation. Encapsulation is a technique that supports no outside world data access (directly) and also multiple related objects can be grouped under one object. Java programing also implements this type of process by the use of Package Programming. The Java classes which is created in the same file or each in its own file. The file that contains the class needs to maintain the protocol that file name and class name both are same.
-<p>package programming is one of the major skills in Java. In the situation where different developer or programmer are working with their different project across in the different department as well as different city, countries then each developer take a choice to create classes which is based on the requirement. In the above consequence the project should be completed with classes with same name. Packages are classified into two types. The first category is known as java API (Application Programming Interface) packages and the second one is known as user defines packages. Java API provides a large number of classes grouped into different package according their functionality. This classification is given below.
+<p>Java is an Object-Oriented programming language. We know that the object oriented programming provides the different types of advantages.one of the most important advantage is Encapsulation. Encapsulation is a technique that supports no outside world data access (directly) and also multiple related objects can be grouped under one object. Java programing also implements this type of process by the use of Package Programming. The Java classes which is created in the same file or each in its own file. The file that contains the class needs to maintain the protocol that file name and class name both are same.
+<p>package programming is one of the major skills in Java. In the situation where different developer or programmer are working with their different project across in the different department as well as different city, countries then each developer take a choice to create classes which is based on the requirement. In the above consequence the project should be completed with classes with the same name. Packages are classified into two types. The first category is known as java API (Application Programming Interface) packages and the second one is known as user defines packages. Java API provides a large number of classes grouped into different package according to their functionality. This classification is given below.
 <br><p><img src="img/package-in-java.jpg" bordr="0"><br>
 <p><b>Advantage of package</b>
 	<pre>Package is used to categorize the classes and interfaces so that they can be easily maintained
@@ -338,7 +338,7 @@ User defined package.</pre>
 <p>ii)  Choose an appropriate class name or interface name and whose modifier must be public.
 <p>iii)  Any package program can contain only one public class or only one public interface but it can contain any number of normal classes.
 <p>iv)  Package program should not contain any main class (that means it should not contain any main())
-<p>v)  Modifier of constructor of the class which is present in the package must be public. (This is not applicable in case of interface because interface have no constructor.)
+<p>v)  Modifier of the constructor of the class which is present in the package must be public. (This is not applicable in the case of the interface because interface has no constructor.)
 <p>vi)  The modifier of method of class or interface which is present in the package must be public (This rule is optional in case of interface because interface methods by default public)
 <p><b>Compile package programs</b>
 <p>For compilation of package program first we save program with public className.java and it compile using below syntax:
@@ -346,7 +346,7 @@ User defined package.</pre>
 <pre>javac -d . className.java</pre>
 <p><b>Syntax</b>
 <pre>javac -d path className.java</pre>
-<p><b>Explanations:</b> In above syntax "-d" is a specific tool which is tell to java compiler create a separate folder for the given package in given path. When we give specific path then it create a new folder at that location and when we use . (dot) then it crate a folder at current working directory.
+<p><b>explanations:</b> In above syntax "-d" is a specific tool which is told to java compiler create a separate folder for the given package in given path. When we give specific path then it create a new folder at that location and when we use. (dot) then it create a folder at current working directory.
 <p>Package program which is save with S.java and compile by javac -d . S.java
 <p><b>Example</b>
 	<pre>package mypack;
@@ -373,14 +373,14 @@ public class Hello
 
 </pre>
 	<h2>3. Java Access Modifiers</h2>
-	<p> A Java access modifier specifies which classes can access a given class and its fields, constructors and methods. Access modifiers can be specified separately for a class, its constructors, fields and methods. Java access modifiers are also sometimes referred to in daily speech as Java access specifiers, but the correct name is Java access modifiers. Classes, fields, constructors and methods can have one of four different Java access modifiers:
+	<p> A Java access modifier specifies which classes can access a given class and its fields, constructors and methods. Access modifiers can be specified separately for a class, its constructors, fields, and methods. Java access modifiers are also sometimes referred to in daily speech as Java access specifiers, but the correct name is Java access modifiers. Classes, fields, constructors, and methods can have one of four different Java access modifiers:
 	<p>1.  private
     	<p>2. default (package)
    	<p>3.  protected
     	<p>4. public
 	<p><br><img src="img/accessmodifier.png" border="0">
 	<p><b>Java Access Modifiers -public keyword</b>
-	<p>If class member is  &quot;public&quot; then it can be accessed from anywhere. The member variable or method is accessed globally. This is simplest way to provide access to class members, however we should take care in using this keyword with class variables otherwise anybody can change the values. Usually class variables are kept as private and getter-setter methods are provided to work with them.
+	<p>If the class member is  &quot;public&quot; then it can be accessed from anywhere. The member variable or method is accessed globally. This is the simplest way to provide access to class members, however,we should take care of using this keyword with class variables otherwise anybody can change the values. Usually,class variables are kept as private and getter-setter methods are provided to work with them.
 	<pre>//Java program to illustrate
 //public modifier
 package p1;
@@ -402,7 +402,7 @@ class K
       }
 }</pre>
 	<p><b>Java Access Modifiers -private keyword</b>
-	<p>If class member is &quot;private&quot; then it will be accessible only inside the same class. This is the most restricted access and the class member will not be visible to the outer world. Usually we keep class variables as private and methods that are intended to be used only inside the class as private.
+	<p>If the class member is &quot;private&quot; then it will be accessible only inside the same class. This is the most restricted access and the class member will not be visible to the outer world. Usually, we keep class variables as private and methods that are intended to be used only inside the class as private.
 	<p>Example, we will create two classes S and k within same package p1. We will declare a method in class S as private and try to access this method from class S  and see the result.
 	<pre>//Java program to illustrate error while 
 //using class from different package with
@@ -429,7 +429,7 @@ class K
 error: display() has private access in A
 obj.display();</pre>
 	<p><b>Java Access Modifiers - protected keyword</b>
-	<p>If class member is &quot;protected&quot; then it will be accessible only to the classes in the same package and to the subclasses. This modifier is less restricted from private but more restricted from public access. Usually we use this keyword to make sure the class variables are accessible only to the subclasses.
+	<p>If the class member is &quot;protected&quot; then it will be accessible only to the classes in the same package and to the subclasses. This modifier is less restricted from private but more restricted from public access. Usually, we use this keyword to make sure the class variables are accessible only to the subclasses.
 	<p>we will create two packages p1 and p2. Class A in p1 is made public, to access it in p2. The method display in class A is protected and class B is inherited from class A and this protected method is then accessed by creating an object of class B.
 	<pre>//Java program to illustrate
 //protected modifier
@@ -462,8 +462,8 @@ class B extends A
 BrightIT Career
 </pre>
 	<p><b>Java Access Modifiers - default access</b>
-	<p>If class member doesn&apos;t have any access modifier specified, then it&apos;s treated with default access. The access rules are similar as classes and the class member with default access will be accessible to the classes in the same package only. This access is more restricted than public and protected but less restricted than private.
-	<p>Example, We will create two packages and the classes in the packages will be having the default access modifiers and we will try to access a class from one package from a class of second package.
+	<p>If the class member doesn&apos;t have any access modifier specified, then it&apos;s treated with default access. The access rules are similar as classes and the class member with default access will be accessible to the classes in the same package only. This access is more restricted than public and protected but less restricted than private.
+	<p>Example, We will create two packages and the classes in the packages will be having the default access modifiers and we will try to access a class from one package from a class of the second package.
 	<pre>//Java program to illustrate default modifier
 package p1;
  //Class BrightIT is having Default access modifier
