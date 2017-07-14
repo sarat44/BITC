@@ -91,11 +91,11 @@
 							<li>
 								<a href="../../testing/testNG/testing_introduction.html">TestNG</a>
 						  </li>
-						   <li>
+						 <!--  <li>
                               <a href="../../testing/testing_main.html">Appium</a>
-                          </li>
+                          </li> -->
 						   <li>
-                              <a href="../../terms.html">Mobile Testing</a>
+                              <a href="../../terms.html">Appium/Mobile Testing</a>
                           </li>
 						  
 						  <li> 
@@ -129,15 +129,15 @@
                               </ul>
                           </li> 
 						  
-                          <li> 
+                     <!--     <li> 
                               <a href="../../testing/testing_main.html">QTP</a>
-                          </li>
+                          </li> -->
 						  <li> 
                               <a href="../../sql/sql/sql_Demo.html">SQL</a>
                           </li>
 						  
 						  <li> 
-                              <a href="../../testing/testing_main.html">Linux</a>
+                              <a href="../../testing/linux/linux.html">Linux</a>
                           </li>
                           
 						  <li>
@@ -262,7 +262,7 @@
 		
 	</ol>
 	<br>
-	<p><b>DDL</b>
+	<p><b><a name="two">DDL</a></b>
 	<ol>
 		<li>CREATE DATABASE - creates a new database</li>
 		<li>ALTER DATABASE - modifies a database</li>
@@ -330,7 +330,7 @@ ADD DateOfBirth date
 	<pre>ALTER TABLE Persons 
 DROP COLUMN DateOfBirth 
 </pre>
-<p><b>SQL SELECT Syntax </b>
+<p><b><a name="one">SQL SELECT Syntax </a></b>
 	<pre>SELECT column_name(s) 
 FROM table_name 
 or 
@@ -411,7 +411,7 @@ FROM table_name
 	<p>SELECT * FROM Persons WHERE FirstName LIKE '_la' 
 	<p>SELECT * FROM Persons WHERE LastName LIKE '[bsp]%' 
 	<br>
-	<p><b>SQL LIKE Operator </b>
+	<p><b><a name="three">SQL LIKE Operator</a></b>
 	<p><b>The LIKE operator is used in a WHERE clause to search for a specified pattern in a column.</b> 
 	<pre>SELECT column_name(s) 
 FROM table_name
@@ -592,7 +592,7 @@ FROM Persons
 WHERE City='Hyderabad' 
 </pre>
 <br>
-<p><b>SQL Constraints</b>
+<p><b><a name="four">SQL Constraints</a></b>
 <p>Constraints are used to limit the type of data that can go into a table. 
 <p>Constraints can be specified when a table is created (with the CREATE TABLE statement) or after the table is 
 <p>created (with the ALTER TABLE statement). 
@@ -832,22 +832,31 @@ OrderDate date DEFAULT GETDATE()
 
         </div>
 
-		<!-- List of the Topics start -->
-		<div class="col-lg-3">
+		 <!-- List of the Topics -->
+				
+        <div class="col-lg-3">
           <div class="blog-side-item">
  
-            
+            <div class="blog-post">
+              <h3><b>
+               Sql</b>
+              </h3>
+             
+              <div class="media">
+						<a href="#two">DDL Commands</a><p></p>
+						<a href="#one">DML Commands</a><p></p>
+						<a href="#three">Operator in SQL</a><p></p>
+						<a href="#four"> Constraint in SQL</a><p></p>
+               </div>
+			   
+              </div>
             </div>
           </div>
-		  <!-- List of the Topics End -->
-		  
         </div>
-		
       </div>
 
     </div>
-    <!--container end-->
-
+	<!-- List of the Topics End-->
     
     <!--footer start-->
      <footer class="footer">

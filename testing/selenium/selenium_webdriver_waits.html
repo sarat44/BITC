@@ -90,11 +90,11 @@
 						  <li>
 								<a href="../../testing/testNG/testing_introduction.html">TestNG</a>
 						  </li>
-						   <li>
+						<!--   <li>
                               <a href="../../testing/testing_main.html">Appium</a>
-                          </li>
+                          </li> -->
 						   <li>
-                              <a href="../../testing/testing_main.html">Mobile Testing</a>
+                              <a href="../../testing/testing_main.html">Appium/Mobile Testing</a>
                           </li>
 						  
 						  <li> 
@@ -128,15 +128,15 @@
                               </ul>
                           </li> 
 						  
-                          <li> 
+                     <!--       <li> 
                               <a href="../../testing/testing_main.html">QTP</a>
-                          </li>
+                          </li> -->
 						  <li> 
                               <a href="../../sql/sql/sql_Demo.html">SQL</a>
                           </li>
 						  
 						  <li> 
-                              <a href="../../testing/testing_main.html">Linux</a>
+                              <a href="../../testing/linux/linux.html">Linux</a>
                           </li>
                           
 						  <li>
@@ -197,7 +197,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-sm-4">
-                    <h1>Testing</h1>
+                    <h1>Selenium</h1>
                 </div>
                 <div class="col-lg-8 col-sm-8">
                     <ol class="breadcrumb pull-right">
@@ -236,7 +236,7 @@ driver.get("http://somedomain/url_that_delays_loading");
 WebElementmyDynamicElement=driver.findElement(By.id("myDynamicElement"));
 </pre>
 <p><big>Explicit Waits</big>
-<p>An explicit wait is code you define to wait for a certain condition to occur before proceeding further in the code. The worst case of this is Thread.sleep(), which sets the condition to an exact time period to wait. There are some convenience methods provided that help you write code that will wait only as long as required. WebDriverWait in combination with ExpectedCondition is one way this can be accomplished.
+<p>An explicit wait is the code you define to wait for a certain condition to occur before proceeding further in the code. The worst case of this is Thread.sleep(), which sets the condition to an exact time period to wait. There are some convenience methods provided that help you write code that will wait only as long as required. WebDriverWait in combination with ExpectedCondition is one way this can be accomplished.
 <pre>WebDriverdriver=newFirefoxDriver();
 driver.get("http://somedomain/url_that_delays_loading");
 WebElementmyDynamicElement=(newWebDriverWait(driver,10))
@@ -245,7 +245,7 @@ WebElementmyDynamicElement=(newWebDriverWait(driver,10))
 <p>This waits up to 10 seconds before throwing a TimeoutException or if it finds the element will return it in 0 - 10 seconds. WebDriverWait by default calls the ExpectedCondition every 500 milliseconds until it returns successfully. A successful return value for the ExpectedCondition function type is a Boolean value of true, or a non-null object.
 <p><b>WARNING:</b> Do not mix implicit and explicit waits. Doing so can cause unpredictable wait times. For example setting an implicit wait of 10 seconds and an explicit wait of 15 seconds, could cause a timeout to occur after 20 seconds.
 <p><big>Fluent Wait </big>
-<p>Fluent wait is when we can setup a repeat time cycle to verify the condition is met or not. Fluent wait allows use to setup frequency with a time frame to verify the given expected condition at regular time interval. This wait is used in test scenario where element loading time is variable (it can be 10,15 or 20 secs) In this case we can use frequency to handle "ElementNotVisibleException".
+<p>the Fluent wait is when we can set up a repeat time cycle to verify the condition is met or not. Fluent wait allows use to setup frequency with a time frame to verify the given expected condition at regular time interval. This wait is used in test scenario where element loading time is variable (it can be 10,15 or 20 secs) In this case we can use frequency to handle "ElementNotVisibleException".
 <p><b>Code Examples:</b>
 <p>Checking whether an alert is present using Explicit Wait
 <pre>publicvoidcheckAlert() 

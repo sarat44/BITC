@@ -8,7 +8,7 @@
     <meta name="keywords" content="IT Career, JOBS, Training, Selenium, JAVA, webdriver,testing, automation, Appium, SQL, Career,guarantee,ETL Testing, Mobile, SOAP,Hyderabad, interview, questions,Part time,Fresher, experienced,ISTQB,OCJP, SCJP, dumps,certifications  ">
     <link rel="shortcut icon" href="../../img/favicon.png">
 
-    <title>BrightITCareer | Testing git commands</title>
+    <title>BrightITCareer | git commands</title>
 	
     <!-- Bootstrap core CSS -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
@@ -90,11 +90,11 @@
 						  <li>
 								<a href="../../testing/testNG/testing_introduction.html">TestNG</a>
 						  </li>
-						   <li>
+						<!--  <li>
                               <a href="../../testing/testing_main.html">Appium</a>
-                          </li>
+                          </li> -->
 						   <li>
-                              <a href="../../testing/testing_main.html">Mobile Testing</a>
+                              <a href="../../testing/testing_main.html">Appium/Mobile Testing</a>
                           </li>
 						  
 						  <li> 
@@ -128,15 +128,15 @@
                               </ul>
                           </li> 
 						  
-                          <li> 
+                     <!--     <li> 
                               <a href="../../testing/testing_main.html">QTP</a>
-                          </li>
+                          </li> -->
 						  <li> 
                               <a href="../../sql/sql/sql_Demo.html">SQL</a>
                           </li>
 						  
 						  <li> 
-                              <a href="../../testing/testing_main.html">Linux</a>
+                              <a href="../../testing/linux/linux.html">Linux</a>
                           </li>
                           
 						  <li>
@@ -226,22 +226,23 @@
                 <h1>
 					Git Commands
                 </h1>
+			<!--	<ul>
+						<li><a href="#one">Create a Branch for Desired Feature</a></li>
+						<li> <a href="#two">Merge a Branch</a></li>
+						<li><a href="#three">Deleting the Branch</a></li>
+						<li><a href="#four">Cloning a Remote Repository</a></li>
+						<li><a href="#five">Add files to Staging Area</a></li>
+						<li><a href="#six">Add remote from original repository to your forked repository</a></li>
+				</ul> -->
 				
-				
-				
-				
-
-
-
-
-
 				<p>Need Help: <b>git help</b>
 							
-				<p>Check Version :  <b> git –-version </b>
+				<p>Check Version:  <b> git –-version </b>
 				
-				<p>Check the status : <b> git status</b> (it will be better to type this command repeatedly ) 
+				<p>Check the status: <b> git status</b> (it will be better to type this command repeatedly ) 
 				
-				<br><br><p><h4>Create a Branch for Desired Feature:</h4>
+				<br><br>
+				<p><h4><a name="one">Create a Branch for Desired Feature:</a></h4>
 				
 				<p>command 1:  <b>   git branch branchName</b>
 				
@@ -253,7 +254,8 @@
 				
 				<img src="../../testing/github/images/git_2.png" height="300" width="400">
 				
-				<br><br><p><h4>Merge a Branch</h4>
+				<br><br>
+				<p><h4><a name="two">Merge a Branch: </a></h4>
 				
 				<p>command 1:  <b>   git checkout master</b>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// now ready to merge those changes, need to checkout to master.
 								
@@ -263,7 +265,8 @@
 				
 				<p>command 4:<b>   git push origin master</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//push the changes.
 				
-				<br><br><p><h4>Deleting the Branch</h4>
+				<br><br>
+				<p><h4><a name="three">Deleting the Branch</a></h4>
 				
 				<p>command 1:<b>   git branch --merged</b>
 				
@@ -273,35 +276,38 @@
 				
 				<p>command 4:<b>   git push origin --delete branchName</b>
 				
-				<br><br><p><h4>Cloning a Remote Repository</h4>
+				<br><br>
+				<p><h4><a name="four">Cloning a Remote Repository</a></h4>
 				
-				<p>command 1:<b>  git clone path or URL</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(where to clone)
+				<p>Command 1:<b>  git clone path or URL</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(where to clone)
 				
 				<p>Eg:<b> git clone git://github.com…….git </b>
 
-				<br><br><p><h4>Add files to Staging Area</h4>
+				<br><br>
+				<p><h4><a name="five">Add files to Staging Area</a></h4>
 				
 				<p>command 1:<b> git add –A</b>
 				
 				<p>command 2:<b> git commit –m  “Provide the information about the changes you have done”</b>
 							
-	       		<br><br><p><h4>Add remote from original repository in your forked repository</h4>
+	       		<br><br>
+				<p><h4><a name="six">Add remote from original repository to your forked repository</a></h4>
 				
-				<p>command 1:<b>git remote add upstream git://github.com……...git</b>
+				<p>command 1:<b> git remote add upstream git://github.com……...git</b>
 				
-				<p>command 2:<b>git remote –v</b>
+				<p>command 2:<b> git remote –v</b>
 				
 				<p>command 3:<b> git fetch upstream</b>
 				
-				<p>command 4:<b>git merge upstream/master</b>
+				<p>command 4:<b> git merge upstream/master</b>
 			
 				<br><br><p>Clear the Changes: <b>git reset --hard [commit]</b>
 				
 				<p> Discarding unstages Changes: <b>git reset [file]</b>
 				
-				<br><br><p>Get the changes from the git hub account : <b> git pull origin master</b>
+				<br><br><p>Get the changes from the git hub account: <b> git pull origin master</b>
 				
-				<p>Push the changes into the git hub account:<b> git push origin master</b>
+				<p>Push the changes to the git hub account:<b> git push origin master</b>
 				
 				<p><img src="../../testing/github/images/git_1.png" height="300" width="400">
 						
@@ -314,16 +320,31 @@
             </div>
           </div>
       <!-- List of the Topics -->
-		
+				
         <div class="col-lg-3">
           <div class="blog-side-item">
  
-            
+            <div class="blog-post">
+              <h3><b>
+               Git Commands</b>
+              </h3>
+             
+              <div class="media">
+						<a href="#one">Create a Branch for Desired Feature</a><p></p>
+						<a href="#two">Merge a Branch</a><p></p>
+						<a href="#three">Deleting the Branch</a><p></p>
+						<a href="#four">Cloning a Remote Repository</a><p></p>
+						<a href="#five">Add files to Staging Area</a><p></p>
+						<a href="#six">Add remote from original repository to your forked repository</a><p></p>
+               </div>
+			   
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-     </div>
+
     </div>
-</div>
-</div>
     <!--container end-->
 
     

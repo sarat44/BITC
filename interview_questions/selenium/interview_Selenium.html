@@ -94,11 +94,11 @@
 						  <li>
 								<a href="../../testing/testNG/testing_introduction.html">TestNG</a>
 						  </li>
-						   <li>
+						<!--   <li>
                               <a href="../../testing/testing_main.html">Appium</a>
-                          </li>
+                          </li> -->
 						   <li>
-                              <a href="../../testing/testing_main.html">Mobile Testing</a>
+                              <a href="../../testing/testing_main.html">Appium/Mobile Testing</a>
                           </li>
 						  
 						  <li> 
@@ -138,7 +138,7 @@
                           </li>
 						  
 						  <li> 
-                              <a href="../../testing/testing_main.html">Linux</a>
+                              <a href="../../testing/linux/linux.html">Linux</a>
                           </li>
                           <li>
 								<a href="../../testing/github/github.html">Git Hub</a>
@@ -238,7 +238,7 @@
         </div>
 		
 		<div class="col-lg-4">
-          <h3><center><a href="../../interview_questions/manul_testing/interview_manul_testing_assi.html">Assignments</a></h3>
+          <h3><center><a href="#">Assignments</a></h3>
           
           <p class="text-muted">
             <center></center>
@@ -273,7 +273,9 @@
 
                             <div id="collapseOne" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre>
+                                    <p>
+									<pre>Selenium Webdriver can be used with a variety of browsers such as Internet Explorer,Mozilla Firefox, Google Chrome, Safari & Opera. 
+Languages that are supported by Selenium WebDriver are  C#, Java, Perl, PHP, Python and Ruby.</pre>
 									</p>
                                 </div>
                             </div>
@@ -290,7 +292,16 @@
                             </div>
                             <div id="collapseTwo" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre></pre></p>
+                                    <p>
+									<pre>Id
+Name
+Link Text
+Partial Link Text
+Tag Name
+CSS Class
+CSS Selector
+XPath</pre>
+									</p>
                                 </div>
                             </div>
                         </div>
@@ -307,7 +318,10 @@
 
                             <div id="collapseThree" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre></pre></p>
+                                    <p><pre>Get command is used to retrieve the inner text of the specified web element.
+Syntax:
+String text = driver.findElement(By.id(“Element_ID”)).getText();
+									</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -325,7 +339,9 @@
 
                             <div id="collapseFive" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre></pre>	</p>
+                                    <p><pre>When an "assert" command fails then test execution will be aborted.So when the Assertion fails, all the test steps after that line of code are skipped.
+When an "verify" command fails, it will fail the test but continue to run the test case
+									</pre>	</p>
                                 </div>
                             </div>
                         </div>
@@ -341,7 +357,12 @@
 
                             <div id="collapseSix" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                   <p><pre>	</pre></p>
+                                   <p><pre>In a textbox typed text goes into the value attribute.
+findElement(By.id("TextBoxid")).getAttribute("value");
+For ComboBox is a bit different. But if you're using the Select object you can use the method:
+Select selectItem = new Select(findElement(By.id("someid")));
+selectItem.getFirstSelectedOption().getText();
+								   </pre></p>
                              </div>
                             </div>
                         </div>
@@ -358,7 +379,7 @@
 
                             <div id="collapseSeven" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre>
+                                    <p><pre>driver.findElement(By.Xpath("//img[@ src='images/shim.gif']")).click();
 </pre></p>
                                 </div>
                             </div>
@@ -505,7 +526,15 @@
 
                             <div id="collapseseventeen" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre> </pre></p>
+                                    <p><pre>FirefoxDriver
+InternetExplorerDriver
+ChromeDriver
+SafariDriver
+OperaDriver
+AndroidDriver
+IPhoneDriver
+HtmlUnitDriver
+</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1183,7 +1212,20 @@
 
                             <div id="collapsesixtythree" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre> </pre></p>
+                                    <p><pre>Selenium Web driver provides two types of waits
+
+Implicit waits
+
+Explicit waits
+
+Implicit Wait:  An implicit wait is to tell Web Driver to poll the DOM for a certain amount of time when trying to find an element or elements if they are not immediately available.The default setting is 0. Once set, the implicit wait is set for the life of the Web Driver object instance until it changed again. This means that we can tell Selenium that we would like it to wait for a certain amount of time before throwing an exception that if it cannot find the element on the page.
+The implicit wait is set for the life of the WebDriver object instance.
+WebDriver driver = new FirefoxDriver();
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+Refer Selenium Explicit and Implicit Waits        (with hyperlink http://brightitcareer.com/testing/selenium/selenium_webdriver_waits.html) This link should not be visible, you just need to assign this link to the linkText
+
+Explicit Wait: An explicit waits is code you define to wait for a certain condition to occur before proceeding further in the code. The worst case of this is time.sleep(), which sets the condition to an exact time period to wait. There are some convenience methods provided that help you write code that will wait only as long as required. WebDriverWait in combination with ExpectedCondition is one way this can be accomplished.
+Refer Selenium Explicit and Implicit Waits        (with hyperlink http://brightitcareer.com/testing/selenium/selenium_webdriver_waits.html) </pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1198,7 +1240,19 @@
 
                             <div id="collapsesixtyfour" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre> </pre></p>
+                                    <p><pre>WebDriver provides the APIs to check the visibility of the web elements on the web page. These web elements can be buttons, drop boxes, checkboxes, radio buttons, labels etc.
+
+isDisplayed()
+isSelected()
+isEnabled()
+Syntax:
+isDisplayed():
+boolean elementPresent = driver.findElement(By.id(“element_Id”)).isDisplayed();
+isSelected():
+boolean elementSelected = driver.findElement(By.id(“element_Id”)).isSelected();
+isEnabled():
+boolean elementEnabled = driver.findElement(By.id(“element_Id”)).isEnabled();
+</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1676,6 +1730,21 @@
                             </div>
 
                             <div id="collapsenintyseven" class="panel-collapse collapse">
+                                <div class="panel-body panel-faq">
+                                    <p><pre> </pre></p>
+                                </div>
+                            </div>
+                        </div>
+						<div class="panel panel-default">
+                            <div class="panel-heading panel-heading-faq">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapsenintyeight">
+						      How do you achieve synchronization in WebDriver
+                                    </a>
+                                </h4>
+                            </div>
+
+                            <div id="collapsenintyeight" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
                                     <p><pre> </pre></p>
                                 </div>

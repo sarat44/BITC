@@ -8,7 +8,7 @@
     <meta name="keywords" content="IT Career, JOBS, Training, Selenium, JAVA, webdriver,testing, automation, Appium, SQL, Career,guarantee,ETL Testing, Mobile, SOAP,Hyderabad, interview, questions,Part time,Fresher, experienced,ISTQB,OCJP, SCJP, dumps,certifications  ">
     <link rel="shortcut icon" href="../../img/favicon.png">
 
-    <title>BrightITCareer | Testing frames and popups</title>
+    <title>BrightITCareer | Linux commands</title>
 	
     <!-- Bootstrap core CSS -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
@@ -90,7 +90,7 @@
 						  <li>
 								<a href="../../testing/testNG/testing_introduction.html">TestNG</a>
 						  </li>
-						  <!-- <li>
+						<!--   <li>
                               <a href="../../testing/testing_main.html">Appium</a>
                           </li> -->
 						   <li>
@@ -128,7 +128,7 @@
                               </ul>
                           </li> 
 						  
-                       <!--     <li> 
+                        <!--   <li> 
                               <a href="../../testing/testing_main.html">QTP</a>
                           </li> -->
 						  <li> 
@@ -158,7 +158,7 @@
                       "dropdown" data-toggle="dropdown" href="#">Interview Questions <i class="fa fa-angle-down"></i>
                       </a>
                       <ul class="dropdown-menu">
-                          <li>
+                         <li>
                               <a href="../../interview_questions/manul_testing/interview_manul_testing.html">Manual Testing</a>
                           </li>
                           <li>
@@ -197,14 +197,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-sm-4">
-                    <h1>Selenium</h1>
+                    <h1>Linux Commands</h1>
                 </div>
                 <div class="col-lg-8 col-sm-8">
                     <ol class="breadcrumb pull-right">
                         <li><a href="../../index.html">Home</a></li>
                         <li><a href="../../testing/testing_main.html">Testing</a></li>
 						
-                        <li class="active">Selenium WebDriver</li>
+                        <li class="active">Linux Commands</li>
                     </ol>
                 </div>
             </div>
@@ -224,119 +224,127 @@
               
               <div class="col-lg-10 col-sm-10">
                 <h1>
-                  
-                      Frames/Popups in Selenium WebDriver 
-                 
+					<p><a name="two">Linux Commands</a>
                 </h1>
-               	<p>WebDriver's  <b>driver.switchTo().The frame()</b> method takes one of the three possible arguments: 	
-	<p><b>A number.</b>
-	<p>Select a frame by its (zero-based) index. That is, if a page has three frames, the first frame would be at index 0, the second at index 1 and the third at index 2. Once the frame has been selected, all subsequent calls on the WebDriver interface are made to that frame.
-	<pre>driver.switchTo().frame(index) 
-	</pre>
-	<p><b>A name or ID</b>
-	<p>Select a frame by its name or ID. Frames located by matching name attributes are always given precedence over those matched by ID
-	<pre>driver.switchTo.frame("Frame_ID or name");
-	</pre>
-	<p><b>A previously found WebElement</b>
-	<p>Select a frame using its previously located WebElement.
-	<pre>driver.switchTo().frame(iframe_element) 
-	</pre>
-	<p>Need to make sure once switched into a frame, need to switch back to default content for accessing webelements in another frames. As Webdriver tend to find the new frame inside the current frame.
-	<pre>driver.switchTo().defaultContent()
-	</pre>
-	<p><b>Selects the frame 1</b>
-	<pre>driver.switchTo().frame("frame1");
-	</pre>
-	<p><b>Selects the frame2</b>
-	<pre>driver.switchTo().frame("frame2");
-	</pre>
-	<p><b>Switching back to the parent window</b>
-	<pre>driver.switchTo().defaultContent(); // you are now outside both frames	
-	</pre>
-	<p>Code for getting the window windowHandle
-	<pre>String BaseWindow = driver.CurrentWindowHandle;
-ReadOnlyCollection<string> handles = driver.WindowHandles;
-foreach (string handle in handles)
-    {
-           if (handle != BaseWindow)
-             { 
-                   String title = driver.SwitchTo().Window(handle).Title;
-                   Thread.Sleep(3000);
-                   driver.SwitchTo().Window(handle).Title.Equals(title);
-                   Thread.Sleep(3000);
-           }
-  }
-</pre>
-<p><b>Alerts in Selenium WebDriver</b>
-<p>Selenium provides an interface called Alertto handle alerts. 
-<p>It is present in the org.openqa.selenium.Alert package. Alert interface contains the following methods to deal with the alert:
-<p><b>accept() </b>To accept the alert
-<p><b>dismiss()</b> To dismiss the alert
-<p><b>getText() </b>To get the text of the alert
-<p><b>sendKeys() </b>To write some text to the alert
-<p><b>Handling Alerts
-<pre>try {
-Alertalert = webDriver.switchTo().alert();
+					<p>Linux is one of the popular <code>OS</code> like Microsoft Windows.It is free of coust. We need to learn basic Linux Commands.
+					<p>The below all Linux Commands are most commonly used.
+					<table class="table">
+						<thead>
+								<th>Command</th>
+								<th>Description</th>
+						</thead>
+						<tbody>
+								<tr>
+										<td>cat</td>
+										<td>Display file’s contents to the standard output device.</td>
+								</tr>
+								<tr>
+										<td>cd (directorypath)</td>
+										<td>Change to directory.</td>
+								</tr>
+								<tr>
+										<td>clear</td>
+										<td>Clear a command line screen/window for a fresh start.</td>
+								</tr>
+								<tr>
+										<td>date [options]</td>
+										<td>Display or set the system date and time.</td>
+								</tr>
+								<tr>
+										<td>df [option]</td>
+										<td>Display used and available disk space.</td>
+								</tr>
+								<tr>
+										<td>du [options]</td>
+										<td>Show how much space each file takes up.</td>
+								</tr>
+								<tr>
+										<td>chown [options] filename</td>
+										<td>Change who owns a file.</td>
+								</tr>
+																<tr>
+										<td>find [pathname] [expression]</td>
+										<td>Search for files matching a provided pattern.</td>
+								</tr>
 
-// check if alert exists
-alert.getText();
-alert.accept();
-    } catch (Exception e) {
-}</pre>
-<p><b>Method to handle Alerts:</b>
-<pre>publicbooleanisAlertPresent() 
-{
-    try {
-     driver.switchTo().alert();
-     returntrue;
-     } // try
-     catch (Exception e) 
-     {
-        returnfalse;
-    } // catch
-}
-</pre>
-<p>Now, you can check whether alertly is present or not by using the method written above as below:
-<pre>if (isAlertPresent()) 
-{
-        driver.switchTo().alert();
-        driver.switchTo().alert().accept();
-        driver.switchTo().defaultContent();
-}
-</pre>
-<p>To decline the alert box:
-<pre>Alert alert = driver.switchTo().alert();
-alert().dismiss();
-</pre>
+																<tr>
+										<td>kill [options] pid</td>
+										<td>Stop a process.If the process refuses to stop</td>
+								</tr>
 
+																<tr>
+										<td>ls [options]</td>
+										<td>List directory contents.</td>
+								</tr>
 
+																<tr>
+										<td>man [command]</td>
+										<td>Display the help information for the specified command.</td>
+								</tr>
 
+																<tr>
+										<td>mkdir [options] directory</td>
+										<td>Create a new directory.</td>
+								</tr>
+								<tr>
+										<td>passwd [name [password]]</td>
+										<td>Change the password or allow (for the system administrator) to change any password.</td>
+								</tr>
+								<tr>
+										<td>ps [options]</td>
+										<td>Display a snapshot of the currently running processes</td>
+								</tr>
+								<tr>
+										<td>lpr [options]</td>
+										<td>Send a print job.</td>
+								</tr>
+								<tr>
+										<td>ln [options] source [destination]</td>
+										<td>Create a shortcut.</td>
+								</tr>
 
+																<tr>
+										<td>less [options] [filename]</td>
+										<td>View the contents of a file one page at a time.</td>
+								</tr>
 
+																<tr>
+										<td>chmod [options] mode filename</td>
+										<td>Change a file’s permissions.</td>
+								</tr>
+
+																<tr>
+										<td>chown [options] filename</td>
+										<td>Change who owns a file.</td>
+								</tr>
+
+																<tr>
+										<td>who [options]</td>
+										<td>Display who is logged on.</td>
+								</tr>
+
+						</tbody>
+					</table>
+					
+							
+				
+               </div>			   
               </div>
             </div>
           </div>
-
-        </div>
-
-		<!-- List of the Topics -->
-		
+      <!-- List of the Topics -->
+				
         <div class="col-lg-3">
           <div class="blog-side-item">
  
             <div class="blog-post">
               <h3><b>
-                Selenium WebDriver </b>
+               Linux Commands</b>
               </h3>
-              
+             
               <div class="media">
-                  <a href="../../testing/selenium/selenium_installation.html">selenium installation</a><p></p>
-                  <a href="../../testing/selenium/selenium_intro.html">Selenium Introduction </a><p></p>
-                  <a href="../../testing/selenium/selenium_page_factory.html">Selenium Page Factory</a><p></p>
-                  <a href="../../testing/selenium/selenium_locators.html">Selenium Locators</a><p></p>			  
-                <a href="../../testing/selenium/selenium_driver_comm.html">Selenium WebDriver commands</a><p></p>	
-                <a href="../../testing/selenium/selenium_frames_popups.html">Selenium  Frames/Popups in WebDriver</a><p></p>	
-				<a href="../../testing/selenium/selenium_webdriver_waits.html">Selenium Explicit and Implicit Waits</a><p></p>
+						<a href="#one">Linux Commands</a><p></p>
+						
                </div>
 			   
               </div>
@@ -358,8 +366,8 @@ alert().dismiss();
                      <address>
                          <p><i class="fa fa-home pr-10"></i>Address: Madhapur, silicon valley</p>
                          <p><i class="fa fa-globe pr-10"></i>Hyderabad, India</p>
-                        
-                         <p><i class="fa fa-phone pr-10"></i>Phone :  79899 39242</p>
+                         
+                         <p><i class="fa fa-phone pr-10"></i>Phone : 79899 39242</p>
                          <p><i class="fa fa-envelope pr-10"></i>Email : <a href="javascript:;">support@BrightITCareer.com</a></p>
                      </address>
                  </div>
