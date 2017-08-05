@@ -259,7 +259,7 @@
                 <div class="col-md-10 col-md-offset-1 mar-b-30">
 
                 <div id="heading">
-                  <h1 class="wow flipInX">FAQs</h1>
+                  <h1 class="wow flipInX">Selenium Program</h1>
                   
                 </div>
 
@@ -267,11 +267,11 @@
                     <div class="panel-group wow fadeInUp" id="accordion" data-wow-duration="2s">
 
                         <!-- PANEL 1 -->
-                        <div class="panel panel-default">
+                    <!--    <div class="panel panel-default">
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                    What are the languages supported by WebDriver.
+										Print all the values of dropdown list using Selenium WebDriver
                                     </a>
                                 </h4>
                             </div>
@@ -279,131 +279,136 @@
                             <div id="collapseOne" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
                                     <p>
-									<pre>Selenium Webdriver can be used with a variety of browsers such as 
-									
-Internet Explorer
-Mozilla Firefox
-Google Chrome
-Safari
-Opera
+									<pre> // Print all the option values available on student Registration page
 
-Languages that are supported by Selenium WebDriver are  
-
-C#
-Java
-Perl
-PHP
-Python 
-Ruby</pre>
+WebElement webEle = driver.findElement(By.id("ddlcountry"));
+List<WebElement> options= driver.findElements(By.tagName("option"));
+		for(WebElement option:options){
+		System.out.println("Option value : "+option.getText());		
+		}</pre>
 									</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- PANEL 2 -->
+                       
                         <div class="panel panel-default">
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                                    What are different types of locators
+									Select/Click an item from the dropdown list using Option tag
                                     </a>
                                 </h4>
                             </div>
                             <div id="collapseTwo" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
                                     <p>
-									<pre>Id
-Name
-Link Text
-Partial Link Text
-Tag Name
-CSS Class
-CSS Selector
-XPath</pre>
+									<pre>// Click the country "Uk" from the country dropdown list
+
+WebElement webEle = driver.findElement(By.id("ddlcountry"));
+List<WebElement> options= driver.findElements(By.tagName("option"));
+		for(WebElement option:options){
+				if("Uk".equals(option.getText())){
+				option.click();
+				System.out.println("Clicked "+option.getText());
+			}
+		}</pre>
 									</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- PANEL 3 -->
+                      
                         <div class="panel panel-default">
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                                   Difference between getText and getValue.
+                                   Select/Click an item from the dropdown list using visible Text/ Index
                                     </a>
                                 </h4>
                             </div>
 
                             <div id="collapseThree" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre>Get command is used to retrieve the inner text of the specified web element.
-									
-Syntax:
-
-	String text = driver.findElement(By.id(“Element_ID”)).getText();
-									</pre></p>
+                                    <p><pre>// Select an item from the dropdown list using SelectByVisibleText/SelectByIndex		
+		
+		WebElement webEle = driver.findElement(By.id("ddlcountry"));
+		Select select= new Select(webEle);
+		select.selectByVisibleText("USA");
+		select.selectByIndex(2);</pre></p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         
 
-                        <div class="panel panel-default">
+                <div class="panel panel-default">
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
-                                    Verify and Assert difference
+										TextBox: How to type in TextBox using Selenium WebDriver
                                     </a>
                                 </h4>
                             </div>
 
                             <div id="collapseFive" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre>When an "assert" command fails then test execution will be aborted.
-So when the Assertion fails, all the test steps after that line of code are skipped.
-When an "verify" command fails, it will fail the test but continue to run the test case
-									</pre>	</p>
+                                    <p><pre>// Type in TextBox using SendKeys
+	@Test
+	public void testEnterText() {
+		driver.get(url);
+		WebElement textBox = driver.findElement(By.id("fname"));
+		textBox.sendKeys("BrightITCareer");
+
+	}</pre>	</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="panel panel-default">
+                   <div class="panel panel-default">
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
-                                    How to get the value from text box
+                                    TextBox: How to get a TextBox value using Selenium WebDriver
                                     </a>
                                 </h4>
                             </div>
 
                             <div id="collapseSix" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                   <p><pre>In a textbox typed text goes into the value attribute.
-findElement(By.id("TextBoxid")).getAttribute("value");
+                                   <p><pre>// Reading a TextBox value, getting inner text value of any tag
+	@Test
+	public void testGetInnerText() {
+		driver.get(url);
+		WebElement textBox = driver.findElement(By.name("cname"));
+		System.out.println(" Enter Text is "+textBox.getText());
 
-For ComboBox is a bit different. But if you're using the Select object you can use the method:
-
-Select selectItem = new Select(findElement(By.id("someid")));
-selectItem.getFirstSelectedOption().getText();
-								   </pre></p>
+	}</pre></p>
                              </div>
                             </div>
                         </div>
                     
 
-					  <div class="panel panel-default">
+				  <div class="panel panel-default">
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
-									How to identify the image
+									TextBox: How to read the placeholder value of a TextBox using getAttribute() method
                                     </a>
                                 </h4>
                             </div>
 
                             <div id="collapseSeven" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre>driver.findElement(By.Xpath("//img[@ src='images/shim.gif']")).click();
+                                    <p><pre>// Reading the placeholder value using getAttribute() method	
+	@Test
+	public void testPlaceHolder(){
+		driver.get(url);
+		WebElement textBox= driver.findElement(By.id("fname"));
+		String placeHolder=textBox.getAttribute("placeholder");
+		System.out.println("PlaceHolder fo First Name is : "+placeHolder);
+		
+	}
 </pre></p>
                                 </div>
                             </div>
@@ -413,14 +418,20 @@ selectItem.getFirstSelectedOption().getText();
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">
-									In a drop down get the value of 3rd position text
+									TextBox: Deleting/clear text from the TextBox
                                     </a>
                                 </h4>
                             </div>
 
                             <div id="collapseEight" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre>
+                                    <p><pre>//Clear the text from the TextBox using clear() method
+	@Test
+	public void testgetInnerText() {
+		driver.get(url);
+		WebElement textBox = driver.findElement(By.id("fname"));
+		textBox.clear();
+	}
 </pre></p>
                                 </div>
                             </div>
@@ -430,14 +441,20 @@ selectItem.getFirstSelectedOption().getText();
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">
-									How many ways you can start a selenium server?
+									TextBox: Check if TextBox is enabled/disabled
                                     </a>
                                 </h4>
                             </div>
 
                             <div id="collapseTen" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre></pre></p>
+                                    <p><pre>@Test
+	    public void testgetInnerText() {
+		driver.get(url);
+		WebElement textBox = driver.findElement(By.id("fname"));
+		boolean flag=textBox.isEnabled();
+		System.out.println("TextBox is editable :"+flag);
+	}</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -446,14 +463,32 @@ selectItem.getFirstSelectedOption().getText();
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">
-                                    How many different commands you know in Selenium Web Driver?
+                                    Radio Button: Selecting the Radio Button by Label Text
                                     </a>
                                 </h4>
                             </div>
 
                             <div id="collapseEleven" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre>
+                                    <p><pre>// Selects the radio button Female/Male. 
+	// locating an element using Xpath
+	@Test
+	public void testRadioButtonGroupByXpath() {
+		driver.get(url);
+		String xPath = "//input[@value='Female']";
+		WebElement radioButton = driver.findElement(By.xpath(xPath));
+		radioButton.click();
+	}
+	
+	//locating RadioButtonGroup using Name and clicking Male Radio Button
+	@Test
+	public void testRadioButtonGroupByName() {
+		driver.get(url);
+		List<WebElement> radioGroup= driver.findElements(By.name("radiobtn"));
+		for(int i=0;i<radioGroup.size();i++){
+			if(radioGroup.get(i).getAttribute("value").equals("Male"))
+			radioGroup.get(i).click();
+	}
 </pre></p>
                                 </div>
                             </div>
@@ -463,15 +498,28 @@ selectItem.getFirstSelectedOption().getText();
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwelve">
-                                    How to generate report using Junit?
+                                     Radio Button: How to get the selected radio button label text /  Check if Radio Button is selected ?
                                     </a>
                                 </h4>
                             </div>
 
                             <div id="collapseTwelve" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre>
-                                </div>
+                                    <p><pre>@Test
+		public void testRadioButtonSelected() throws InterruptedException {
+		driver.get(url);
+		List<WebElement> radioGroup= driver.findElements(By.name("radiobtn"));
+		// wait for 10 seconds, Select one of the radio buttons manually if not already selected as the program waits for 10 seconds
+		Thread.sleep(10000);
+		for(int i=0;i<radioGroup.size();i++){
+			
+			System.out.println("Radio Button : "+radioGroup.get(i).getAttribute("value"));
+			// Prints the radion button selected
+			if(radioGroup.get(i).isSelected())
+			System.out.println("The Radio Button selected is : "+radioGroup.get(i).getAttribute("value"));
+		}
+	}
+    </div>
                             </div>
                         </div>
 						
@@ -479,14 +527,23 @@ selectItem.getFirstSelectedOption().getText();
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThirteen">
-                                    How to do cross-browser testing
+                                   Radio Button: Check if Radio Button is enabled or disabled ?
                                     </a>
                                 </h4>
                             </div>
 
                             <div id="collapseThirteen" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre> </pre></p>
+                                    <p><pre>// use isEnabled() method to check if Radio Button is enabled
+	@Test
+	public void testRadioButtonGroupByName()  {
+		driver.get(url);
+		List<WebElement> radioGroup = driver.findElements(By.name("radiobtn"));
+		for (int i = 0; i < radioGroup.size(); i++) {
+			if (radioGroup.get(i).isEnabled())
+				System.out.println("The Radio Button : " + radioGroup.get(i).getAttribute("value") + "   isenabled");
+		}
+	} </pre></p>
                                 </div>
                             </div>
                         </div>
@@ -495,14 +552,27 @@ selectItem.getFirstSelectedOption().getText();
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFourteen">
-									How to handle certificate page in selenium
+									CheckBox: Selecting the CheckBox of for Label/ select an HTML checkbox with a clickable label
                                     </a>
                                 </h4>
                             </div>
 
                             <div id="collapseFourteen" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre> </pre></p>
+                                    <p><pre>// use following-sibling
+HTML Code:
+<div>
+	<input id="CheckBox1" type="checkbox" name="CheckBox1" onclick="javascript:setTimeout('__doPostBack(\'CheckBox1\',\'\')', 0)">
+	<label for="CheckBox1">For Other City</label>
+</div>
+
+	@Test
+	public void testCheckBoxClickableLabel() {
+		driver.get(url);
+		String xPath = "//input[@id='CheckBox1']/following-sibling::label[@for='CheckBox1']";
+		WebElement checkBoxGroup = driver.findElement(By.xpath(xPath));
+		System.out.println("The CheckBox Text: " + checkBoxGroup.getText());
+	} </pre></p>
                                 </div>
                             </div>
                         </div>
@@ -511,14 +581,25 @@ selectItem.getFirstSelectedOption().getText();
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFifteen">
-                                   How to invoke Chrome/IE/Safari browsers in Selenium?
+                                  CheckBox: Check if a CheckBox is enabled
                                     </a>
                                 </h4>
                             </div>
 
                             <div id="collapseFifteen" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre></pre></p>
+                                    <p><pre>//  use type to locate all the checkboxes on the page
+	@Test
+	public void testCheckBoxByLabel() throws InterruptedException {
+		driver.get(url);
+		String xPath = "//input[@type='checkbox']";
+		List<WebElement> checkBoxGroup = driver.findElements(By.xpath(xPath));
+		for (int i = 0; i < checkBoxGroup.size(); i++) {
+			if (checkBoxGroup.get(i).isEnabled())
+				System.out.println("The CheckBox : " + checkBoxGroup.get(i).getAttribute("value") + "   isenabled");
+		}
+		System.out.println("CheckBox Count : " + checkBoxGroup.size());
+	}</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -527,7 +608,7 @@ selectItem.getFirstSelectedOption().getText();
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapsesixteen">
-                                      How to test Ajax application with Selenium?
+                                      Check DropDown/ListBox is empty
                                     </a>
                                 </h4>
                             </div>
@@ -543,22 +624,28 @@ selectItem.getFirstSelectedOption().getText();
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseseventeen">
-                                       What are the different types of locators in Selenium?
+                                       List down all the values of DropDown/ListBox and find the selected value
                                     </a>
                                 </h4>
                             </div>
 
                             <div id="collapseseventeen" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre>FirefoxDriver
-InternetExplorerDriver
-ChromeDriver
-SafariDriver
-OperaDriver
-AndroidDriver
-IPhoneDriver
-HtmlUnitDriver
-</pre></p>
+                                    <p><pre>// Lists down all the option values and finds the selected value
+	@Test
+	public void testSelectOptionDropDown() {
+		driver.get(url);
+		WebElement dropDownEle = driver.findElement(By.id("ddlcountry"));
+		Select selectDropDown = new Select(dropDownEle);
+		List<WebElement> listOptions = selectDropDown.getOptions();
+		for (int i = 0; i < listOptions.size(); i++) {
+
+			String str = listOptions.get(i).getText();
+			System.out.println("getText() is : " + str);
+			if (listOptions.get(i).isSelected())
+				System.out.println("Selected value is : " + str);
+		}
+	}</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -567,14 +654,21 @@ HtmlUnitDriver
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseEighteen">
-                                     What is Selenese?
+                                     How to select an option from DropDown/ListBox by Visible Text
                                     </a>
                                 </h4>
                             </div>
 
                             <div id="collapseEightteen" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre> </pre></p>
+                                    <p><pre>// Selects the option by Visible Text
+	@Test
+	public void testSelectOptionByVisibleText() {
+		driver.get(url);
+		WebElement dropDownEle = driver.findElement(By.id("ddlcountry"));
+		Select selectDropDown = new Select(dropDownEle);
+		selectDropDown.selectByVisibleText("Uk");
+	}	 </pre></p>
                                 </div>
                             </div>
                         </div>
@@ -583,20 +677,27 @@ HtmlUnitDriver
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseNineteen">
-                                     What is the use of xpath
+                                    Verify that DropDown list is no
                                     </a>
                                 </h4>
                             </div>
 
                             <div id="collapseNineteen" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre>
+                                    <p><pre>@Test
+	    public void testSelectOptionByVisibleText() {
+		driver.get(url);
+		WebElement dropDownEle = driver.findElement(By.id("ddlcity"));
+		Select selectDropDown = new Select(dropDownEle);
+		List<WebElement> options= selectDropDown.getOptions();
+		System.out.println("Options size :"+options.size());
+	}
 </pre></p>
                                 </div>
                             </div>
                         </div>
 						
-						<div class="panel panel-default">
+					<!--	<div class="panel panel-default">
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapsetwenty">
@@ -1789,7 +1890,7 @@ boolean elementEnabled = driver.findElement(By.id(“element_Id”)).isEnabled()
                                     <p><pre> </pre></p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 						<!--//////////  Toggle End//////////-->
 					</div>
 			  </div><!-- /col-md-10 -->
