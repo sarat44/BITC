@@ -106,8 +106,8 @@
                               <a href="../../testing/testing_main.html">Appium/Mobile Testing</a>
                           </li>
 						  
-						  <li> 
-                              <a href="../../testing/testing_main.html">SOAP UI</a>
+						   <li> 
+                              <a href="../../testing/soap_ui/soap_ui.html">SOAP UI</a>
                           </li>
                           
                     
@@ -509,7 +509,7 @@ List<WebElement> options= driver.findElements(By.tagName("option"));
 		public void testRadioButtonSelected() throws InterruptedException {
 		driver.get(url);
 		List<WebElement> radioGroup= driver.findElements(By.name("radiobtn"));
-		// wait for 10 seconds, Select one of the radio buttons manually if not already selected as the program waits for 10 seconds
+		// wait for 10 seconds,Select one of the radio buttons manually if not already selected as the program waits for 10 seconds
 		Thread.sleep(10000);
 		for(int i=0;i<radioGroup.size();i++){
 			
@@ -561,12 +561,7 @@ List<WebElement> options= driver.findElements(By.tagName("option"));
                                 <div class="panel-body panel-faq">
                                     <p><pre>// use following-sibling
 HTML Code:
-<div>
-	<input id="CheckBox1" type="checkbox" name="CheckBox1" onclick="javascript:setTimeout('__doPostBack(\'CheckBox1\',\'\')', 0)">
-	<label for="CheckBox1">For Other City</label>
-</div>
-
-	@Test
+@Test
 	public void testCheckBoxClickableLabel() {
 		driver.get(url);
 		String xPath = "//input[@id='CheckBox1']/following-sibling::label[@for='CheckBox1']";

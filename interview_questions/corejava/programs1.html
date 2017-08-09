@@ -105,9 +105,8 @@
 						   <li>
                               <a href="../../testing/testing_main.html">Appium/Mobile Testing</a>
                           </li>
-						  
-						  <li> 
-                              <a href="../../testing/testing_main.html">SOAP UI</a>
+						    <li> 
+                              <a href="../../testing/soap_ui/soap_ui.html">SOAP UI</a>
                           </li>
                           
                     
@@ -803,13 +802,13 @@ public class ForLoop
 						<div class="panel panel-default">
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseEighteen">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapsezero">
                                        Write a Java Program to print 10 to 20 using while loop.   
                                     </a>
                                 </h4>
                             </div>
 
-                            <div id="collapseEightteen" class="panel-collapse collapse">
+                            <div id="collapsezero" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
                                     <p><pre>package com.core;
 public class WhileLoop 
@@ -932,7 +931,22 @@ public class Factorial
 
                             <div id="collapsetwentytwo" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre></pre></p>
+                                    <p><pre>import java.util.*;
+class SumOfNum
+{
+	public static void main(String args[])
+	{
+		int sum = 0;
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the Sum of values");
+		int n=s.nextInt(); 
+		for(int i = 1;i <= n;i++)
+		{
+			sum = sum + i;
+		}
+		System.out.println("The Sum Of "+n+" Numbers are:" + sum);
+	}
+}</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1120,7 +1134,27 @@ class Main
 
                             <div id="collapseTwentyseven" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>interface interfaceDemo
+{
+   public void method();
+   public void method1();
+}
+class Bright implements interfaceDemo
+{
+  public void method()
+  {
+      System.out.println("implementation of method");
+  }
+  public void method1()
+  {
+      System.out.println("implementation of method1");
+  }
+  public static void main(String arg[])
+  {
+      interfaceDemo interfaceDemo = new Bright();
+      interfaceDemo. method();
+  }
+}</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1136,7 +1170,15 @@ class Main
 
                             <div id="collapseTwentyeight" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>class ConstructorDemo{  
+	ConstructorDemo()
+	{
+		System.out.println("ConstructorDemo is created");
+	}  
+	public static void main(String args[]){ 	 
+	ConstructorDemo b=new ConstructorDemo();  
+	}  
+}  </pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1152,7 +1194,35 @@ class Main
 
                             <div id="collapseTwentynine" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>public class StaticDemo {
+  public static void main(String[] args) {
+    One a1 = new One();
+    Two b1 = new Two();
+  }
+}
+
+class One {
+  static{
+    System.out.println("Static block of Class One");
+  }
+  {
+    System.out.println("Non-Static block of a instance of Class One");
+  }
+  public One(){
+    System.out.println("Constructing object of type One");
+  }
+}
+class Two {
+  static{
+    System.out.println("Static block of Class Two");
+  }
+  {
+    System.out.println("Non-Static block of a instance of Class Two");
+  }
+  public Two(){
+    System.out.println("Constructing object of type One");
+  }
+}</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1168,7 +1238,26 @@ class Main
 
                             <div id="collapseThirty" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>class Student{  
+	int rollno;  
+	String name;  
+	float fee;  
+	Student(int rollno,String name,float fee){  
+		this.rollno=rollno;  
+		this.name=name;  
+		this.fee=fee;  
+	}  
+	void display(){
+	System.out.println(rollno+" "+name+" "+fee);
+	}  
+}  
+public class ThisDemo{  
+public static void main(String args[]){  
+	Student s1=new Student(234,"Ramu",4500f);  
+	Student s2=new Student(123,"Sitha",6500f);  
+	s1.display();  
+	s2.display();  
+}}</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1184,7 +1273,21 @@ class Main
 
                             <div id="collapseThirtyone" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>class Laptop{  
+String color="white";  
+}  
+class Dell extends Laptop{  
+String color="black";  
+void printColor(){  
+System.out.println(color);//prints color of Dell class  
+System.out.println(super.color);//prints color of Laptop class  
+}  
+}  
+class SuperDemo{  
+public static void main(String args[]){  
+Dell d=new Dell();  
+d.printColor();  
+}}  </pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1200,7 +1303,16 @@ class Main
 
                             <div id="collapseThirtytwo" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>class Book{  
+ final String type="Horror";//final variable  
+ void run(){  
+  System.out.println(type);
+ }  
+ public static void main(String args[]){  
+ Book obj=new Book();  
+ obj.run();  
+ }  
+}//end of class  </pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1240,7 +1352,16 @@ class Main
 
                             <div id="collapseThirtythree" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>class ArrayDemo
+{
+	public static void main(String ar[]){
+	 int[] array = {10, 20, 30, 40, 50, 10};
+	System.out.println("Given array elements..");
+	for(int num : array){
+		System.out.println(num);	
+	}
+}
+}</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1256,7 +1377,22 @@ class Main
 
                             <div id="collapseThirtyfour" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>import java.util.*;
+class ArrayDemo1{
+	public static void main(String ar[]){
+		int sum=0;
+		System.out.println("Enter the values 5 values");
+		Scanner s=new Scanner(System.in);
+		int arr[]=new int[5];
+		for(int i=0;i<5;i++){
+			arr[i]=s.nextInt();
+		}
+		for(int num: arr){
+			sum=sum+num;
+		}
+	System.out.println("Sum of array elements is:"+sum);
+	}
+}</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1272,7 +1408,27 @@ class Main
 
                             <div id="collapseThirtyfive" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>public class ArrayMaxMin {
+ 
+        public static void main(String[] args) {
+               
+                //numbers array
+                int numbers[] = new int[]{5,55,9,44,12,4,8,90,219,319};
+               
+                //assign first element of an array to largest and smallest
+                int smallest = numbers[0];
+                int largetst = numbers[0];
+               
+                for(int i=1; i< numbers.length; i++) { 
+			if(numbers[i] > largetst)
+                                largetst = numbers[i];
+                        else if (numbers[i] < smallest)
+                                smallest = numbers[i];    
+                }
+                System.out.println("Largest Number is : " + largetst);
+                System.out.println("Smallest Number is : " + smallest);
+        }
+}</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1288,7 +1444,26 @@ class Main
 
                             <div id="collapseThirtysix" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>class ArrayLoop {
+   public static void main(String[] args) {
+      int[] ary = { 11,222,333,444};
+      forDis(ary);
+      foreachDis(ary);
+   }
+   public static void forDis(int[] a) {  
+      System.out.println("Display an array using for loop");
+      for (int i = 0; i < a.length; i++) {
+         System.out.print(a[i] + " ");
+      }
+      System.out.println();
+   }
+   public static void foreachDis(int[] data) {
+      System.out.println("Display an array using for each loop");
+      for (int a  : data) {
+         System.out.print(a+ " ");
+      }
+   }
+}</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1304,7 +1479,32 @@ class Main
 
                             <div id="collapseThirtyseven" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>// differences between array and arraylist
+import java.util.ArrayList;
+import java.util.Arrays;
+ 
+class Arraylist
+{
+    public static void main(String args[])
+    {
+        /* ........... Normal Array............. */
+        int[] arr = new int[3];
+        arr[0] = 11;
+        arr[1] = 22;
+        System.out.println(arr[1]);
+ 
+        /*............ArrayList..............*/
+        
+        ArrayList<Integer> arrL = new ArrayList<Integer>(2);
+ 
+        // Add elements to ArrayList
+        arrL.add(11);
+        arrL.add(22);
+ 
+        // Access elements of ArrayList
+        System.out.println(arrL.get(1));
+    }
+}</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1337,7 +1537,20 @@ class Main
 
                             <div id="collapseThirtynine" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>public class OutDemo {
+  public static void main(String[] args) {
+    String[] Hello = new String[3];
+    Hello[0] = "Good Morning";
+    Hello[1] = "Good Afternoon";
+    Hello[2] = "Good Evening.";
+
+    for (int i = 0; i < Hello.length; i++)
+      System.out.println(Hello[i]);
+  }
+}
+
+           
+       </pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1354,12 +1567,29 @@ class Main
 
                             <div id="collapsefourtyone" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>public class extendsDemo {
+   public static void main(String[] args) {
+      String[] beforeInit= new String[] { "A", "B", "C" };
+      //Define array length
+      String[] afterInit = new String[7];
+    //extend new array
+      afterInit[3] = "D";
+      afterInit[4] = "E";
+      afterInit[5] = "F";
+      afterInit[6] = "G";
+    //  check value and length 
+	System.arraycopy(beforeInit,0, afterInit ,0, beforeInit.length);
+      for (String str : afterInit){
+         System.out.println(str);
+      }
+   }
+}
+</pre></p>
                                 </div>
                             </div>
                         </div>
 						
-						<div class="panel panel-default">
+					<!--	<div class="panel panel-default">
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapsefourtytwo">
@@ -1374,7 +1604,7 @@ class Main
                                 </div>
                             </div>
                         </div>
-						
+						-->
 						
 						<div class="panel panel-default">
                             <div class="panel-heading panel-heading-faq">
@@ -1387,7 +1617,21 @@ class Main
 
                             <div id="collapsefourtythree" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>class multiArrayDemo{  
+public static void main(String args[]){  
+  
+//declaring and initializing MulMultidimensional array  
+int arr[][]={{11,22,33},{22,44,55},{44,44,55}};  
+  
+//printing Multidimensional array  
+for(int i=0;i<3;i++){  
+ for(int j=0;j<3;j++){  
+   System.out.print(arr[i][j]+" ");  
+ }  
+ System.out.println();  
+}  
+  
+}}  </pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1429,7 +1673,20 @@ class Main
 
                             <div id="collapsefourtyfour" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>import java.io.*;
+public class stringLength{
+
+   public static void main(String args[]) {
+      String Str1 = new String("Welcome BrightITCareer.com");
+      String Str2 = new String("Student");
+
+      System.out.print("String Length :");
+      System.out.println(Str1.length());
+
+      System.out.print("String Length :" );
+      System.out.println(Str2.length());
+   }
+}</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1447,7 +1704,30 @@ class Main
 
                             <div id="collapsefourtyfive" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>import java.util.*;
+ 
+class poliArrayDemo
+{
+   public static void main(String args[])
+   {
+      String original, reverse = "";
+      Scanner in = new Scanner(System.in);
+ 
+      System.out.println("Enter a string to check if it is a palindrome");
+      original = in.nextLine();
+ 
+      int length = original.length();
+ 
+      for ( int i = length - 1; i >= 0; i-- )
+         reverse = reverse + original.charAt(i);
+ 
+      if (original.equals(reverse))
+         System.out.println("Entered string is a palindrome.");
+      else
+         System.out.println("Entered string is not a palindrome.");
+ 
+   }
+}	</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1463,7 +1743,16 @@ class Main
 
                             <div id="collapsefourtysix" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>import java.io.*;
+public class trimDemo{
+
+   public static void main(String args[]) {
+      String Str = new String("   Welcome to BrightITCareer.com   ");
+
+      System.out.print("Given Value :" );
+      System.out.println(Str.trim() );
+   }
+}</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1479,7 +1768,20 @@ class Main
 
                             <div id="collapsefourtyseven" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>public class endsStringDemo{
+   public static void main(String args[]){
+       String str1 = new String("This is a Demo String");
+       String str2 = new String("BrightITCareer");
+       boolean va1 = str1.endsWith("String");
+       boolean va2 = str1.endsWith("Bright");
+       boolean va3 = str2.endsWith("String");
+       boolean va4 = str2.endsWith("Career");
+       System.out.println("str1 ends with String: "+ va1);
+       System.out.println("str1 ends with ABC: "+ va2);
+       System.out.println("str2 ends with String: "+ va3);
+       System.out.println("str2 ends with ABC: "+ va4);
+   }
+}</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1495,7 +1797,19 @@ class Main
 
                             <div id="collapsefourtyeight" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>import java.io.*;
+public class repalceDemo{
+
+   public static void main(String args[]) {
+      String Str = new String("Welcome to brightITCareer.com");
+      
+      System.out.print("Return Value :" );
+      System.out.println(Str.replace('a', 'b'));
+
+      System.out.print("Return Value :" );
+      System.out.println(Str.replace('o', 'O'));
+   }
+}</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1511,7 +1825,20 @@ class Main
 
                             <div id="collapsefourtynine" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>public class compareStrDemo{
+
+   public static void main(String args[]) {
+      String str1 = "Bright";
+      String str2 = new String("BrightITCareer.com");
+      String str3 = new String("bright");
+      
+      int result = str1.compareTo( str2 );
+      System.out.println(result);
+      
+      result = str2.compareTo( str3 );
+      System.out.println(result);
+   }
+}</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1527,7 +1854,12 @@ class Main
 
                             <div id="collapsefifty" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>public class subStringDemo{  
+public static void main(String args[]){  
+String s1="BrightITCareer.com";  
+System.out.println(s1.substring(0,5));//returns va  
+System.out.println(s1.substring(0));//returns vatpoint  
+}}  </pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1543,7 +1875,12 @@ class Main
 
                             <div id="collapsefiftyone" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>public class upperCaseDemo{  
+public static void main(String args[]){  
+String s1="brightitcareer.com";  
+String upper=s1.toUpperCase();  
+System.out.println(upper);  
+}} </pre> </p>
                                 </div>
                             </div>
                         </div>
@@ -1559,7 +1896,14 @@ class Main
 
                             <div id="collapsefiftytwo" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>public class concatDemo{
+
+   public static void main(String args[]) {
+      String s = "Welcome to ";
+      s = s.concat(" BrightITCareer.com");
+      System.out.println(s);
+   }
+}</pre></p>
                                 </div>
                             </div>
                         </div>
@@ -1576,7 +1920,25 @@ class Main
 
                             <div id="collapsefiftythree" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>public class countDemo
+{ 
+	public static void main(String args[])
+	{ 
+		String s = "welcome to BrightITCareer.com";
+ 
+		int count = 1;
+ 
+		for (int i = 0; i < s.length() - 1; i++)
+		{
+			if ((s.charAt(i) == ' ') && (s.charAt(i + 1) != ' '))
+			{
+				count++;
+ 
+			}
+		}
+ 		System.out.println("Number of words in a string = " + count);
+	}
+}</pre></p>
                                 </div>
                             </div>
                         </div>
