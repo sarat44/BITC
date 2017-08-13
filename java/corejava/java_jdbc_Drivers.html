@@ -56,9 +56,9 @@
                           <li>
                               <a href="../../index.html">Career Counselling</a>
                           </li>
-						 	   <li>
+						  	   <li>
 								<a href="../../course/details/coursedetails.html">Course Details</a>
-						  </li> 
+						  </li>
                       </ul>
                   </li>
 				  
@@ -81,7 +81,7 @@
 				  
 				  <li class="dropdown">
                       <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
-                      "dropdown" data-toggle="dropdown" href="#">Testing  <i class="fa fa-angle-down"></i>
+                      "dropdown" data-toggle="dropdown" href="#">Testing <i class="fa fa-angle-down"></i>
                       </a>
                       <ul class="dropdown-menu">
                           <li>
@@ -93,16 +93,17 @@
 						  <li>
 								<a href="../../testing/testNG/testing_introduction.html">TestNG</a>
 						  </li>
-						<!--   <li>
+						  <!-- <li>
                               <a href="../../testing/testing_main.html">Appium</a>
                           </li> -->
 						   <li>
                               <a href="../../testing/testing_main.html">Appium/Mobile Testing</a>
                           </li>
 						  
-						     <li> 
+						    <li> 
                               <a href="../../testing/soap_ui/soap_ui.html">SOAP UI</a>
                           </li>
+                          
                     
                          <li class="dropdown-submenu">
                               <a href="#" tabindex="-1">Defect Tracking Tools</a>
@@ -130,9 +131,9 @@
                               </ul>
                           </li> 
 						  
-                   <!--       <li> 
+                  <!--        <li> 
                               <a href="../../testing/testing_main.html">QTP</a>
-                          </li> -->
+                          </li>  -->
 						  <li> 
                               <a href="../../sql/sql/sql_Demo.html">SQL</a>
                           </li>
@@ -145,7 +146,7 @@
 								<a href="../../testing/github/github.html">Git Hub</a>
 						  </li>
 						  
-						  <li>
+						   <li>
 								<a href="../../testing/jenkin/maven_project.html">Maven</a>
 						  </li>
                       </ul>
@@ -160,20 +161,20 @@
                       "dropdown" data-toggle="dropdown" href="#">Interview Questions <i class="fa fa-angle-down"></i>
                       </a>
                       <ul class="dropdown-menu">
-                         <li>
+                          <li>
                               <a href="../../interview_questions/manul_testing/interview_manul_testing.html">Manual Testing</a>
                           </li>
 						   <li>
 								<a href="../../interview_questions/soap_ui/interview_soap_ui.html">SOAP UI</a>
 						  </li>
-                       <li>
+                          <li>
                               <a href="../../interview_questions/selenium/interview_Selenium.html">Selenium</a>
                           </li>
                           <li>
                               <a href="../../testing/testing_main.html">Appium</a>
                           </li>
                           <li>
-                             <a href="../../interview_questions/corejava/programs1.html">Core JAVA</a>
+                              <a href="../../interview_questions/corejava/programs1.html">Core JAVA</a>
                           </li>
 						  <li>
                               <a href="../../interview_questions/sql/interview_sql.html">SQL</a>
@@ -198,14 +199,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-sm-4">
-                    <h1>Core Java(jdbc)</h1>
+                    <h1>Core Java(jdbc_Sql)</h1>
                 </div>
                 <div class="col-lg-8 col-sm-8">
                     <ol class="breadcrumb pull-right">
                         <li><a href="../../index.html">Home</a></li>
                         <li><a href="../../java/corejava/java_installation.html">Java</a></li>
 						
-                        <li class="active">Jdbc Connection</li>
+                        <li class="active">Jdbc Connection(SQL)</li>
                     </ol>
                 </div>
             </div>
@@ -224,74 +225,33 @@
             <div class="row">
               
               <div class="col-lg-10 col-sm-10">
-                <h1> <p>Jdbc Connection</p></h1>
-                <p>Steps to interact with oracle database
-				<ol type="I">
-					<li>Download or find <big>ojdbc14.jar/ojdbc6.jar</big> file</li>
-					<li>We have to set the class path for the jar file</li>
-					<ol>
-						<li>My computer ->properties -> advanced system settings -> click on Environment Variables button -> click on new button from user variables</li>
-						<br><br>
-						<img src="../../java/corejava/img/jdbc_1.png" height="300" width="500">
-					</ol><br>
-					<li>Find out the <big>SID Name</big> of database </li>
-						<ol>
-							<li>Select INSTANCE_NAME from v$instance;</li>
-							<li>Select name from v$database;</li>
-						</ol>
-					<p>Note: The above two commands are run only in administrator user (system/manager)
-					<li>What is 1521 port over Here?</li>
-						<ol>
-							<li> 1521 is the default port number of oracle. It allows oracle client connections to the database.</li>
-						</ol>
-						<li><big>To Connect with database. we have to follow the below Steps.</big></li>
-						<br>
-						<p><big>Steps 1: </big> import the package.
-						<pre>import java.sql.*;
-import javax.sql.*;
-</pre>
-						<p><big>Steps 2: </big> Load the driver.
-						<pre>Class.forName(“oracle.jdbc.driver.OracleDriver”);</pre>
-						<p><big>Steps 3: </big>Establish the database connection.
-						<pre>Connection con=DriverManager.getConnection(“jdbc:oracle:thin:@PC3:1521:XE”,”scott”,”tiger”);
-						</pre>
-						<p><big>Steps 4: </big> Create the statement object and send the commands to the database
-						<pre>Statement stmt=con.createStatement();
-						</pre>
-						<p><big>Steps 5: </big>	Send the commands(Querys) and get the results by using the methods of Statement object
-						<pre>ResultSet rs=stmt.executeQuery(“select command”);
-boolean flag=stmt.execute(“any  command”);
-int i=stmt.executeUpdate(“only dml commands”);
-int i[]=stmt.executeBatch()
-</pre>
-					<p><big>Steps 6:</big>	Close the database connection
-					<pre>con.close();
-					</pre>
-				</ol>
-				<p><big>Example Code:</big><pre>import java.sql.*;
-import static java.lang.System.*;
-class DbCon
-{	
-	public static void main(String args[])throws Exception
-	{	Class.forName("oracle.jdbc.driver.OracleDriver");
-		out.println("Loaded....");
-		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:ORCL","scott","tiger");
-		out.println("Connected...");
-		Statement stmt=con.createStatement();
-		ResultSet rs=stmt.executeQuery("select * from  emp");
-		while(rs.next())
-		{	for(int i=1;i<=4;i++)
-			{out.print(rs.getString(i)+"\t");
-			}
-			out.println();
-		}
-		con.close();
-	}
-}</pre>
-<p><big>Note:</big> Before that we need to have Database.
+                <h1> <p>Jdbc Drivers Types</p></h1>
+				<p>JDBC Driver is a software component that enables java application to interact with the database.There are 4 types of JDBC drivers:
+				<p><b><h4>Type 1: JDBC-ODBC bridge driver
+				<br>Type 2:Native-API driver<br>
+				Type 3: All Java + Middleware translation driver<br>
+				Type 4: Thin driver
+				</h4></b>
+				<p>Today, most drivers are type 4 drivers. Nevertheless, I will just discuss the 4 types of drivers shortly.
+				<p><b>Type 1 JDBC Driver</b>
+				<p>A type 1 JDBC driver consists of a Java part that translates the JDBC interface calls to ODBC calls. An ODBC bridge then calls the ODBC driver of the given database. Type 1 drivers are (were) mostly intended to be used in the beginning, when there were no type 4 drivers (all Java drivers). Here is an illustration of how a type 1 JDBC driver is organized:<br>
+			    <img src="../../java/corejava/img/one.png" height="200" width="700">
+				<center><b>Type 1 JDBC driver.</b></center>
+				<p><b>Type 2 JDBC Driver</b>
+				<p>A type 2 JDBC driver is like a type 1 driver, except the ODBC part is replaced with a native code part instead. The native code part is targeted at a specific database product. Here is an illustration of a type 2 JDBC driver:<br>
+				<img src="../../java/corejava/img/two.png" height="200" width="600">
+				<p><center><b>Type 2 JDBC Driver</b></center>
+				<p><b>Type 3 JDBC Driver</b>
+				<p>A type 3 JDBC driver is an all Java driver that sends the JDBC interface calls to an intermediate server. The intermediate server then connects to the database on behalf of the JDBC driver. Here is an illustration of a type 3 JDBC driver:<br>
+				<img src="../../java/corejava/img/three.png" height="200" width="600">
+				<p><center><b>Type 3 JDBC Driver</b></center>
+				<p><b>Type 4 JDBC Driver</b>
+				<p>A type 4 JDBC driver is an all Java driver which connects directly to the database. It is implemented for a specific database product. Today, most JDBC drivers are type 4 drivers. Here is an illustration of how a type 4 JDBC driver is organized:<br>
+				<img src="../../java/corejava/img/five.png" height="200" width="600">
+				<p><center><b>Type 4 JDBC Driver</b></center>
 				
-
-	</div>
+				<p>
+			</div>
             </div>
           </div>
 
@@ -334,8 +294,8 @@ class DbCon
                      <address>
                          <p><i class="fa fa-home pr-10"></i>Address: Madhapur, silicon valley</p>
                          <p><i class="fa fa-globe pr-10"></i>Hyderabad, India</p>
-                        
-                         <p><i class="fa fa-phone pr-10"></i>Phone :79899 39242</p>
+                         
+                         <p><i class="fa fa-phone pr-10"></i>Phone : 79899 39242</p>
                          <p><i class="fa fa-envelope pr-10"></i>Email : <a href="javascript:;">support@BrightITCareer.com</a></p>
                      </address>
                  </div>

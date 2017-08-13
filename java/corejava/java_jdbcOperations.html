@@ -224,73 +224,175 @@
             <div class="row">
               
               <div class="col-lg-10 col-sm-10">
-                <h1> <p>Jdbc Connection</p></h1>
-                <p>Steps to interact with oracle database
-				<ol type="I">
-					<li>Download or find <big>ojdbc14.jar/ojdbc6.jar</big> file</li>
-					<li>We have to set the class path for the jar file</li>
-					<ol>
-						<li>My computer ->properties -> advanced system settings -> click on Environment Variables button -> click on new button from user variables</li>
-						<br><br>
-						<img src="../../java/corejava/img/jdbc_1.png" height="300" width="500">
-					</ol><br>
-					<li>Find out the <big>SID Name</big> of database </li>
-						<ol>
-							<li>Select INSTANCE_NAME from v$instance;</li>
-							<li>Select name from v$database;</li>
-						</ol>
-					<p>Note: The above two commands are run only in administrator user (system/manager)
-					<li>What is 1521 port over Here?</li>
-						<ol>
-							<li> 1521 is the default port number of oracle. It allows oracle client connections to the database.</li>
-						</ol>
-						<li><big>To Connect with database. we have to follow the below Steps.</big></li>
-						<br>
-						<p><big>Steps 1: </big> import the package.
-						<pre>import java.sql.*;
-import javax.sql.*;
-</pre>
-						<p><big>Steps 2: </big> Load the driver.
-						<pre>Class.forName(“oracle.jdbc.driver.OracleDriver”);</pre>
-						<p><big>Steps 3: </big>Establish the database connection.
-						<pre>Connection con=DriverManager.getConnection(“jdbc:oracle:thin:@PC3:1521:XE”,”scott”,”tiger”);
-						</pre>
-						<p><big>Steps 4: </big> Create the statement object and send the commands to the database
-						<pre>Statement stmt=con.createStatement();
-						</pre>
-						<p><big>Steps 5: </big>	Send the commands(Querys) and get the results by using the methods of Statement object
-						<pre>ResultSet rs=stmt.executeQuery(“select command”);
-boolean flag=stmt.execute(“any  command”);
-int i=stmt.executeUpdate(“only dml commands”);
-int i[]=stmt.executeBatch()
-</pre>
-					<p><big>Steps 6:</big>	Close the database connection
-					<pre>con.close();
-					</pre>
-				</ol>
-				<p><big>Example Code:</big><pre>import java.sql.*;
-import static java.lang.System.*;
-class DbCon
-{	
-	public static void main(String args[])throws Exception
-	{	Class.forName("oracle.jdbc.driver.OracleDriver");
+                <h1> <p>Jdbc Connection Operations</p></h1>
+                <p><b>Create table by using the JDBC program.</b>
+				<pre>import java.sql.*;
+import java.lang.*;
+class JdbcBrightCreate{
+	try{	
+ 		public static void main(String args[])throws Exception{	
+		//Register JDBC driver.
+	        Class.forName("oracle.jdbc.driver.OracleDriver");
 		out.println("Loaded....");
-		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:ORCL","scott","tiger");
+		//Open a connection.
+		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:  XE","Bright","Career");
 		out.println("Connected...");
-		Statement stmt=con.createStatement();
-		ResultSet rs=stmt.executeQuery("select * from  emp");
-		while(rs.next())
-		{	for(int i=1;i<=4;i++)
-			{out.print(rs.getString(i)+"\t");
-			}
-			out.println();
-		}
+		//Create Statement Object.
+	  	Statement stmt=con.createStatement();
+		String sql = "CREATE TABLE Student " +
+	                   "(id INTEGER not NULL, " +
+	                   " first VARCHAR(255), " + 
+	                   " last VARCHAR(255), " + 
+	                   " age INTEGER, " + 
+	                   " PRIMARY KEY ( id ))"; 
+		stmt.executeUpdate(sql);
+		System.out.println("Created table in given database...");
+	}catch(Exception e){
+		System.out.println(e);
+	}
+	finally{
 		con.close();
 	}
-}</pre>
-<p><big>Note:</big> Before that we need to have Database.
-				
-
+}}
+</pre>
+<p><b>Inserted records into the table.</b>
+<pre>import java.sql.*;
+import java.lang.*;
+class JdbcBrightInsert{
+	try{	
+ 		public static void main(String args[])throws Exception{	
+		//Register JDBC driver.
+	        Class.forName("oracle.jdbc.driver.OracleDriver");
+		out.println("Loaded....");
+		//Open a connection.
+		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:  XE","Bright","Career");
+		out.println("Connected...");
+		//Create Statement Object.
+	  	Statement stmt=con.createStatement();
+		
+		String sql = "INSERT INTO Student " + "VALUES (100, 'abc', 'one', 18)";
+     		stmt.executeUpdate(sql);
+      		sql1 = "INSERT INTO Student " +"VALUES (101, 'zyx', 'two', 4)";
+      		stmt.executeUpdate(sql1);
+      		sql2 = "INSERT INTO Student " + "VALUES (102, 'pqr', 'three', 44)";
+      		stmt.executeUpdate(sql2);
+      		sql3 = "INSERT INTO Student " +"VALUES(103, 'ksk', 'four', 19)";
+      		stmt.executeUpdate(sql3);
+		System.out.println("inserting values into database...");
+	}catch(Exception e){
+		System.out.println(e);
+	}
+	finally{
+		con.close();
+	}
+}}</pre>
+<p><b>Getting values from Database</b>
+<pre>import java.sql.*;
+import java.lang.*;
+class JdbcBrightGet{
+	try{	
+ 		public static void main(String args[])throws Exception{	
+		//Register JDBC driver.
+	        Class.forName("oracle.jdbc.driver.OracleDriver");
+		out.println("Loaded....");
+		//Open a connection.
+		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:  XE","Bright","Career");
+		out.println("Connected...");
+		//Create Statement Object.
+	  	Statement stmt=con.createStatement();
+		ResultSet rs=stmt.executeQuery("select * from  emp");
+		while(rs.next())
+		{	out.print(rs.getString(1)+"\t"+rs.getString(2));
+			out.println();
+		}
+		}catch(Exception e){
+		System.out.println(e);
+	}
+	finally{
+		con.close();
+	}
+}}
+</pre>
+<p><b>Updated records</b>
+<pre>import java.sql.*;
+import java.lang.*;
+class JdbcBrightUpdate{
+	try{	
+ 		public static void main(String args[])throws Exception{	
+		//Register JDBC driver.
+	        Class.forName("oracle.jdbc.driver.OracleDriver");
+		out.println("Loaded....");
+		//Open a connection.
+		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:  XE","Bright","Career");
+		out.println("Connected...");
+		//Create Statement Object.
+	  	Statement stmt=con.createStatement();
+		int r=stmt.executeUpdate("update students set first='Venkatesh' where id=1");
+		out.println(r+" rows are updated...");
+		}catch(Exception e){
+		System.out.println(e);
+	}
+	finally{
+		con.close();
+	}
+}}
+</pre>
+<p><b>Delete records</b>
+<pre>import java.sql.*;
+import java.lang.*;
+class JdbcBrightDelete{
+	try{	
+ 		public static void main(String args[])throws Exception{	
+		//Register JDBC driver.
+	        Class.forName("oracle.jdbc.driver.OracleDriver");
+		out.println("Loaded....");
+		//Open a connection.
+		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:  XE","Bright","Career");
+		out.println("Connected...");
+		//Create Statement Object.
+	  	Statement stmt=con.createStatement();
+		int r=stmt.executeUpdate("delete from Student where sno=2");
+		out.println(r+" rows are deleted...");
+		}catch(Exception e){
+		System.out.println(e);
+	}
+	finally{
+		con.close();
+	}
+}}</pre>
+<p><b>DeleteRollback records </b>
+<pre>import java.sql.*;
+import java.lang.*;
+class JdbcBrightDelete{
+	
+		public static Properties getProps(){
+		Properties p=new Properties();
+		p.put("user","Bright");	
+		p.put("password","Career");	
+		return p;
+		}
+		try{	
+ 		public static void main(String args[])throws Exception{	
+		//Register JDBC driver.
+	    Class.forName("oracle.jdbc.driver.OracleDriver");
+		out.println("Loaded....");
+		//Open a connection.
+		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:  XE",getProps());
+		out.println("Connected...");
+		//Create Statement Object.
+	  	Statement stmt=con.createStatement();
+		con.setAutoCommit(false);
+		Statement stmt=con.createStatement();
+		int r=stmt.executeUpdate("delete from Student where first='LKG'");
+		out.println(r+"   rows are deleted..");
+		}catch(Exception e){
+		System.out.println(e);
+	}
+	finally{
+		con.close();
+	}
+}}
+</pre>
 	</div>
             </div>
           </div>
@@ -305,7 +407,7 @@ class DbCon
               <h3><b>
              Database Connection </b>
               </h3>
-              
+              <p>
               <div class="media">
                   <a href="../../java/corejava/java_jdbc.html">Java Connection_Oracle</a><p></p>
                   <a href="../../java/corejava/java_jdbcSql.html">Java Connection_SQL </a><p></p>
