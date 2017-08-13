@@ -363,6 +363,7 @@ class JdbcBrightDelete{
 <p><b>DeleteRollback records </b>
 <pre>import java.sql.*;
 import java.lang.*;
+import java.util.*;
 class JdbcBrightDelete{
 	
 		public static Properties getProps(){
@@ -393,6 +394,83 @@ class JdbcBrightDelete{
 	}
 }}
 </pre>
+<p>SavePoint the records
+<pre>import java.sql.*;
+import java.lang.*;
+import java.util.*;
+class JdbcBrightSavePoint{
+		public static Properties getProps(){
+		Properties p=new Properties();
+		p.put("user","Bright");	
+		p.put("password","Career");	
+		return p;
+		}
+		try{	
+ 		public static void main(String args[])throws Exception{	
+		//Register JDBC driver.
+	    Class.forName("oracle.jdbc.driver.OracleDriver");
+		out.println("Loaded....");
+		//Open a connection.
+		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:  XE",getProps());
+		out.println("Connected...");
+		//Create Statement Object.
+	  	Statement stmt=con.createStatement();
+		Savepoint sp1=con.setSavepoint();
+		int r=stmt.executeUpdate("delete from students where first='Bright'");
+		System.out.println(r+"   rows are deleted..");
+		Savepoint sp2=con.setSavepoint();
+		r=stmt.executeUpdate("insert into students values(100, 'abc', 'one', 18)");
+		System.out.println(r+"   rows are inserted..");
+		con.rollback(sp2);
+		con.commit();
+		}catch{
+			System.out.println(e);
+		}finally{
+			con.close;
+		}
+		
+}</pre>
+<p>Using the PreparedStatement
+<pre>import java.lang.*;
+import java.sql.*;
+class JdbcPrepared
+{	public static void main(String args[])throws Exception
+	{
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	out.println("Driver is loaded..");
+	Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","Bright","Career");
+	PreparedStatement pstmt=con.prepareStatement("insert into students values(?,?,?,?)");
+	pstmt.setInt(1,4);
+	pstmt.setString(2,"Gandhi");
+	pstmt.setString(3,"e.c.e");
+	pstmt.setInt(4,44);
+	int r=pstmt.executeUpdate();
+	out.println(r+" rows are updated...");
+	}
+}</pre>
+<p>Using the CallableStatement
+<pre>create or replace procedure getSal(empno in varchar2,empsal out number)
+as
+begin
+select sal into empsal from employee where eno=empno;
+end;
+/
+</pre>
+<pre>import java.lang.*;
+import java.sql.*;
+class JdbcCallableStatement{
+	{	public static void main(String args[])throws Exception
+	{	Class.forName("oracle.jdbc.driver.OracleDriver");	
+		out.println("Loaded..");
+		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","scott","tiger");
+		CallableStatement cstmt=con.prepareCall("{call getSal(?,?)}");
+		cstmt.setString(1,"emp3");
+		cstmt.registerOutParameter(2,Types.FLOAT);
+		cstmt.execute();
+		out.println(cstmt.getFloat(2));
+		con.close();
+	}
+}</pre>
 	</div>
             </div>
           </div>
