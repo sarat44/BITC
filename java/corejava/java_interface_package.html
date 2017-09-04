@@ -229,12 +229,9 @@
               
               <div class="col-lg-10 col-sm-10">
                 <h1>
-                 
-                    
 					<p>Interface, package and Access Modifiers
-                 
                 </h1>
-	<h2>1.Java Interface</h2>
+	<h3>Java Interface</h3>
 	<p>the Interface is a pure abstract class.They are syntactically similar to classes, but you cannot create an instance of an Interface and their methods are declared without anybody.The Interface is used to achieve complete abstraction in Java. When you create an interface it defines what a class can do without saying anything about how the class will do it. 
 	<p><b>Syntax :</b>
 	<pre>interface interface_name { }</pre>
@@ -258,29 +255,28 @@ public static void main(String args[])
 <pre>Output:
 Hello</pre>
 <p><big>we know facts about Interfaces</big>
-	<pre>Let's discover some more facts about "Interface and Class."
-1) Difference between Class and Interface-
-       	i) In class, you can instantiate variable and create an object. In an interface,you can't.
-       	ii) The interface cannot contain concrete(with implementation) methods.
-       	iii) The access specifiers used with classes are private, protected and public. While in Interface only one specifier is used- Public.
-2)  A Java class can implement multiple Java Interfaces. It is necessary that the class must implement all the methods declared in the interfaces.
-3)  Class should override all the abstract methods declared in the interface
-4)  The interface allows sending a message to an object without concerning which classes it belongs.
-5)  Class needs to provide functionality for the methods declared in the interface.
-6) All methods in an interface are implicitly public and abstract
-7)  An interface cannot be instantiated
-8)  An interface reference can point to objects of its implementing classes
-9)  An interface can extend from one or many interfaces. Class can extend only one class but implement any number of interfaces
-10)   An interface cannot implement another Interface. It has to extend another interface if needed.
-11)   An interface which is declared inside another interface is referred as nested interface
-12)   At the time of declaration, interface variable must be initialized. Otherwise, the compiler will throw an error.
-13)   The class cannot implement two interfaces in java that have methods with same name but different return type.</pre>
+	<p>Let's discover some more facts about "Interface and Class."
+<p>1) Difference between Class and Interface-
+       	<ol><li>In class, you can instantiate variable and create an object. In an interface,you can't.</li>
+		<li>The interface cannot contain concrete(with implementation) methods.</li>
+       	<li>The access specifiers used with classes are private, protected and public. While in Interface only one specifier is used- Public.</li></ol>
+<p>2)  A Java class can implement multiple Java Interfaces. It is necessary that the class must implement all the methods declared in the interfaces.
+<p>3)  Class should override all the abstract methods declared in the interface.
+<p>4)  The interface allows sending a message to an object without concerning which classes it belongs.
+<p>5)  Class needs to provide functionality for the methods declared in the interface.
+<p>6) All methods in an interface are implicitly public and abstract.
+<p>7)  An interface cannot be instantiated.
+<p>8)  An interface reference can point to objects of its implementing classes.
+<p>9)  An interface can extend from one or many interfaces. Class can extend only one class but implement any number of interfaces.
+<p>10)   An interface cannot implement another Interface. It has to extend another interface if needed.
+<p>11)   An interface which is declared inside another interface is referred as nested interface.
+<p>12)   At the time of declaration, interface variable must be initialized. Otherwise, the compiler will throw an error.
+<p>13)   The class cannot implement two interfaces in java that have methods with same name but different return type.
 <br>
 <p><b>Multipleinheritance</b><img src="img/multipleinheritance.jpg" border="0">
-<p>Interface Inherits An Interface
-<p><b>An interface can inherit one or more interfaces using extends keyword , but no interface can implements any other interfaces.</b>
-<p>java code
-	<pre>public class Main 
+<p><b>Interface Inherits An Interface</b>
+<p>An interface can inherit one or more interfaces using extends keyword , but no interface can implements any other interfaces.
+<pre>public class Main 
 {
 public static void main(String[] args) 
 {
@@ -316,7 +312,7 @@ public void Draw2()
 	Drawing Circle here:shape3
 	Drawing Circle here:shape3
 </pre>
-<h2>2. Java Package </h2>
+<h3>Java Package </h3>
 <p>Java is an Object-Oriented programming language. We know that the object oriented programming provides the different types of advantages.one of the most important advantage is Encapsulation. Encapsulation is a technique that supports no outside world data access (directly) and also multiple related objects can be grouped under one object. Java programing also implements this type of process by the use of Package Programming. The Java classes which is created in the same file or each in its own file. The file that contains the class needs to maintain the protocol that file name and class name both are same.
 <p>package programming is one of the major skills in Java. In the situation where different developer or programmer are working with their different project across in the different department as well as different city, countries then each developer take a choice to create classes which is based on the requirement. In the above consequence the project should be completed with classes with the same name. Packages are classified into two types. The first category is known as java API (Application Programming Interface) packages and the second one is known as user defines packages. Java API provides a large number of classes grouped into different package according to their functionality. This classification is given below.
 <br><p><img src="img/package-in-java.jpg" bordr="0"><br>
@@ -333,27 +329,27 @@ Package removes naming collision.</pre>
 <p>Package are classified into two type which are given below.
 <pre>Predefined or built-in package
 User defined package.</pre>
-<br>
+
 <p><b>Buit-in package</b>
-<p>The Java platform comes with a lot of built-in Java packages. These packages contain classes for all kinds of purposes that programmers often need, like reading and writing files from the local hard disk, sending and receiving data over networks and the internet, connecting to databases, and many, many other things. I have covered many of these packages (APIs) in separate tutorials. If you go the frontpage of my tutorial website, you can see a list of what I have covered so far: 
+<p>The Java platform comes with a lot of built-in Java packages.These packages contain classes for all kinds of purposes that programmers often need, like reading and writing files from the local hard disk, sending and receiving data over networks and the internet, connecting to databases, and many, many other things. I have covered many of these packages (APIs) in separate tutorials. If you go the frontpage of my tutorial website, you can see a list of what I have covered so far.
 <p><b>User defined package</b>
 <p>If any package is design by the user is known as user defined package. User defined package are those which are developed by java programmer and supply as a part of their project to deal with common requirement.
-<p><b>Rules to create user defined package</b>
-<p>i)  Package statement should be the first statement of any package program.
-<p>ii)  Choose an appropriate class name or interface name and whose modifier must be public.
-<p>iii)  Any package program can contain only one public class or only one public interface but it can contain any number of normal classes.
-<p>iv)  Package program should not contain any main class (that means it should not contain any main())
-<p>v)  Modifier of the constructor of the class which is present in the package must be public. (This is not applicable in the case of the interface because interface has no constructor.)
-<p>vi)  The modifier of method of class or interface which is present in the package must be public (This rule is optional in case of interface because interface methods by default public)
+<ol><li>Rules to create user defined package</li>
+<li>Package statement should be the first statement of any package program.</li>
+<li>Choose an appropriate class name or interface name and whose modifier must be public.</li>
+<li>Any package program can contain only one public class or only one public interface but it can contain any number of normal classes.</li>
+<li>Package program should not contain any main class (that means it should not contain any main())</li>
+<li>Modifier of the constructor of the class which is present in the package must be public. (This is not applicable in the case of the interface because interface has no constructor.)</li>
+<li>The modifier of method of class or interface which is present in the package must be public (This rule is optional in case of interface because interface methods by default public)</li></ol>
 <p><b>Compile package programs</b>
-<p>For compilation of package program first we save program with public className.java and it compile using below syntax:
-<p><b>Syntax</b>
+<p>For compilation of package program first we save program with public className.java and it compile using below
+<p><b>Syntax:</b>
 <pre>javac -d . className.java</pre>
-<p><b>Syntax</b>
+<p><b>Syntax:</b>
 <pre>javac -d path className.java</pre>
 <p><b>explanations:</b> In above syntax "-d" is a specific tool which is told to java compiler create a separate folder for the given package in given path. When we give specific path then it create a new folder at that location and when we use. (dot) then it create a folder at current working directory.
 <p>Package program which is save with S.java and compile by javac -d . S.java
-<p><b>Example</b>
+<p><b>Example:</b>
 	<pre>package mypack;
 public class S
 {
@@ -364,7 +360,7 @@ public class S
 }
 </pre>
 <p>Import above class in below program using import packageName.className
-<p><b>Example</b>
+<p><b>Example:</b>
 	<pre>import mypack.S;
 public class Hello
 {
@@ -377,13 +373,13 @@ public class Hello
 }</pre>
 
 </pre>
-	<h2>3. Java Access Modifiers</h2>
+	<h3>Java Access Modifiers</h3>
 	<p> A Java access modifier specifies which classes can access a given class and its fields, constructors and methods. Access modifiers can be specified separately for a class, its constructors, fields, and methods. Java access modifiers are also sometimes referred to in daily speech as Java access specifiers, but the correct name is Java access modifiers. Classes, fields, constructors, and methods can have one of four different Java access modifiers:
-	<p>1.  private
-    	<p>2. default (package)
-   	<p>3.  protected
-    	<p>4. public
-	<p><br><img src="img/accessmodifier.png" border="0">
+	<ol><li>private</li>
+    	<li>default (package)</li>
+   	<li>protected</li>
+    	<li>public</li></ol>
+	<p><img src="img/accessmodifier.png" border="0">
 	<p><b>Java Access Modifiers -public keyword</b>
 	<p>If the class member is  &quot;public&quot; then it can be accessed from anywhere. The member variable or method is accessed globally. This is the simplest way to provide access to class members, however,we should take care of using this keyword with class variables otherwise anybody can change the values. Usually,class variables are kept as private and getter-setter methods are provided to work with them.
 	<pre>//Java program to illustrate
@@ -478,7 +474,7 @@ class BrightIT
        {
            System.out.println("Hello World!");
        }
-}</pre><br><br>
+}</pre>
 <pre>///Java program to illustrate error while 
 //using class from different package with
 //default modifier

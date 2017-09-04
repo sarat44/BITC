@@ -229,21 +229,18 @@
               
               <div class="col-lg-10 col-sm-10">
                 <h1>
-                  
-                    
-					<p>Static and Non Static, final
-                  
-                </h1>
-	<h2>Static Keyword</h2>
+                 <p>Static and Non Static, final
+               </h1>
+	<h3>Static Keyword</h3>
 	<p>The static keyword is used in java mainly for memory management. It is used with variables, methods, blocks and nested class. It is a keyword that are used for share the same variable or method of a given class. This is used for a constant variable or a method that is the same for every instance of a class. The main method of a class is generally labeled static.
 	<p>No object needs to be created to use static variable or call static methods, just put the class name before the static variable or method to use them. Static method can not call non-static method.
 	<p><b>In java language static keyword can be used for following</b>
-	 <p>i)  variable (also known as class variable)
-	  <p>ii)  method (also known as class method)
-	  <p>iii)  block
-	   <p>iv)  nested class
-	  <br>
-	  <p>When and why we use static variable
+	 <ol><li>Variable (also known as class variable)</li>
+	  <li>Method (also known as class method)</li>
+	  <li>Block</li>
+	   <li>Nested class</li></ol>
+		
+	  <p><b>When and why we use static variable.</b>
 	  <p>Suppose we want to store record of all employee of any company, in this case employee id is unique for every employee but company name is common for all. When we create a static variable as a company name then only once memory is allocated otherwise it allocate a memory space each time for every employee.
                            <p><b>Syntax for declare static variable:</b>
 	<pre>public static variableName;</pre>
@@ -307,8 +304,8 @@ Name: Java2novice
 </pre>
 	<p><b>Difference between Static and non-static method in Java</b>
 	<p>In case of non-static method memory is allocated multiple time whenever method is calling. But memory for static method is allocated only once at the time of class loading. Method of a class can be declared in two different ways
-		<p>1.  Non-static methods
-		<p>2.  Static methods
+		<ol><li>Non-static methods</li>
+		<li>Static methods</li></ol>
 	<p><img src="img/static-keyword-in-java.jpg" border="0">
 	<p><b>Example:</b>
 	<pre>class S
@@ -334,12 +331,12 @@ S  s=new  S();
 <pre>Output:
 Hello I am Non-Static
 Hello I am Static</pre>
-<h2>Java Final</h2>
+<h3>Java Final</h3>
 <p><b>Use of final</b>
 <p>It is used in the following three cases:
-   	<p>1. If the final keyword is attached to a variable then the variable becomes constant i.e. its value cannot be changed in the program.
-	 <p>2. If a method is marked as final then the method cannot be overridden by any other method.
- 	  <p>3. If a class is marked as final then this class cannot be inherited by any other class.
+   	<ol><li>If the final keyword is attached to a variable then the variable becomes constant i.e. its value cannot be changed in the program.</li>
+	 <li>If a method is marked as final then the method cannot be overridden by any other method.</li>
+ 	  <li>If a class is marked as final then this class cannot be inherited by any other class.</li></ol>
 	 <p> <b>Final Example</b>
 	<p>With a variable
 	<pre>final int c=1;</pre>

@@ -231,41 +231,34 @@
                 <h1> <p>SQL Database Connection</p></h1>
 				
                 <p> Steps to interact with SQL Server database
-				<ol type="I">
+				<ol>
 					<li>Download or find <big>sqljdbc4-4.0.jar</big> file</li>
-					<li>We have to set the class path for the jar file</li>
+					<li>We have to set the class path for the jar file</li>	
 					<ol>
 						<li>My computer ->properties -> advanced system settings -> click on Environment Variables button -> click on new button from user variables</li>
-						<br><br>
-						<img src="../../java/corejava/img/jdbc_2.png" height="300" width="700">
+						<br><img src="../../java/corejava/img/jdbc_2.png" height="300" width="700">
 					</ol><br>
 						<p>Before  Connecting, We need to install the SQL Server database.
-						<li><big>To Connect with database. we have to follow the below Steps.</big></li>
+						<li><big>To Connect with database. we have to follow the below Steps.</big></li></ol>
 						<br>
-						<p><big>Steps 1: </big> import the package.
+						<p><big>Steps 1: </big> <b>import the package.</b>
 						<pre>import java.sql.*;
-import javax.sql.*;
-</pre>
-						<p><big>Steps 2: </big> Load the driver.
-						<pre>Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-						</pre>
-						<p><big>Steps 3: </big>Establish the database connection.
+import javax.sql.*;</pre>
+						<p><big>Steps 2: </big> <b>Load the driver.</b>
+						<pre>Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");</pre>
+						<p><big>Steps 3: </big> <b>Establish the database connection.</b>
 						<pre>String url="jdbc:sqlserver://localhost:1433; databaseName=sarat; user= sa; password=sarat444@";
-con = DriverManager.getConnection(url);
-						</pre>
-						<p><big>Steps 4: </big> Create the statement object and send the commands to the database
-						<pre>Statement ps=con.CreateStatement();
-						</pre>
-						<p><big>Steps 5: </big>	Send the commands(Querys) and get the results by using the methods of Statement object
+con = DriverManager.getConnection(url);</pre>
+						<p><big>Steps 4: </big> <b>Create the statement object and send the commands to the database.</b>
+						<pre>Statement ps=con.CreateStatement();</pre>
+						<p><big>Steps 5: </big>	<b>Send the commands(Querys) and get the results by using the methods of Statement object.</b>
 						<pre>ResultSet rs=stmt.executeQuery(“select command”);
 boolean flag=stmt.execute(“any  command”);
 int i=stmt.executeUpdate(“only dml commands”);
-int i[]=stmt.executeBatch()
-</pre>
+int i[]=stmt.executeBatch();</pre>
 					<p><big>Steps 6:</big>	Close the database connection
-					<pre>con.close();
-					</pre>
-				</ol>
+					<pre>con.close();</pre>
+			
 				<p><b>Example Code:</b>
 				<p><pre>import java.sql.*;
 import static java.lang.System.*;

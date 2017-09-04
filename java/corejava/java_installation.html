@@ -229,40 +229,36 @@
               
               <div class="col-lg-10 col-sm-10">
                 <h1>
-                  
-                    
-					<p>How to download and install Java 8.
-                 
-                </h1>
+                 <p>How to download and install Java 8.
+               </h1>
                 <p>
                   Following are steps to install Java in Windows
-				  <p>
-				  
-<p><h3>1) Go to Oracle website and Download JDK.For java latestVersion </h3></p><br>
-	<p>i)  Goto Java SE download site @ http://www.oracle.com/technetwork/java/javase/downloads/index.html.<p><br><br>
- <img border="0"  src="img/Howtoinstal1.png" width="700" height="500"><br><br>
-	ii)  Under "Java Platform, Standard  Edition"? " Java SE 8u{xx}", where {xx} is the latest update number ? Click the "JDK Download" button.<p>
- 	iii)  Look for the latest "Java SE Development Kit 8u{xx}"? Check "Accept License Agreement".<p>
- 	iv) Choose the JDK for your operating system, e.g., "Windows x64" (for 64-bit Windows OS) or "Windows x86" (for 32-bit Windows OS). You can check whether your Windows OS is 32-bit or 64-bit via "Control Panel"? (Optional) System and Security? System ? Under "System Type".<p><br><br>
+				  <p>  
+					<h3>1) Go to Oracle website and Download JDK.For java latestVersion </h3></p>
+					<ol><li>Goto Java SE download site @ http://www.oracle.com/technetwork/java/javase/downloads/index.html.</li>
+					<img border="0"  src="img/Howtoinstal1.png" width="700" height="500"><br><br>
+					<li>Under "Java Platform, Standard  Edition"? " Java SE 8u{xx}", where {xx} is the latest update number ? Click the "JDK Download" button.</li>
+		<li>Look for the latest "Java SE Development Kit 8u{xx}"? Check "Accept License Agreement".</li>
+		<li>Choose the JDK for your operating system, e.g., "Windows x64" (for 64-bit Windows OS) or "Windows x86" (for 32-bit Windows OS). You can check whether your Windows OS is 32-bit or 64-bit via "Control Panel"? (Optional) System and Security? System ? Under "System Type".</li>
 <img border="0" src="img/Howtoinstal2.png" widht="800" height="500"><br><br>
 
-	<h4>v)  Once the download is complete, run the eye for install jdk . Click Next</h4 <br><br>
+	<li>  Once the download is complete, run the eye for install jdk . Click Next,</li><br>
 <img border="0" src="img/Howtoinstal3.png" widht="800" height="500"><br><br>
 
-	<h4>vi) Once install is complete click Close</h4><br><br>
-<img border="0" src="img/Howtoinstal4.png" widht="800" height="500"><br><br>
+	<li> Once install is complete click Close.</li><br>
+	<p><img border="0" src="img/Howtoinstal4.png" widht="800" height="500"><br></ol>
 
 
 
 
-<h3><p> 2) Installation of eclipse IDE </h3><br></p>
-	<p>So far, you've configured your environment, installed the Atlassian SDK, and created a HelloWorld plugin project. You&apos;ve tweaked the plugin project a bit but it has no modules so other than live in the UPM, it does nothing. Of course, you've done all this on the command line - most programmers prefer the advantages of an IDE. So, on this page, you configure the Eclipse IDE to work with the SDK, import HelloWorld and add some functionality.<br>
-	Step 1: Install the Eclipse IDE
-	Step 2: Start Eclipse and update the Installed JREs
-	Step 3: Install the Maven Eclipse Plugin
-	Step 4: Configure the Maven Plugin
-	The Next Steps
-	<h4><p>Step 1: Install the Eclipse IDE</p></h4>
+<h3><p> 2) Installation of eclipse IDE </h3></p>
+			<p>So far, you've configured your environment, installed the Atlassian SDK, and created a HelloWorld plugin project. You&apos;ve tweaked the plugin project a bit but it has no modules so other than live in the UPM, it does nothing. Of course, you've done all this on the command line - most programmers prefer the advantages of an IDE. So, on this page, you configure the Eclipse IDE to work with the SDK, import HelloWorld and add some functionality.<br>
+			<ol><li>: Install the Eclipse IDE.</li>
+				<li>: Start Eclipse and update the Installed JREs.</li>
+				<li>: Install the Maven Eclipse Plugin.</li>
+				<li>: Configure the Maven Plugin.</li>
+			<b><a href="">The Next Steps</a></b>
+	<h4><p><b>Step 1: Install the Eclipse IDE</b></p></h4>
 	<p>
 		In this step, you download and install the Eclipse IDE for Java EE Developers (Indigo). This version of Eclipse comes with most of the Maven dependencies already installed. Do the following to install Eclipse in your system:
 Download the Eclpse IDE for Java EE developers. 
@@ -273,9 +269,9 @@ Expand the tar file.
 
 <h4>tar -xvzf eclipse-standard-luna-R-macosx-cocoa-x86_64.tar.gz</h4>
 
-When you are done, you will have an eclipse directory in your home directory.<br></p>
+When you are done, you will have an eclipse directory in your home directory.</p>
 
-	<h4><p>Step 2: Start Eclipse and update the Installed JREs</p></h4>
+	<h4><p><b>Step 2: Start Eclipse and update the Installed JREs</b></p></h4>
 	<p>
 	Now you are ready to start Eclipse.</p>
 		<p>1. Change directory to ~/eclipse.</p>
@@ -288,7 +284,7 @@ When you are done, you will have an eclipse directory in your home directory.<br
 		<p>5. Filter for or navigate to the Installed JREs page.</p>
 		<p>6. Make sure that the checked JRE comes from the JDK 1.6.</p>
 	
-	<h4><p>Step 3: Install the Maven Eclipse Plugin</p></h4>
+	<h4><p><b>Step 3: Install the Maven Eclipse Plugin</b></p></h4>
 	<p>Start Eclipse and do the following:
 	<p>1. Choose Help > Install New Software from the menu bar.
 The Available Software dialog appears.
@@ -308,7 +304,7 @@ Eclipse calculates the dependencies and space
 <p>12. Press Finish.
 The installation procedure runs.
 <p>13. Restart Eclipse when prompted.<br>
-<h4><p>Step 4: Configure the Maven Plugin</p></h4>
+<h4><p><b>Step 4: Configure the Maven Plugin</b></p></h4>
 
 <p>After Eclipse has restarted, configure it to use the Maven Eclipse plugin you just installed.
 
@@ -339,15 +335,15 @@ This prevents Maven from updating on Eclipse start up, which can be time-consumi
 
 <p>You've got Eclipse set up and configured. Now, you can import your project into Eclipse and use the Atlassian SDK with it.
 <h3><p>3.  Setting  path for JAVA HOME</p></h3>				  
-	<p>i) Right click My Computer and select Properties > Advanced System Settings
-	<p>ii) Click the Environment Variables button
-	<p>iii) Under System Variables, click New
-	<p>vi) In the Variable Name field, enter either: 
-	<p>v) If the latest version on Java website is 1.8.0_65, your class path will be C:\Program Files\Java\jdk1.8.0_65\bin; copy at Variable value place and variable name place type path<br><br>	
+	<ol><li> Right click My Computer and select Properties > Advanced System Settings.</li>
+	<li> Click the Environment Variables button.</li>
+	<li> Under System Variables, click New.</li>
+	<li> In the Variable Name field, enter either.</li> 
+	<li>If the latest version on Java website is 1.8.0_65, your class path will be C:\Program Files\Java\jdk1.8.0_65\bin; copy at Variable value place and variable name place type path.</li><br>	
 	<img border="0" src="img/Howtoinstal5.png" widht="800" height="500"><br><br>			  
-	<p> vi)  Restart your PC. Go to command prompt and type javac.
+	<li>Restart your PC. Go to command prompt and type javac.</li></ol>
 	
-	<p>If you see a screen like below' Java is installed.	<br><br>		  
+	<p><b>If you see a screen like below' Java is installed.</b><br><br>		  
                	<img border="0" src="img/Howtoinstal6.png" widht="800" height="500"><br><br>
                 
               </div>

@@ -236,16 +236,16 @@
 		<p>Inheritance is one of the core concepts of Object Oriented Programming. It is used when we have is-a relationship between objects. Inheritance in Java is implemented using extends keyword.
 		<p>By using Inheritance between Superclass and Subclass, a IS-A Relationship is formed which means you can use any subclass object in place of the super class object e.g. if a method expects a superclass object, you can pass a subclass object to it. Inheritance in Java is also used to provide a concrete implementation of abstract class and interface in Java.
 		<p>Here are some important points about Inheritance in Java which is worth remembering:
-		<p>1. One subclass can extend only one super class in Java but it can implement the multiple interfaces.
-		<p>2. A private member of the super class can not be inherited in subclass e.g. private field and private methods.
-		<p>3. Default member can only be inherited in same package subclass, not in another package.
-		<p>4. The constructor in Java is not inherited by the subclass.
-		<p>5. If a class implements Interface or extends an abstract class, it needs to override all abstract methods untile it is not abstract.
-		<p>6. Multiple inheritances are not supported in java but we can achieve this by using interface.One class can implement multiple interfaces
-		<p>7. In Java class never extends the interface rather it implements interface
-		<p>8. One interface can extend another interface in Java.
-		<p>Simple inheritance: The simple inheritance is superclass inherited by subclass. In simple inheritance one class extend one class only.<br><br>
-		<br><img border="0" src="img/inheritance.jpg" widht="550" height="400"><br><br>
+		<ol><li>One subclass can extend only one super class in Java but it can implement the multiple interfaces.</li>
+		<li>A private member of the super class can not be inherited in subclass e.g. private field and private methods.</li>
+		<li>Default member can only be inherited in same package subclass, not in another package.</li>
+		<li>The constructor in Java is not inherited by the subclass.</li>
+		<li>If a class implements Interface or extends an abstract class, it needs to override all abstract methods untile it is not abstract.</li>
+		<li>Multiple inheritances are not supported in java but we can achieve this by using interface.One class can implement multiple interfaces.</li>
+		<li>In Java class never extends the interface rather it implements interface.</li>
+		<li>One interface can extend another interface in Java.</li></ol>
+		<p>Simple inheritance: The simple inheritance is superclass inherited by subclass. In simple inheritance one class extend one class only.<br>
+		<br><img border="0" src="img/inheritance.jpg" widht="550" height="400">
 	<p><b>Example of simple inheritance:</b>
 	<pre>class SimpleInherit 
 {
@@ -273,7 +273,7 @@ public class SimpleInheritText extends SimpleInherit
 }</pre>
 <pre>Output:
 25</pre>
-	<p><b>Multilevel inheritance:</b> The Multilevel inheritance is inheriting features of more than one class into a single class. Multiple inheritance in Java can be achieved by interface. In this example we have used multilevel inheritance to create one-to-one ladder. "super" keyword is used to inherit features of a superclass into subclass in Multilevel inheritance.
+	<p><b>Multilevel inheritance:</b> <br>The Multilevel inheritance is inheriting features of more than one class into a single class. Multiple inheritance in Java can be achieved by interface. In this example we have used multilevel inheritance to create one-to-one ladder. "super" keyword is used to inherit features of a superclass into subclass in Multilevel inheritance.
 	<pre>class College 
 {
 public void branch(String str) 
@@ -318,7 +318,7 @@ Anji Branch is BAC
 Gopal Branch is MBA
 Sarat Branch is B.Tech
 </pre>
-<p><b>Hierarchical inheritance:</b> Hierarchical inheritance, a superclass is extended by more than one class in a tree structure.
+<p><b>Hierarchical inheritance:</b><br> Hierarchical inheritance, a superclass is extended by more than one class in a tree structure.
 <p>Syntax of hierarchical inheritance:
 <pre>class A//A is superclass class
 {

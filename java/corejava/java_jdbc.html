@@ -227,17 +227,16 @@
             <div class="row">
               
               <div class="col-lg-10 col-sm-10">
-                <h1> <p>Jdbc Connection</p></h1>
+                <h1>Jdbc Connection</h1>
                 <p>Steps to interact with oracle database
-				<ol type="I">
+				<ol>
 					<li>Download or find <big>ojdbc14.jar/ojdbc6.jar</big> file</li>
-					<li>We have to set the class path for the jar file</li>
-					<ol>
-						<li>My computer ->properties -> advanced system settings -> click on Environment Variables button -> click on new button from user variables</li>
-						<br><br>
+					<li>We have to set the class path for the jar file</li></ol>
+					<pre>My computer -> properties -> advanced system settings -> click on Environment Variables button -> click on new button from user variables</pre>
+						
 						<img src="../../java/corejava/img/jdbc_1.png" height="300" width="500">
-					</ol><br>
-					<li>Find out the <big>SID Name</big> of database </li>
+					<br><br>
+					<ol><li>Find out the <big>SID Name</big> of database </li>
 						<ol>
 							<li>Select INSTANCE_NAME from v$instance;</li>
 							<li>Select name from v$database;</li>
@@ -247,30 +246,28 @@
 						<ol>
 							<li> 1521 is the default port number of oracle. It allows oracle client connections to the database.</li>
 						</ol>
-						<li><big>To Connect with database. we have to follow the below Steps.</big></li>
-						<br>
-						<p><big>Steps 1: </big> import the package.
+						<li><big>To Connect with database. we have to follow the below Steps.</big></li></ol>
+						
+						<p><big>Steps 1: </big> <b>import the package.</b>
 						<pre>import java.sql.*;
 import javax.sql.*;
 </pre>
-						<p><big>Steps 2: </big> Load the driver.
+						<p><big>Steps 2: </big> <b>Load the driver.</b>
 						<pre>Class.forName(“oracle.jdbc.driver.OracleDriver”);</pre>
-						<p><big>Steps 3: </big>Establish the database connection.
+						<p><big>Steps 3: </big> <b>Establish the database connection.</b>
 						<pre>Connection con=DriverManager.getConnection(“jdbc:oracle:thin:@PC3:1521:XE”,”scott”,”tiger”);
 						</pre>
-						<p><big>Steps 4: </big> Create the statement object and send the commands to the database
+						<p><big>Steps 4: </big> <b>Create the statement object and send the commands to the database.</b>
 						<pre>Statement stmt=con.createStatement();
 						</pre>
-						<p><big>Steps 5: </big>	Send the commands(Querys) and get the results by using the methods of Statement object
+						<p><big>Steps 5: </big>	<b>Send the commands(Querys) and get the results by using the methods of Statement object.</b>
 						<pre>ResultSet rs=stmt.executeQuery(“select command”);
 boolean flag=stmt.execute(“any  command”);
 int i=stmt.executeUpdate(“only dml commands”);
 int i[]=stmt.executeBatch()
 </pre>
-					<p><big>Steps 6:</big>	Close the database connection
-					<pre>con.close();
-					</pre>
-				</ol>
+					<p><big>Steps 6:</big>	<b>Close the database connection.</b>
+					<pre>con.close();</pre>
 				<p><big>Example Code:</big><pre>import java.sql.*;
 import static java.lang.System.*;
 class DbCon
