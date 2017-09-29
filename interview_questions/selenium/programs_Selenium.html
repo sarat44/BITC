@@ -78,7 +78,9 @@
                           <li>
                               <a href="../../java/java_main.html">Core JAVA</a>
                           </li>
-                          
+                            <li>
+							  <a href="../../java/corejava/java_big_o_notation.html">Data Structures</a>
+						  </li>
                       </ul>
                   </li> 
 				  <!-- JAVA header end-->
@@ -176,8 +178,8 @@
                           <li>
                               <a href="../../testing/testing_main.html">Appium</a>
                           </li>
-                          <li>
-                              <a href="../../interview_questions/corejava/programs1.html">Core JAVA</a>
+                           <li>
+                              <a href="../../interview_questions/corejava/corejava_programs.html">Core JAVA</a>
                           </li>
 						  <li>
                               <a href="../../interview_questions/sql/interview_sql.html">SQL</a>
@@ -488,7 +490,7 @@ List<WebElement> options= driver.findElements(By.tagName("option"));
 	public void testRadioButtonGroupByName() {
 		driver.get(url);
 		List<WebElement> radioGroup= driver.findElements(By.name("radiobtn"));
-		for(int i=0;i<radioGroup.size();i++){
+		for(int i=0;i&lt;radioGroup.size();i++){
 			if(radioGroup.get(i).getAttribute("value").equals("Male"))
 			radioGroup.get(i).click();
 	}
@@ -514,7 +516,7 @@ List<WebElement> options= driver.findElements(By.tagName("option"));
 		List<WebElement> radioGroup= driver.findElements(By.name("radiobtn"));
 		// wait for 10 seconds,Select one of the radio buttons manually if not already selected as the program waits for 10 seconds
 		Thread.sleep(10000);
-		for(int i=0;i<radioGroup.size();i++){
+		for(int i=0;i &lt;radioGroup.size();i++){
 			
 			System.out.println("Radio Button : "+radioGroup.get(i).getAttribute("value"));
 			// Prints the radion button selected
@@ -542,7 +544,7 @@ List<WebElement> options= driver.findElements(By.tagName("option"));
 	public void testRadioButtonGroupByName()  {
 		driver.get(url);
 		List<WebElement> radioGroup = driver.findElements(By.name("radiobtn"));
-		for (int i = 0; i < radioGroup.size(); i++) {
+		for (int i = 0; i &lt; radioGroup.size(); i++) {
 			if (radioGroup.get(i).isEnabled())
 				System.out.println("The Radio Button : " + radioGroup.get(i).getAttribute("value") + "   isenabled");
 		}
@@ -562,8 +564,12 @@ List<WebElement> options= driver.findElements(By.tagName("option"));
 
                             <div id="collapseFourteen" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre>// use following-sibling
-HTML Code:
+                                    <p><pre>&lt;div&gt;
+&lt;input id="CheckBox1" type="checkbox" name="CheckBox1"    onclick="javascript:setTimeout('__doPostBack(\'CheckBox1\',\'\')', 0)"&gt;
+&lt;label for="CheckBox1"&gt;For Other City	&lt;/label&gt;
+&lt;/div&gt;
+
+// use following-sibling
 @Test
 	public void testCheckBoxClickableLabel() {
 		driver.get(url);
@@ -592,7 +598,7 @@ HTML Code:
 		driver.get(url);
 		String xPath = "//input[@type='checkbox']";
 		List<WebElement> checkBoxGroup = driver.findElements(By.xpath(xPath));
-		for (int i = 0; i < checkBoxGroup.size(); i++) {
+		for (int i = 0; i &lt; checkBoxGroup.size(); i++) {
 			if (checkBoxGroup.get(i).isEnabled())
 				System.out.println("The CheckBox : " + checkBoxGroup.get(i).getAttribute("value") + "   isenabled");
 		}
@@ -636,7 +642,7 @@ HTML Code:
 		WebElement dropDownEle = driver.findElement(By.id("ddlcountry"));
 		Select selectDropDown = new Select(dropDownEle);
 		List<WebElement> listOptions = selectDropDown.getOptions();
-		for (int i = 0; i < listOptions.size(); i++) {
+		for (int i = 0; i &lt; listOptions.size(); i++) {
 
 			String str = listOptions.get(i).getText();
 			System.out.println("getText() is : " + str);
@@ -695,23 +701,31 @@ HTML Code:
                             </div>
                         </div>
 						
-					<!--	<div class="panel panel-default">
+						<div class="panel panel-default">
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapsetwenty">
-                                     How Xpath does work?
+											How to select an option from DropDown/ListBox by visible text
                                     </a>
                                 </h4>
                             </div>
 
                             <div id="collapsetwenty" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p><pre> </pre></p>
+                                    <p><pre>// Selects the option by Visible Text
+	@Test
+	public void testSelectOptionByVisibleText() {
+
+		driver.get(url);
+		WebElement dropDownEle = driver.findElement(By.id("ddlcountry"));
+		Select selectDropDown = new Select(dropDownEle);
+		selectDropDown.selectByVisibleText("Uk");
+	}</pre></p>
                                 </div>
                             </div>
                         </div>
 						
-						<div class="panel panel-default">
+					<!--		<div class="panel panel-default">
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapsetwentyone">
@@ -1946,7 +1960,9 @@ boolean elementEnabled = driver.findElement(By.id(“element_Id”)).isEnabled()
                          <p><i class="fa fa-home pr-10"></i>Address: Madhapur, silicon valley</p>
                          <p><i class="fa fa-globe pr-10"></i>Hyderabad, India</p>
                          
-                         <p><i class="fa fa-phone pr-10"></i>Phone : 79899 39242</p>
+                         <p><i class="fa fa-phone pr-10"></i>Phone : 755-733-1102 <br>&nbsp;&nbsp;&nbsp;
+						 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 798-993-9242</p>
                          <p><i class="fa fa-envelope pr-10"></i>Email : <a href="javascript:;">support@BrightITCareer.com</a></p>
                      </address>
                  </div>

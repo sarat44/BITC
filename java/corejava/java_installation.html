@@ -72,7 +72,9 @@
                           <li>
                               <a href="../../java/java_main.html"">Core JAVA</a>
                           </li>
-                          
+                          <li>
+							  <a href="../../java/corejava/java_big_o_notation.html">Data Structures</a>
+						  </li>
                       </ul>
                   </li> 
 				  <!-- JAVA header end-->
@@ -176,8 +178,8 @@
                           <li>
                               <a href="../../testing/testing_main.html">Appium</a>
                           </li>
-                          <li>
-                              <a href="../../interview_questions/corejava/programs1.html">Core JAVA</a>
+                         <li>
+                              <a href="../../interview_questions/corejava/corejava_programs.html">Core JAVA</a>
                           </li>
 						  <li>
                               <a href="../../interview_questions/sql/interview_sql.html">SQL</a>
@@ -202,7 +204,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-sm-4">
-                    <h1>Core Java</h1>
+                    <h1><b>Core Java</b></h1>
                 </div>
                 <div class="col-lg-8 col-sm-8">
                     <ol class="breadcrumb pull-right">
@@ -229,7 +231,7 @@
               
               <div class="col-lg-10 col-sm-10">
                 <h1>
-                 <p>How to download and install Java 8.
+                 <p><b>How to download and install Java 8.</b>
                </h1>
                 <p>
                   Following are steps to install Java in Windows
@@ -237,8 +239,8 @@
 					<h3>1) Go to Oracle website and Download JDK.For java latestVersion </h3></p>
 					<ol><li>Goto Java SE download site @ http://www.oracle.com/technetwork/java/javase/downloads/index.html.</li>
 					<img border="0"  src="img/Howtoinstal1.png" width="700" height="500"><br><br>
-					<li>Under "Java Platform, Standard  Edition"? " Java SE 8u{xx}", where {xx} is the latest update number ? Click the "JDK Download" button.</li>
-		<li>Look for the latest "Java SE Development Kit 8u{xx}"? Check "Accept License Agreement".</li>
+					<li>Under "Java Platform, Standard  Edition"? " Java SE 8u", Click the "JDK Download" button.</li>
+		<li>Look for the latest "Java SE Development Kit 8u"? Check "Accept License Agreement".</li>
 		<li>Choose the JDK for your operating system, e.g., "Windows x64" (for 64-bit Windows OS) or "Windows x86" (for 32-bit Windows OS). You can check whether your Windows OS is 32-bit or 64-bit via "Control Panel"? (Optional) System and Security? System ? Under "System Type".</li>
 <img border="0" src="img/Howtoinstal2.png" widht="800" height="500"><br><br>
 
@@ -253,10 +255,10 @@
 
 <h3><p> 2) Installation of eclipse IDE </h3></p>
 			<p>So far, you've configured your environment, installed the Atlassian SDK, and created a HelloWorld plugin project. You&apos;ve tweaked the plugin project a bit but it has no modules so other than live in the UPM, it does nothing. Of course, you've done all this on the command line - most programmers prefer the advantages of an IDE. So, on this page, you configure the Eclipse IDE to work with the SDK, import HelloWorld and add some functionality.<br>
-			<ol><li>: Install the Eclipse IDE.</li>
-				<li>: Start Eclipse and update the Installed JREs.</li>
-				<li>: Install the Maven Eclipse Plugin.</li>
-				<li>: Configure the Maven Plugin.</li>
+			<ol><li>Install the Eclipse IDE.</li>
+				<li>Start Eclipse and update the Installed JREs.</li>
+				<li>Install the Maven Eclipse Plugin.</li>
+				<li>Configure the Maven Plugin.</li>
 			<b><a href="">The Next Steps</a></b>
 	<h4><p><b>Step 1: Install the Eclipse IDE</b></p></h4>
 	<p>
@@ -345,7 +347,115 @@ This prevents Maven from updating on Eclipse start up, which can be time-consumi
 	
 	<p><b>If you see a screen like below' Java is installed.</b><br><br>		  
                	<img border="0" src="img/Howtoinstal6.png" widht="800" height="500"><br><br>
-                
+             
+	 <h2><b>Run a java program from command Prompt.</b></h2>		
+		<p>This instructable will teach you how to: 
+		<p><b>1. Install the Java Development Kit.
+		<p>2. Set system variables to easily be able to compile and execute java files.
+		<p>3.  Compile and execute a Java file from Command Prompt.</b>
+		</p>
+		<h4>Step 1: Download Latest JDK</h4><br>
+
+		<ol><img src="img/command.jpg" border="0">
+		<li>Follow this link: http://www.oracle.com/technetwork/java/javase/downloads/index.html</li>
+		<li>Click Download JDK under the download Java Standard Edition panel.</li>
+		<li>Choose your Operating System and agree to the terms of service. **</li>
+		<li>** This will  probably be Windows since your using Command Prompt.</li></ol>
+
+		<h4>Step 2: Setting Path for Command Prompt</h4><br>
+		<ol><img src="img/cmd1.png" border="0 " width="700" height="350"><br><br>
+		<img src="img/cmd2.png" border="0" widht="800" height="350"><br><br>	
+		<li>Open the Command Prompt.</li>
+		<li>Type "set Path=C:\Program Files\Javajdk1.8.0_121\bin" .*</li>
+		<li>Type  " set HomePath= C:\Program Files\Java\ jdk1.8.0_121 *</li> </ol><br>
+		<pre>* If you have a later JDK ( i.e. JDK 1.6.0_22) replace the portion that says jdk1.6.0 with it.
+** If you don't know which jdk you have to go to start pane( at bottom left corner of your screen)>click run> click browse>Then  go to C:\Program Files\Java.
+*** Do not type quotation marks in steps 1-3  at the command prompt.</pre>
+		<h4>Step 3: Creating a Simple Java Program</h4><br>
+		<ol><img src="img/cmd3.jpg" border="0" width="700" height="350"><br><br>
+		<li>Create Program</li>
+		<li>Go to Start pane>All Programs > Accessories> Notepad.exe</li>
+		<li>Copy and paste the following exactly:</li> </ol><br>
+		<pre>public class helloworld
+{
+public static void main(String[] args)
+{
+	System.out.println("Hello World!");
+}
+}
+		</pre>
+		<p>Save the file as helloworld.java 
+		<p> Make sure "Save as type" under where you typed the file name as "All Files" (as opposed to the default "Text-File").
+      		<p>You want to save your java file where  the Command Prompt  is set to open at.*
+		<p>*Such as C:\Users\Home 
+		<h4>Step 4: Compiling and Executing the Program</h4><br>
+		<ol><img src="img/cmd5.png" border="0" width="700" height="350"><br><br>
+		<li>First compile file by going to Command Prompt and typing javac  helloworld.java.</li>
+		<li>This will create a class file which you can execute by typing java helloworld.</li>
+		<li>It should print "Hello World!" to show your done.</li></ol>
+		<h2><b>7. Type Conversion, Type Casting</b></h2>
+		<p><b>Summary:</b> By the end of this tutorial "Java Data Type Casting Type Conversion", you will be comfortable with converting one data type to another either implicitly or explicitly.
+		Java supports two types of castings – primitive data type casting and reference type casting. Reference type casting is nothing but assigning one Java object to another object. It comes with very strict rules and is explained clearly in Object Casting. Now let us go for data type casting.
+		<p>Java data type casting comes with 3 flavors.
+		<ol><li> Implicit casting.</li>
+    		<li>Explicit casting.</li>
+    		<li>Boolean casting.</li></ol>
+		<p><b>1. Implicit casting(widening conversion)</b>
+		<p>A data type of lower size (occupying less memory) is assigned to a data type of higher size. This is done implicitly by the JVM. The lower size is widened to higher size. This is also named as automatic type conversion.
+		<pre>int x = 30;                    // occupies 4 bytes
+double y = x;                  // occupies 8 bytes
+System.out.println(y);         // prints 10.0</pre>
+		<p>In the above code 4 bytes integer value is assigned to 8 bytes double value.
+		<p><b>2. Explicit casting (narrowing conversion)</b>             
+		<p>A data type of higher size (occupying more memory) cannot be assigned to a data type of lower size. This is not done implicitly by the JVM and requires explicit casting; a casting operation to be performed by the programmer. The higher size is narrowed to lower size.
+		<pre>double x = 30.5;             // 8 bytes
+ int y = x;                   // 4 bytes ;  raises compilation error
+</pre>
+		<p>In the above code, 8 bytes double value is narrowed to 4 bytes int value. It raises error. Let us explicitly type cast it.
+		<pre>double x = 30.5;                  
+int y = (int) x; </pre>
+		<p>The double x is explicitly converted to int y. The thumb rule is, on both sides, the same data type should exist.
+		<p><b>3. Boolean casting</b>
+		<p>A boolean value cannot be assigned to any other data type. Except boolean, all the remaining 7 data types can be assigned to one another either implicitly or explicitly; but boolean cannot. We say, boolean is incompatible for conversion. Maximum we can assign a boolean value to another boolean.
+		<p>Following raises error.
+			<pre>boolean x = true;
+int y = x;                    // error
+boolean x = true;
+int y = (int) x;           // error
+</pre><br>
+		<img src="img/Type_cast1.png" border="0" widht="200" height="200"><br>
+		<p>In the above statement, left to right can be assigned implicitly and right to left requires explicit casting. That is, byte can be assigned to short implicitly but short to byte requires explicit casting.
+Following char operations are possible	
+		<pre>public ClassDemo1
+{
+ public static void main(String args[]) 
+	{
+	char ch1 = 'A';
+	double d1 = ch1;
+	System.out.println(d1);        // prints 65.0
+	System.out.println(ch1 * ch1);  // prints 4225 , 65 * 65
+	double d2 = 66.0;
+	char ch2 = (char) d2;
+	System.out.println(ch2);      // prints B
+}
+}</pre>
+		<h4><b>All the data type conversions</b></h4>
+		
+		<table  border="1">
+		<tr><th>byte TO</th> <td>short</td> <td>int</td> <td>long</td> <td>float</td> <td>double</td> <td>char</td> <td>boolean</td> </tr>
+		<tr><th>short TO </th> <td>byte </td> <td>int </td> <td>long </td> <td>float </td> <td>double </td><td>char </td> <td>boolean</td> </tr>
+		<tr><th>int TO</th> <td>byte</td> <td>short</td> <td>long</td> <td>float</td> <td>double</td><td>char</td> <td>boolean</td> </tr>
+		<tr><th>float TO </th> <td>byte </td> <td>short </td> <td>int </td> <td>long </td> <td>double </td><td>char </td> <td>boolean</td> </tr>
+		<tr><th>double TO </th> <td>byte </td> <td>short </td> <td>int </td> <td>long </td><td>float </td> <td>char </td><td>boolean</td> </tr>
+		<tr><th>char TO </th><td>byte </td><td> short </td> <td>int </td> <td>long </td> <td>float </td> <td>double </td> <td>boolean</td> </tr>
+		<tr><th>boolean TO</th> <td>byte </td> <td>short </td> <td>int </td> <td>long </td> <td>float </td> <td>ouble </td><td>char</td> </tr>
+		</table>
+		<h4>String and data type conversions</h4>
+		
+		<table  border="1">
+		<tr><th>String TO  </th> <td>byte</td>  <td>short</td>  <td>int</td> <td>long</td> <td>float</td> <td>double</td> <td>char</td> <td>boolean</td></tr>
+		<tr><th>byte    </th> <td>short</td> <td>int</td>  <td>long</td> <td>float</td>  <td>double</td>  <td>char</td>  <td>boolean</td> <td>TO String</tr></tr>
+		</table>
               </div>
             </div>
           </div>
@@ -365,7 +475,8 @@ This prevents Maven from updating on Eclipse start up, which can be time-consumi
                   <a href="../../java/corejava/java_installation.html">Java Installation and setup</a><p></p>
                   <a href="../../java/corejava/java_introduction.html">Introduction </a><p></p>
 				  <a href="../../java/corejava/java_control_statements.html">Control Statements</a><p></p>
-				  <a href="../../java/corejava/java_string.html">String and String Tonkeinzer class </a><p></p>
+				  <a href="../../java/corejava/java_string.html">String class </a><p></p>
+				  <a href="../../java/corejava/java_jvm_art.html">JVM architecture</a><p></p>
 				   <a href="../../java/corejava/java_math_date.html">Math & Data and Time Class</a><p></p>
 				  <a href="../../java/corejava/java_method.html">Methods </a><p></p>
 				  
@@ -374,9 +485,12 @@ This prevents Maven from updating on Eclipse start up, which can be time-consumi
 				  <a href="../../java/corejava/java_inheritacne.html">Inheritance </a><p></p>
 				 <a href="../../java/corejava/java_poly_abstraction.html">Polymorphism, Abstraction </a><p></p>
 				 <a href="../../java/corejava/java_abstract.html">Abstract Classes</a><p></p>
+				  <a href="../../java/corejava/java_enum.html"> Enum Types</a><p></p>
 				 <a href="../../java/corejava/java_io_stream.html">IO Streams </a><p></p>
 				 <a href="../../java/corejava/java_exception.html">Exception Handling</a><p></p>
+				 <a href="../../java/corejava/java_generics.html">Generices</a><p></p>
 				 <a href="../../java/corejava/java_collections.html">Collections</a><p></p>
+				 <a href="../../java/corejava/java_big_o_notation.html">Data Structures</a><p></p>
 				  <a href="../../java/corejava/java_jdbc.html">Jdbc Connection</a><p></p>
               </div>
               </div>
@@ -402,7 +516,9 @@ This prevents Maven from updating on Eclipse start up, which can be time-consumi
                          <p><i class="fa fa-home pr-10"></i>Address: Madhapur, silicon valley</p>
                          <p><i class="fa fa-globe pr-10"></i>Hyderabad, India</p>
                          
-                         <p><i class="fa fa-phone pr-10"></i>Phone :79899 39242</p>
+                         <p><i class="fa fa-phone pr-10"></i>Phone : 755-733-1102 <br>&nbsp;&nbsp;&nbsp;
+						 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 798-993-9242</p>
                          <p><i class="fa fa-envelope pr-10"></i>Email : <a href="javascript:;">support@BrightITCareer.com</a></p>
                      </address>
                  </div>

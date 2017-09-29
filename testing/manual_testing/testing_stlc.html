@@ -26,7 +26,13 @@
     <link href="../../css/style.css" rel="stylesheet">
 	<link href="../../css/custom.css" rel="stylesheet">
     <link href="../../css/style-responsive.css" rel="stylesheet" />
-
+<style>
+	ul {
+			margin-left: 10;
+			margin-right: 10;
+			padding-left: 40px;
+}
+	</style>
   </head>
 <!--header start-->
     <header class="head-section">
@@ -75,7 +81,9 @@
                           <li>
                               <a href="../../java/java_main.html">Core JAVA</a>
                           </li>
-                          
+                            <li>
+							  <a href="../../java/corejava/java_big_o_notation.html">Data Structures</a>
+						  </li>
                       </ul>
                   </li> 
 				  <!-- JAVA header end-->
@@ -176,8 +184,8 @@
                           <li>
                               <a href="../testing_main.html">Appium</a>
                           </li>
-                          <li>
-                              <a href="../../interview_questions/corejava/programs1.html">Core JAVA</a>
+                           <li>
+                              <a href="../../interview_questions/corejava/corejava_programs.html">Core JAVA</a>
                           </li>
 						  <li>
                               <a href="../../interview_questions/sql/interview_sql.html">SQL</a>
@@ -231,274 +239,142 @@
             <div class="row">
               
               <div class="col-lg-10 col-sm-10">
-                <h1>
-                  
-                    Software Testing Life Cycle
-                  
+                <h1><b>
+                   Software Testing Life Cycle (STLC)</b>
                 </h1>
                 
-			<p>STLC (Software testing life cycle): Various activities testers are initiating from beginning from beginning to end is called as a Software testing life cycle. 
-			This STLC is also called as test process or System testing process.</P>
-			
+			<p>Below are the phases of the STLC and the activities done during each phases.</P>
 			<div class="da-img">
-                <img src="../../testing/manual_testing/img/stlc1.jpg" alt="image01" />
+                <img src="../../testing/manual_testing/img/STLC.png" alt="image01" width="850" />
 			</div>
-<p>			
-			
-<p>1. Test Plan and Control.
-<p>2. Test Analysis and Design.
-<p>3. Test Implementation and Execution.
-<p>4. Evaluating Exit Criteria and Reporting.
-<p>5. Test Closure Activities.
-<p><h4>1. Test Plan and Control:</h4> STLC process starts with test plan and control. In this Test lead, Category people define an overall approach followed by testers. The test plan is defined as an overall document providing direction for all testing activity.
-
-<p><b>Test plan content as per IEEE 829 </b>
-<p>&bull;	Test plan Identifier
-<p>&bull;	Test items
-<p>&bull;	Features to be tested
-<p>&bull;	Features not to be tested
-<p>&bull;	Test approach
-<p>&bull;	Item pass/fail Criteria
-<p>&bull;	Test deliverables/test ware/test artifacts
-<p>&bull;	Testing tasks
-<p>&bull;	Environmental needs
-<p>&bull;	Roles & Responsibilities
-<p>&bull;	Staffing & Training needs
-<p>&bull;	Schedule
-<p>&bull;	Risks, Contingencies and mitigation plan
-<p>&bull;	Approvals
-<p><b>Test Control:</b>
-<p>It involves controlling and measuring the progress of the project against the plan. 
-It is an ongoing activity. The Actual progress is monitored against the planned progress and deviations if any are highlighted. 
-It has following major tasks 
-<p>&bull;	Measure and analyze the results of reviews & testing
-<p>&bull;	Monitor and document progress, test coverage & exit criteria
-<p>&bull;	Initiative corrective actions
-<p>&bull;	Make decisions
-<p>&bull;	Adjust the test schedule
-
-			
-<p><h4>2) Test Analysis & Design:</h4> 
-<p>Test Analysis & Design is the activity where general testing objectives are transformed into tangible test conditions and test designs.
-In this phase, we take general testing objectives identified during planning and build test designs and test procedures.
-<p>Step1: Reviewing on the test basis
-<p>Step 2: Evaluating testability
-<P>Step 3: Identify Test Conditions
-<p>Step4: Design Test cases
-<p>Step5: Setup test data
-<p>Step6: Setup Test Environment
-<p>Step7: Create traceability Matrix
-<p>Reviewing on the test basis: This is the criteria for verification requirements. They are involving in reviewing the following factors
-<p>&bull;	Completeness
-<p>&bull; Correctness
-<p>&bull;	Consistency
-<p>&bull;	Necessity
-<p>&bull;	Testability
-<p>&bull;	Feasibility
-<p>&bull;	Traceability
-<p>&bull;	Feasibility
-<p>&bull;	Testability
-<p>&bull;	Unambiguous
-<p>&bull;	Prioritization
-
-<p>Evaluating testability: During this testers are analyzing the testing concepts and contents of the project and determine each O/P requirements output programmatically.
-
-<p>Identify test Conditions: During this testers are preparing Test Scenarios & test Conditions for requirements.
-
-<p>Test Scenario: It Summarizes functionality of the application without providing the steps to be followed. It is a high-level document that describes what to do? 
-Inputs for preparing Test scenarios are<p>
-i) BRS or SRS<p>
-ii) prototypes (Screenshots)<p>
-
-<p><b>Design test Cases:</b> During this phase testers are deciding or using Test decision techniques to prepare test data or Test cases to avoid Exhaustive testing which is Impractical
-
-<p><h3>What is a Test Case?</h3>
-<p> A test case is a set of conditions or variables and inputs that are developed for a particular goal or objective to be achieved on a certain application to judge its capabilities or features. 
-It might take more than one test case to determine the true functionality of the application being tested. Every requirement or objective to be achieved needs at least one test case. 
-Some software development methodologies like Rational Unified Process (RUP) recommend creating at least two test cases for each requirement or objective; one for performing testing through positive perspective and the other through negative perspective. Test Case Structure A formal written test case comprises of three parts -
-<p>1.  Information consists of general information about the test case. Information incorporates Identifier, test case creator, test case version, the name of the test case, purpose or brief description and test case dependencies.
-<p>2. Teh activity consists of the actual test case activities. Activity contains information about the test case environment, activities to be done at test case initialization, activities to be done after test case is performed, step by step actions to be done while testing and the input data that is to be supplied for testing.
-<p>3. Results are outcomes of a performed test case. Results data consist of information about expected results and the actual results.
-
-<p><b>Setup test Data:</b> During this testers Identify necessary test data to support test conditions and test cases
-Test Data: The data that could be used during testing that application. They are two types
-
-                                                         1. Master Data
-                                                         2. Temporary or Duplicate data
-<p><b>Setup Test Environment: </b>During this testers Setup test Environment and Identify any Required Infrastructure and tools
-
-Create Traceability Matrix: In the software development life cycle, requirements are translated into specifications based on which code is developed. Once the construction process is complete,
-the product is finally put through various stages of testing before it finally goes live.
-<p><b>Requirement Traceability Matrix:</b> Requirement tracing is the process of documenting the links between the user requirements for the system and the work products developed to implement and verify those requirements
-<p><h3>How to Draft a Requirements Traceability Matrix</h3><p> 
-Requirement traceability matrices are often used to determine whether the requirements of the ongoing project are being met or not. An RTM is also used to create a Request for Proposal, project plan tasks, and deliverables documents. 
-Let‟s take a look at the typical steps involved in drawing up a requirements traceability matrix. 
-<p>&bull; Draft a template depending upon your project requirements. You can take the help of many free RTM templates that are available online. 
-<p>&bull; Take all the required data from your business requirements catalog and transfer it to the template. 
-<p>&bull; Mark each requirement with a different identification sign and put each sign against the corresponding requirement. 
-<p>&bull; Include the use case ID into the requirements traceability matrix if you have made use of them while developing the requirements.
-<p>&bull; Incorporate the System Requirements Specification ID in the RTM even though you yourself haven‟t created them. 
-<p>&bull; Appropriately include the testing data into the requirement traceability matrix in such a way that the different types of tests and changes made in the project gets accounted for. 
-<p>&bull; Run a double check to see if your RTM shows each specific deliverable requirement right from the point of conception throughout the entire testing phase.
-
-<p><b>STLC- Test Implementation:</b>
-<p>During Test Implementation the test conditions are converted into test cases.
-<p>Test Implementation involves
-<p>1. Develop and prioritize test cases and create test data for those tests
-<p>2. Create test suits from the test cases for efficient test execution
-<p>3. Implement and verify the environment
-
-<p><b>Test Case:</b>
-A test case is defined as set of test inputs, execution conditions, and expected results developed for a particular objective, such as to exercise a particular program path or to verify compliance with a specific requirement.
-
-<p><b>Inputs for Preparing Test Cases:</b>
-1. BRS/FRS Document/Use case
-2. Prototype
-3. Test Scenario&rsquo;s
-
-<p><b>Test Execution:</b>
-Test Execution is the process of executing all or a selected number of test cases either by manual or automation and observing the results
-<p>Levels of Test Execution
-<p>Smoke Testing: The Test execution process starts with smoke testing. It is done to ensure that the build can be accepted for software testing.
-<p>Comprehensive Testing: Test cases are executed either in Manual or Automation as test batches. The testers prepare the test log document with 3 types of entries i.e. Pass, Fail or blocked.
-<p>Retesting: Software should be retested to confirm that the original defect has been successfully removed. It is done only for failed test cases.
-<p>Regression Testing: Testing the software when it undergoes a code change that the new code has not been affected to other parts of the software.
-<p>Sanity Testing: It is used test small section of the application is still working after a minor change.
-<p>Final Regression Testing: It is the final level of test execution. During this execution, if we get any defect is called as a lucky defect.
-<p><b>STLC- Defect Classification</b>
-<p>Defects can be classified as follows:</p>
-<p>&bull;	Category
-<p>&bull;	Phase of origin
-<p>&bull;	Severity
-<p>&bull;	Priority
-<p>&bull;	Type
-
-<p>Category: Defects generally fall into the following three categories
-
-<p>1.Wrong: The specification has been implemented incorrectly.
-<p>2 Missing: A specification or wanted requirement is not in the built product.
-<p>3 Extra: A requirement included into the product that was not specified.
-
-<p><b>Defects generally involve the following:</b>
-<p>&bull;	Poor programming
-<p>&bull;	Poor requirements
-<p>&bull;	Missing requirements
-<p>&bull;	Missed defects in testing
-<p>&bull;	Misinterpreted customer requests
-<p>&bull;	Untested usage scenarios
-
-<p><b>Severity:</b> Severity indicates the impact of the defect on the application functionality.
-<p>&bull;	Blocker or show stopper
-<p>&bull;	Critical/High
-<p>&bull;	Major/Medium
-<p>&bull;	Minor/Low
-<p><b>Blocker or show stopper:</b> Testing cannot continue until the defect is addressed and there is no possible workaround
-<p><b>Critical:</b> Testing can continue and there is a possible workaround in production, but it is very difficult.
-<p><b>Major:</b> Testing can continue without any difficulty and there is workaround production. But it has to be fixed before going live.
-<p><b>Minor:</b> The functionality is nice to have in production, but it is not necessary to be fixed prior to going live.
-<p><b>Priority:</b> It is used to indicate the precedence of the defect to be fixed
-<p>High<p>
-Medium <p>
-Low<p>
-
-<p><b>1) High Severity & Low Priority:</b></P>
-			
-		
-<p>			
-			
-<p>There is Banking application who gives the interest of Rs 2 for every 1000 Rs in the account on the last day of the year. Means on last day of year 31.12.YYYY the bank will deposit 2 Rs interest for every 1000rs in the account. Now bank found a bug that instead of 2 Rs application giving the interest of 4 Rs for every 1000 Rs in the account. Means due to bug interest is going double.
-This bug is high severity - Due to bug interest is going double and the bank may have thousands of accounts, So it will not be profitable for the bank.
-But This bug is a Low priority - Depositing interest is happening on last day of the year so if it's beginning of the year like January then there is a lot of time to solve this bug.
-
-	<p><b>2) High Priority & Low Severity: </b></P>		
-<p>There is Web site says "Yahoo" Everyone reminds the logo "Yahoo.com". Suppose while updating yahoo.com by mistake they updated the wrong logo with spelling mistake they updated the wrong logo with spell missing like Yaho.com. Here O is missing. It should be seen as Yahoo.com
-The bug is high Priority- Yahoo.com is company logo and mistake in company logo need to resolve on high priority on high priority to keep the brand, but the severity is low As it's just spelling mistake then impact on the user is not much high.
-
-
-
-<p><b>3) High Priority and High Severity: </b></P>	
-
-<p>If ATM machine has a bug like when the user withdraws money from same bank ATM for which he is holding a bank account, He is getting charges by 20 Rs per transaction which is invalid as bank policy says withdrawing money from owns bank ATM no charge will be applied.
-
-The Bug is high priority- Is should be resolved immediately because thousands of user withdraw money per hour so it costs high
-There is high Severity because bank is charging Rs 20 per transaction for own ATM which is opposite to business logic
-
-
-<p>Common Types of Product test defects </p>
-<p>1.	System Functionality: Impact how the application operates as a whole
-<p>2.	User Interface: Impact the appearance or use of the interface
-<p>3.	Integration: Impact the system’s interaction with external systems
-<p>4.	Security: Impact how the application’s architecture works
-<p>5.	Technical Architecture: Impact how the application’s architecture works</p>
-
-
-<p><b>Defect/Bug Life Cycle:</b></p>
-
-<p>The duration between defection of bug and closing the bug successfully is called as bug life cycle.
-                    
-
-<p><b>Defect State: </b>
-<p>New: The bug is in the new state when it is detected the first time. The tester logs the bug with the status as new in the defect report.
-<p>Assigned: Here the bug is assigned to the developer to fix it. The development lead logs the status as Assigned as “Assigned” in the defect report
-<p>Open: The developer changes the status as Open when he starts fixing the bug
-<p>Fixed: Once the developer fixes the bug, he changes the status as ‘fixed’, which is reviewed by the development lead and it is forwarded to the test lead.
-<P>Retest: The test lead changes the status as ‘Retest’ and sends it back to the tester to retest to check whether the bug is fixed 
-<P>Closed: The tester checks whether the bug is fixed or not. If yes then the status is changed to closed.
-<P>Reopen: If bug is not fixed, the tester changes the status to Reopen
-<P>Rejected:  The test lead reviews the bug and if the bug is not valid then the state is changed to rejected.
-<p>Detected By: Name of the tester who detected/reported the bug.
-<p>Assigned To: Name of the developer who is supposed to fix the bug. Generally,this field contains the name of developer group leader, who then delegates the task to a member of his team, and changes the name accordingly.
-<p>Bug ID: This is a unique ID i.e. number created for the bug at the time of reporting, which identifies the bug uniquely.
-<p>Description: Detailed description of the bug. This generally includes the steps that are involved in the test case and the actual results. At the end of the summary, the step at which the test case fails is described along with the actual result obtained and expected result. 
-<p>Summary: This field contains some keyword information about the bug, which can help in minimizing the number of records to be searched.
-<p><b>Defect Profile Document</b> 
-<p><b>Contents of Bug Report </b>
-<p><b>Defect Name/id:</b>
-
-<p><b>Release Name:</b>
-<p><b>Project name:</b>
-<p><b>Module name:</b>
-<p><b>Project name:</b>
-<p><b>Status:</b>
-<p><b>Severity:</b>
-<p><b>Test case id/Name:</b>
-<p><b>Brief Description:</b>
-<p><b>Detail Description:</b>
-<p><b>Steps to reproduce the defects</b>
-<p><b>1.</b>
-<p><b>2.</b>
-<p><b>3.</b>
-<p><b>3.</b>
-
-<p><b>Expected Result:</b>
-<p><b>Actual Result:</b>
-<p><h3>What is a bug/error?</h3> 
-<p>A bug or error in software product is any exception that can hinder the functionality of either the whole a software or part of it. 
-<p><h3>How do I find out a BUG/ERROR?</h3> 
-<p>Basically, test cases/scripts are run in order to find out any unexpected behavior of the software product under test. If any such unexpected behavior or exception occurs, it is called as a bug.
-
-<p><b>Adhoc Testing:</b> It is an informal testing type with an aim to break the system. The testing is usually an unplanned activity. It does not follow any test design techniques to create test cases.</p>
-
-<p><b>Monkey Testing:</b> Randomly testing the product or Application without test cases with a goal to break the system.</p>
-<p><b>Buddy Testing: </b>Two buddies mutually work on identifying defects in the same module. </p>
-Mostly one buddy will be formed development team and another person will be from testing team.
-Buddy testing helps the testers develop better test cases and development team can also design changes early. 
-This testing usually happens after unit testing completion.
-
-<p><b>Adhoc Testing-styles</b>
-<p><b>Exploratory Testing or Specification Driven testing:</b> The testing is useful when requirement documents are not available or partially available.
-It involves investigation process which helps find more bugs than normal testing.
-Uncover bugs which are normally ignored by other testing techniques. This testing purely depends on the tester skills.
-
-<p><b>Pair Testing:</b></p>
-<p>Two testers are assigned modules, share ideas and work on the same machines to find defects
-One person can execute the tests and another person takes notes on the findings.</p>
-	
- 
- 
- 
- 
-              </div>
+<p><big>The phases of software testing life cycle are:</big>			
+<ul><li>Requirement analysis</li>
+<li> Test plan</li>
+<li> Test case development</li>
+<li>Testbed setup and Dry run</li>
+<li> Test case execution</li>
+<li> Defect retesting</li>
+<li> Test closure</li></ul>
+<p><b>Requirement analysis</b>
+<br>This is the first step of STLC. Software quality assurance team or the testing team starts analyzing the required documents to understand the client/end user expectations. During this  process, QA team raise questions to the business analyst and other stakeholders if they face any difficulty while analyzing the requirements.
+<p><b>Entry Criteria: </b>
+<br>Signed off requirement document should be available.
+<p><b>Exit Criteria:</b>
+<br>All the queries raised by the QA team should be answered.
+<p><big>Deliverables:</big>
+<br>Generally, there are no deliverables in this phase. But QA team should maintain a query tracker and can show it to the client. Also, they can prepare a report based on approximate automation testing percentage and manual testing percentage.
+<p><b>Test plan</b>
+<br>After requirement analysis, QA team starts planning. All the planning should be documented. Generally, cost and effort estimation is done before project starts but sometimes cost and effort estimation is also a part of this phase.
+<p><b>Entry Criteria:</b>
+<br>Requirement analysis is completed.
+<p><b>Exit Criteria:</b>
+<br>Test Plan document is prepared.
+<p><big>Deliverables:</big>
+<ol><li>Test Plan Document</li>
+<li>Test Strategy Document</li>
+<li>Estimation sheet (Optional)</li></ol>
+<p><b>Difference between Test Plan and Strategy:</b>
+<br>In some projects, these two are maintained separately. But in most cases, people include test strategy as a part of test plan document. Typically test strategy is a very high-level approach to testing. On the other hand test plan is a detailed document describing each and every process of testing.
+<p><b>Components of a test strategy document:</b>
+<br>If test strategy document is maintained separately the below components are the must. Except these, you can add as many as you want, but keeping it short is recommended.
+<ol><li>A process flow diagram of the project</li>
+<li> In scope</li>
+<li> Out of scope</li>
+<li>Test deliverables</li>
+<li>Test tools to be used</li></ol>
+<p><b>Component of a Test Plan document:</b>
+<ul><li> Introduction/Purpose of the document</li>
+<li> Test items (In Scope)</li>
+<li> Test deliverables</li>
+<li> Features not to be tested (Out of Scope)</li>
+<li> Test Environment requirements (this includes testing tools as well)</li>
+<li> Test techniques (Manual and automation details)</li>
+<li>Test phases (Smoke testing, System-Integration Testing, Regression Testing, Sanity Testing etc.)</li>
+<li>Test Case pass or fail criteria</li>
+<li>Defect reporting and tracking process</li>
+<li> Plan of training schedule and details</li>
+<li> Roles and Responsibilities</li>
+<li> Testing Schedule (Planned schedule for all testing phases)</li>
+<li> Risks and Mitigation plan</li>
+<li> Communication and status reporting process</li>
+<li> References</li>
+<li>Approvals</li>
+<li> Change and configuration management</li></ul>
+<p><b>Test case development</b>
+<br>After planning test case development starts. Testers write manual or automation scripts for testing. Test Scenario, Test Cases and Requirement Traceability matrix (RTM) are prepared in this phase.
+<p><b>Entry Criteria:</b>
+<br>Test Plan is signed off
+<p><b>Exit Criteria:</b>
+<br>Test Scenario, Test Case is ready
+<p><big>Deliverables:</big>
+<ol><li>Test Scenario</li>
+<li>Test Case</li>
+<li>Requirement Traceability matrix (RTM)</li></ol>
+<p><b>Requirement Traceability matrix (RTM):</b>
+<br>It is a matrix where each requirement is mapped with test cases. This matrix is prepared to ensure that all the requirements are covered by test cases. The typical process to create this matrix is, in a spreadsheet, all requirement numbers are written in one column and in the next column corresponding test case name/ID are written. This way you can showcase your client, that all the requirements are covered for testing.
+<p><b>Component of a Test Scenario sheet:</b>           
+<ol><li>Scenario ID</li>
+<li>Scenario Name</li>
+<li>Scenario Description</li></ol>
+<p><b>Component of a Test Case sheet:</b>
+<ul><li>Scenario ID</li>
+<li> Test Case ID</li>
+<li> Test Case Name</li>
+<li> Test Case Description</li>
+<li> Step No</li>
+<li> Step Description</li>
+<li> Expected Result</li>
+<li> Actual Result</li></ul>
+<p>Note: For a particular scenario there can be one or multiple test case. So to maintain Scenario ID in Test case sheet is recommended.
+<p><b>Testbed setup and Dry run</b>
+<br>Testbed or test environment setup is the next step. Before starting test execution test environment setup is required. In most of the cases, separate environment team does this setup with the information provided by testers. In this phase, there are no deliverables.
+<p><b>Test Execution</b>
+<br>In this phase, testers start executing of the test cases they wrote during test design phase. Multiple stages are involved in this execution phase. Let’s describe one by one in order.
+<p><b>Smoke Testing:</b> This is the first phase of the execution. In this phase testers test the environment to check that the environment setup. Generally, testers run their scripts to verify that environment is good to go with further testing. If smoke testing passes, then testers start the actual testing of the new built.
+<p><b>System Integration Testing (SIT):</b> It’s a combination of system testing and integration testing. The main testing happens in this phase. Testers run all their manual and automation test scripts to verify the new system developed.
+<p><b>Regression Testing:</b> This is required when some existing functionality was already there. Testers do regression test to make sure the existing functionality is working properly and it’s not broken due to the new part developed. For a project started from scratch, this testing is not required.
+<p><b>Sanity testing:</b> The last phase of execution. Generally, people do not do this phase. But this is one of the important testing phases to be covered. In this phase, testers identify few critical business area and test that area in depth (Though these are covered during SIT still some more detail testing is required).
+<p><b>Entry Criteria:</b>
+<ol><li>Test cases are ready</li>
+<li>Testbed setup is done</li></ol>
+<p><b>Exit criteria:</b>
+<br>All the test cases are executed
+<p><big>Deliverables:</big>
+<ol><li>Test logs</li>
+<li>Defect matrix</li></ol>
+<p><b>Defect retesting</b>
+<br>This is an extended part of test execution.
+<p><b>Retesting:</b> While SIT and Regression testing testers raise defects. Developers fix them and they redeploy the code in a testing environment. Then tester again tests the failed test cases. This is known as retesting.
+<p><b>Entry criteria:</b>
+<br>All the defects are fixed
+<p><b>Exit criteria:</b>
+<br>All the failed test cases are executed and they are passed
+<p><big>Deliverables:</big>
+<ol><li>Retesting logs</li>
+<li>Closed defect matrix</li></ol>
+<p><b>Test Closure</b>
+<p>This is the final and end stage of testing life cycle. Generally, tester’s job finishes in this phase and Test lead prepares a detail closure report.
+<p><b>Component of a Test Closure report:</b>
+<ul><li>Document Objective</li>
+<li> Introduction</li>
+<li> Scope of Testing (To show all scopes mentioned in test plan are covered)</li>
+<li>Testing Schedule (Report planned start date, end date and actual start date and end date of each phase)</li>
+<li> Scenarios Covered</li>
+<li> Types of Testing Conducted</li>
+<li>Test Cycles and Activities</li>
+<li> Test Environment / Tools Used</li>
+<li> Test Results and Execution Metrics</li>
+<li> SIT Status and Defect Metrics</li>
+<li> Performance Testing Report</li>
+<li> Test Deliverables</li></ul>
+<p><b>Entry Criteria:</b>
+<ol><li>Execution completed.</li>
+<li>All the defects are closed.</li></ol>
+<p><b>Exit Criteria:</b>
+<br>Test Closure report to be signed off by client.
+<p><b>Deliverables:</b>
+<br>Test Closure report.
+				</div>
             </div>
           </div>
 
@@ -518,6 +394,7 @@ One person can execute the tests and another person takes notes on the findings.
                   <a href="../../testing/manual_testing/testing_fundamentals.html">Fundamentals of Software Testing </a><p></p>
                   <a href="../../testing/manual_testing/testing_stlc.html">Software Testing Life Cycle </a><p></p>
 				  <a href="../../testing/manual_testing/testing_sdlc.html">Software Develoment Life Cycle </a><p></p>
+				  <a href="../../testing/manual_testing/testing_dlc.html">Software Defect Life Cycle </a><p></p>
 				  <a href="../../testing/manual_testing/testing_testdesigntechniques.html">Test Design Techniques </a><p></p>
 				  <a href="../../testing/manual_testing/testing_testmanagement.html">Test Management </a><p></p>
 				  
@@ -551,7 +428,9 @@ One person can execute the tests and another person takes notes on the findings.
                          <p><i class="fa fa-home pr-10"></i>Address: Madhapur, silicon valley</p>
                          <p><i class="fa fa-globe pr-10"></i>Hyderabad, India</p>
                          
-                         <p><i class="fa fa-phone pr-10"></i>Phone : 79899 39242</p>
+                         <p><i class="fa fa-phone pr-10"></i>Phone : 755-733-1102 <br>&nbsp;&nbsp;&nbsp;
+						 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 798-993-9242</p>
                          <p><i class="fa fa-envelope pr-10"></i>Email : <a href="javascript:;">support@BrightITCareer.com</a></p>
                      </address>
                  </div>

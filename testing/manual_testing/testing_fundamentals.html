@@ -26,7 +26,13 @@
     <link href="../../css/style.css" rel="stylesheet">
 	<link href="../../css/custom.css" rel="stylesheet">
     <link href="../../css/style-responsive.css" rel="stylesheet" />
-
+	<style>
+	ul {
+			margin-left: 10;
+			margin-right: 10;
+			padding-left: 40px;
+}
+	</style>
   </head>
 <!--header start-->
     <header class="head-section">
@@ -75,7 +81,9 @@
                           <li>
                               <a href="../../java/java_main.html">Core JAVA</a>
                           </li>
-                          
+                            <li>
+							  <a href="../../java/corejava/java_big_o_notation.html">Data Structures</a>
+						  </li>
                       </ul>
                   </li> 
 				  <!-- JAVA header end-->
@@ -176,8 +184,8 @@
                           <li>
                               <a href="../testing_main.html">Appium</a>
                           </li>
-                          <li>
-                             <a href="../../interview_questions/corejava/programs1.html">Core JAVA</a>
+                         <li>
+                              <a href="../../interview_questions/corejava/corejava_programs.html">Core JAVA</a>
                           </li>
 						  <li>
                               <a href="../../interview_questions/sql/interview_sql.html">SQL</a>
@@ -232,48 +240,45 @@
               
               <div class="col-lg-10 col-sm-10">
                 <h1>
-					<p>Fundamentals of Software Testing
+					<p><b>Fundamentals of Software Testing</b>
                 </h1>
                 <p>
                   Testing is the process of executing a program with the intent of finding errors.
 			    </p>
 <p><h3>What is Software Testing? </h3></p>
-<p> Software Testing is a process of verifying and validating whether the program is performing correctly with no bugs. It is the process of analyzing or operating software for the purpose of finding bugs. It also helps to identify the defects/flaws / errors that may appear in the application code which needs to be fixed.
-Testing not only means fixing the bug in the code, but also to check whether the program is behaving according to the given specifications and testing strategies. There are various types of software testing strategies such as white box testing strategy, black box testing strategy, gray box software testing strategy, etc.</p>
+<p> Software Testing is a process of verifying and validating that the program is performing correctly with no bugs. It is the process of analyzing the software for the purpose of finding the bugs. It also helps to identify the defects/flaws/errors that may appear in the application code which needs to be fixed. Testing not only means fixing the bug in the code but also to check whether the program is behaving according to the given specifications and testing strategies. There are various types of software testing strategies such as white box testing strategy, black box testing strategy etc.</p>
 <h3>Why Software Testing?</h3><p>
-1.	To deliver defect free product to the customer.<p>
+1.	To deliver defect free product to the customers.<p>
 2.	To assess the quality of the product.<p>
-3.	To isolate the defects from the application.<p>
-4.	To reach the customer expectations.<p>
-5.	To learn about the reliability of the software.<p>
+3.	To reach the customer expectations.<p>
+4.	To learn about the reliability of the software.<p>
 <h3><p>Types of Testing: </h3></p>
 <p>There are 2 types of testing.<br>
 1.	Manual Testing.<br>
 2.	Automation Testing.<p></p>
 
-<p>1) In Manual Testing, tester tests the application manually, if they find any defect, they report to the developers. Developers rebuild it, sent back to testers.
-Developers rebuild it, sent back to testers. Testers retest to ensure whether the defect is fixed and the application does not have any defects.
-The process repeats until all the defects are resolved.<p></p>
-<p>2) In Automation testing, testing is done with the help of automated tools.
-The method or process being used to implement automation is called a test automation framework. Several frameworks have been implemented over the years by commercial vendors and testing organizations. Automation increases the speed  of test execution and it helps to increase the Test Coverage.
-<p>When can we perform Automation testing?<P>
-<ol type="1">
+<p>1)  In Manual Testing, tester tests the application manually, if they find any defect, they report to the developers. Developers fix the defect, rebuild it and send back to testers. Testers retest to ensure that the defect is fixed and the application does not have any defects. This process repeats until all the defects are resolved.<p></p>
+<p>2)  In Automation testing, testing is done with the help of automated tools. The method or process being used to implement automation is called a test automation framework. Several frameworks have been implemented over the years by commercial vendors and testing organizations. Automation increases the speed of test execution and it helps increase the Test Coverage.
+<p>When can we perform Automation testing?</P>
+<p><ul type="disc">
 	<li>For High Risk or Business Critical test cases</li>
-	<li>Test cases that are executed repeatedly</li>
-	<li>It Increases our Test Coverage</li>
-	<li>Test Cases which are time-consuming</li>
-	<li>It increases speed & efficiency</li>
-	</ol>
+	<li>Test cases that are executed repeatedly-It Increases our Test Coverage</li>
+	<li>Test Cases which are time-consuming-It increases speed & efficiency</li>
+</ul></p>
 <p><b>Advantages of manual testing:</b>
-<ol><li>Low Cost</li><li>Flexible</li><li>Decision making</li><li>independent testing and minimal resources</li></ol>
+<p><ul type="disc">
+	<li>Low Cost</li>
+	<li>Decision-making</li>
+	<li>independent testing and minimal resources</li>
+	</ul>
 
 <p><b>Disadvantages:</b>
-	<ol><li>Time consuming</li> <li>Low reliable</li><li>Inaccuracy</li><li>No reusability</li><li>Inconsistency</li></ol>
+	<ul type="disc"><li>Time consuming</li> <li>Low reliable</li><li>Inaccuracy</li><li>No reusability</li><li>Inconsistency</li></ul>
 	
 <p><b>Advantages of Automation testing:</b>
-<ol><li>Time saving</li><li>Fast &speed</li><li>Highly Reliable</li><li>Accuracy is high</li><li> Repeatability & Reusability</li><li>Consistent</li><li>Comprehensive</li></ol>
+<ul type="disc" ><li>Time saving</li><li>Fast &speed</li><li>Highly Reliable</li><li>Accuracy is high</li><li> Repeatability & Reusability</li><li>Consistent</li><li>Comprehensive</li></ul>
 <p><b>Disadvantages:</b>
-<ol><li>Expensive</li><li>Dependent</li><li>Minimal resources</li><li>High Maintenance</li><li>License issues</li></ol>
+<ul type="disc"><li>Expensive</li><li>Dependent</li><li>Minimal resources</li><li>High Maintenance</li><li>License issues</li></ul>
 
 <p>Testing- By Whom:<br>
 Developer-Develops the software (program level)<br>
@@ -284,11 +289,18 @@ Quality: It is the level of Customer satisfaction. it is the level to which the 
 <p>
 
 <b>Software Quality Approaches:</b><br>
-1.	Quality Assurance.<br>
-2.	Quality Control.<br>
-<b>Quality Assurance:</b> It is defect prevention orient. It is applied when the development is under process. Reviews are the subset of quality assurance.
-<p><b>Quality Control:</b> It is correction and Detection orient. It is applied when the software is developed. Testing is the subset of quality control.
-				  
+<p>1.	Quality Assurance.<br>
+<p>2.	Quality Control.<br>
+<p><b>Quality Assurance (QA):</b> <br><p>QA is planned and systematic way to evaluate the quality of the process used to produce a quality product.
+<p>The goal of a QA is to provide assurance that a product is meeting customer’s quality expectations.
+<p>QA deals with how to prevent bugs from occurring in a product being developed.
+<p>Software Quality Assurance Engineer’s main responsibility is to create and implement methods and standards to improve the development process.
+<p>QA is associated with activities like measuring the quality of the process used to develop a product, process improvement, and defect prevention.
+<p>It consists of auditing and reporting procedures related to development and testing.
+<p><b>Quality Control (QC):</b><br> <p>QC in the software industry is evaluating software product, find the defects & suggest improvements.
+<p>QC implements the process established by QA.
+<p>The software tester is responsible for QC.
+<p>If required, personnel involved in QC have to carry out QA tasks as well.			  
 <h3>Software Testing Principles:</h3>
 There are seven principles of testing. They are as follows:
 <P><b>1) Testing shows the presence of defects: </b>Testing can show the defects are present, 
@@ -340,6 +352,7 @@ For example, safety-critical software is tested differently from an e-commerce s
                   <a href="../../testing/manual_testing/testing_fundamentals.html">Fundamentals of Software Testing </a><p></p>
                   <a href="../../testing/manual_testing/testing_stlc.html">Software Testing Life Cycle </a><p></p>
 				  <a href="../../testing/manual_testing/testing_sdlc.html">Software Develoment Life Cycle </a><p></p>
+				  <a href="../../testing/manual_testing/testing_dlc.html">Software Defect Life Cycle </a><p></p>
 				  <a href="../../testing/manual_testing/testing_testdesigntechniques.html">Test Design Techniques </a><p></p>
 				  <a href="../../testing/manual_testing/testing_testmanagement.html">Test Management </a><p></p>
 				  
@@ -371,7 +384,9 @@ For example, safety-critical software is tested differently from an e-commerce s
                          <p><i class="fa fa-home pr-10"></i>Address: Madhapur, silicon valley</p>
                          <p><i class="fa fa-globe pr-10"></i>Hyderabad, India</p>
                          
-                         <p><i class="fa fa-phone pr-10"></i>Phone : 79899 39242</p>
+                         <p><i class="fa fa-phone pr-10"></i>Phone : 755-733-1102 <br>&nbsp;&nbsp;&nbsp;
+						 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 798-993-9242</p>
                          <p><i class="fa fa-envelope pr-10"></i>Email : <a href="javascript:;">support@BrightITCareer.com</a></p>
                      </address>
                  </div>

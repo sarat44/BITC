@@ -26,7 +26,7 @@
     <link href="../../css/style.css" rel="stylesheet">
 	<link href="../../css/custom.css" rel="stylesheet">
     <link href="../../css/style-responsive.css" rel="stylesheet" />
-
+	<link href="../../css/heading_1.css" rel="stylesheet" type="text/css">
   </head>
 <!--header start-->
     <header class="head-section">
@@ -72,7 +72,9 @@
                           <li>
                               <a href="../../java/java_main.html"">Core JAVA</a>
                           </li>
-                          
+                          <li>
+							  <a href="../../java/corejava/java_big_o_notation.html">Data Structures</a>
+						  </li>
                       </ul>
                   </li> 
 				  <!-- JAVA header end-->
@@ -177,7 +179,7 @@
                               <a href="../../testing/testing_main.html">Appium</a>
                           </li>
                           <li>
-                             <a href="../../interview_questions/corejava/programs1.html">Core JAVA</a>
+                              <a href="../../interview_questions/corejava/corejava_programs.html">Core JAVA</a>
                           </li>
 						  <li>
                               <a href="../../interview_questions/sql/interview_sql.html">SQL</a>
@@ -229,38 +231,68 @@
               
               <div class="col-lg-10 col-sm-10">
                 <h1>
-						<p>Polymorphism and Abstraction in Java
+						<p><b>Polymorphism and Abstraction in Java</b>
                 </h1>
-		<p>A the java object that passes more than one IS-A test considered as polymorphic.
-		<p>So, all the objects in except type Object are polymorphic as they pass IS-A test for own type and Object type. ( Detailed reading : Inheritance, IS-A and Has-A )
-		<p>You are accessing an object stored in Heap by reference variable. A reference variable type of class can reference object of any subtype of that class. For example,
-	<pre>class Animal 
-{
-public void name() 
-{
-      System.out.println("This is Animal");
-}
-	public void parentMethod() 
-	{
-		System.out.println("This is method in Animal class.");
-	 }
-}
+		<p>Polymorphism means more than one form, same object performing different operations according to the requirement.
+		<p>Polymorphism can be achieved by using two ways, those are
+		<ul><li>Method overriding</li>
+		<li>Method overloading</li></ul>
+		<p>Method overloading means writing two or more methods in the same class by using same method name, but the passing parameters is different.
+		<p>Method overriding means we use the method names in the different classes,that means parent class method is used in the child class.
+		<p>In Java to achieve polymorphism a super class reference variable can hold the sub class object
+		<p>Polymorphism is when you can treat an object as a generic version of something, but when you access it, the code determines which exact type it is and calls the associated code
+		<p>Overriding is the means by which you get polymorphism. Polymorphism is the ability for an object to vary behavior based on its type. This is best demonstrated when the caller of an object that exhibits polymorphism is unaware of what specific type the object is.
+		<p>Overriding is when a child class replaces a parent's method with one of its own. 
+		<p>Polymorphis is late binding, e.g. the base class (parent) methods are being called but not until runtime does the application know what the actual object is - it may be a child class whose methods are different. This is because any child class can be used where a base class is defined
+		<p><b>Example:</b>
+		<pre>The SuperClass:
 
-interface Running 
-{
-   public void run();
+public class Parent {
+    //Define things that all classes share
+    String maidenName;
+    String familyTree;
+
+    //Give the top class a default method
+    public void speak(){
+         System.out.println("We are all Parents");
+    }
 }
-class Horse extends Animal implements Running 
-{
-	public void run() 
-	{
-	      System.out.println("Horse is running.");
-   	}
-	public void name() 
-	{
-     	      System.out.println("This is Horse.");
-   	}
+The father, a subclass:
+
+public class Father extends Parent{
+    //Can use maidenName and familyTree here
+    String name="Joe";
+    String called="dad";
+
+    //Give the top class a default method
+    public void speak(){
+        System.out.println("I am "+name+", the father.");
+    }
+}
+The child, another subclass:
+
+public class Child extends Father {
+    //Can use maidenName, familyTree, called and name here
+
+    //Give the top class a default method
+    public void speak(){
+        System.out.println("Hi "+called+". What are we going to do today?");
+    }
+}
+The execution method, references Parent class to start:
+
+public class Parenting{
+    public static void main(String[] args) {
+        Parent parents = new Parent();
+        Parent parent = new Father();
+        Parent child = new Child();
+
+        parents.speak();
+        parent.speak();
+        child.speak();
+    }
 }</pre>
+	
 <big>Overloading in Java</big>
 <p>Like method overloading, we can overload constructors also. Along with default constructor, we can have constructors with parameters. The no of parameters can be same, and it can have different datatypes. Below example gives sample code for constructors overloading. 
 <p>Over loading Syntex:
@@ -367,14 +399,14 @@ k:13</pre>
 <p>Example:
 <pre>class A
 {
-    public void bark()
+    public void back()
     {
         System.out.println("woof ");
     }
 }
 class B extends A
 {
-    public void show()
+    public void back()
     {
         System.out.println("show ");
     }
@@ -388,7 +420,7 @@ public class OverridingTest
     public static void main(String [] args)
     {
         A a = new B();
-        a.get();
+        a.back();
     }
 }</pre>
 <pre>Output
@@ -412,7 +444,8 @@ get</per>
                   <a href="../../java/corejava/java_installation.html">Java Installation and setup</a><p></p>
                   <a href="../../java/corejava/java_introduction.html">Introduction </a><p></p>
 				  <a href="../../java/corejava/java_control_statements.html">Control Statements</a><p></p>
-				  <a href="../../java/corejava/java_string.html">String and String Tonkeinzer class </a><p></p>
+				  <a href="../../java/corejava/java_string.html">String class </a><p></p>
+				  <a href="../../java/corejava/java_jvm_art.html">JVM architecture</a><p></p>
 				  <a href="../../java/corejava/java_math_date.html">Math & Data and Time Class</a><p></p>
 				  <a href="../../java/corejava/java_method.html">Methods </a><p></p>
 				  
@@ -421,9 +454,12 @@ get</per>
 				  <a href="../../java/corejava/java_inheritacne.html">Inheritance </a><p></p>
 				 <a href="../../java/corejava/java_poly_abstraction.html">Polymorphism, Abstraction </a><p></p>
 				 <a href="../../java/corejava/java_abstract.html">Abstract Classes</a><p></p>
+				  <a href="../../java/corejava/java_enum.html"> Enum Types</a><p></p>
 				 <a href="../../java/corejava/java_io_stream.html">IO Streams </a><p></p>
 				 <a href="../../java/corejava/java_exception.html">Exception Handling</a><p></p>
+				 <a href="../../java/corejava/java_generics.html">Generices</a><p></p>
 				 <a href="../../java/corejava/java_collections.html">Collections</a><p></p>
+				 <a href="../../java/corejava/java_big_o_notation.html">Data Structures</a><p></p>
 				 <a href="../../java/corejava/java_jdbc.html">Jdbc Connection</a><p></p> 
               </div>
               </div>
@@ -449,7 +485,9 @@ get</per>
                          <p><i class="fa fa-home pr-10"></i>Address: Madhapur, silicon valley</p>
                          <p><i class="fa fa-globe pr-10"></i>Hyderabad, India</p>
                         
-                         <p><i class="fa fa-phone pr-10"></i>Phone : 79899 39242</p>
+                         <p><i class="fa fa-phone pr-10"></i>Phone : 755-733-1102 <br>&nbsp;&nbsp;&nbsp;
+						 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 798-993-9242</p>
                          <p><i class="fa fa-envelope pr-10"></i>Email : <a href="javascript:;">support@BrightITCareer.com</a></p>
                      </address>
                  </div>

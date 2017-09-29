@@ -78,7 +78,9 @@
                           <li>
                               <a href="../../java/java_main.html">Core JAVA</a>
                           </li>
-                          
+                            <li>
+							  <a href="../../java/corejava/java_big_o_notation.html">Data Structures</a>
+						  </li>
                       </ul>
                   </li> 
 				  <!-- JAVA header end-->
@@ -178,7 +180,7 @@
                               <a href="../../testing/testing_main.html">Appium</a>
                           </li>
                           <li>
-                              <a href="../../interview_questions/corejava/programs1.html">Core JAVA</a>
+                              <a href="../../interview_questions/corejava/programs.html">Core JAVA</a>
                           </li>
 						  <li>
                               <a href="../../interview_questions/sql/interview_sql.html">SQL</a>
@@ -238,7 +240,7 @@
 			</div>
 			
         <div class="col-lg-4">
-          <h3><center><a href="../../interview_questions/corejava/programs1.html">Programs</a></h3>
+          <h3><center><a href="../../interview_questions/corejava/programs.html">Programs</a></h3>
           <p class="text-muted">
             All programs on Core JAVA for practice are listed here.
           </p>
@@ -262,7 +264,7 @@
                 <div class="col-md-10 col-md-offset-1 mar-b-30">
 
                 <div id="heading">
-                  <h1 class="wow flipInX">FAQs of Core JAVA</h1>
+                  <h1 class="wow flipInX">Basic</h1>
                   
                 </div>
 
@@ -747,21 +749,30 @@ The StringBuffer class in java is same as String class except it is mutable i.e.
                             </div>
                         </div>
 						
-				<!--	<div class="panel panel-default">
+					<div class="panel panel-default">
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwentyseven">
-                                    What is an Exception?    
+                                     length, length() and size() in JAVA.
                                     </a>
                                 </h4>
                             </div>
 
                             <div id="collapseTwentyseven" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>length -- arrays (int[], double[], String[])-- to know the length of the arrays.
+									
+length() -- String related Object (String, StringBuilder, etc) -- to know the length of the String.
+
+size() -- Collection Object (ArrayList, Set, etc) -- to know the size of the Collection.
+
+length is not a method, so it completely makes sense that it will not work on objects.    It only works on arrays.size() its name describes it better and as it is a method, it will be used in the case of those objects who work with the   collection (collection frameworks).
+
+length():
+ The string is not a primitive array (so we can't use .length) and also not a Collection (so we cant use .size()) that's why we also need a different one which is length() (keep the differences and serve the purpose).</pre></p>
                                 </div>
                             </div>
-                        </div> -->
+                        </div> 
 						
 					<div class="panel panel-default">
                             <div class="panel-heading panel-heading-faq">
@@ -1024,26 +1035,27 @@ String s = new String("Hello");</pre></p>
                                 </div>
                             </div>
                         </div>
-						
-                     <!--    <div class="panel panel-default">
+						<div class="panel panel-default">
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapsefourtyfour">
-											What do you mean by Checked Exceptions?				
+											What's the meaning of System.out.println in Java?		
                                     </a>
                                 </h4>
                             </div>
 
                             <div id="collapsefourtyfour" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p><pre>System is a class in the java.lang package.
+out is a static member of the System class, and is an instance of java.io.PrintStream.
+println is a method of java.io.PrintStream. This method is overloaded to print message to output destination, which is      typically a console or file.</pre></p>
                                 </div>
                             </div>
                         </div>
                   
 						
 						
-                        <div class="panel panel-default">
+                        <!-- <div class="panel panel-default">
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapsefourtyfive">
@@ -2162,7 +2174,9 @@ but the idea of having my own ClassLoader that can customize the Java Class Load
                          <p><i class="fa fa-home pr-10"></i>Address: Madhapur, silicon valley</p>
                          <p><i class="fa fa-globe pr-10"></i>Hyderabad, India</p>
                         
-                         <p><i class="fa fa-phone pr-10"></i>Phone :79899 39242</p>
+                        <p><i class="fa fa-phone pr-10"></i>Phone : 755-733-1102 <br>&nbsp;&nbsp;&nbsp;
+						 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 798-993-9242</p>
                          <p><i class="fa fa-envelope pr-10"></i>Email : <a href="javascript:;">support@BrightITCareer.com</a></p>
                      </address>
                  </div>

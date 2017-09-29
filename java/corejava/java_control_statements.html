@@ -26,7 +26,7 @@
     <link href="../../css/style.css" rel="stylesheet">
 	<link href="../../css/custom.css" rel="stylesheet">
     <link href="../../css/style-responsive.css" rel="stylesheet" />
-
+	<link href="../../css/heading_1.css" rel="stylesheet" type="text/css">
   </head>
 <!--header start-->
     <header class="head-section">
@@ -72,7 +72,9 @@
                           <li>
                               <a href="../../java/java_main.html"">Core JAVA</a>
                           </li>
-                          
+                          <li>
+							  <a href="../../java/corejava/java_big_o_notation.html">Data Structures</a>
+						  </li>
                       </ul>
                   </li> 
 				  <!-- JAVA header end-->
@@ -175,7 +177,7 @@
                               <a href="../../testing/testing_main.html">Appium</a>
                           </li>
                           <li>
-                              <a href="../../interview_questions/corejava/programs1.html">Core JAVA</a>
+                              <a href="../../interview_questions/corejava/corejava_programs.html">Core JAVA</a>
                           </li>
 						  <li>
                               <a href="../../interview_questions/sql/interview_sql.html">SQL</a>
@@ -203,7 +205,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-sm-4">
-                    <h1>Core Java</h1>
+                    <h1><b>Core Java</b></h1>
                 </div>
                 <div class="col-lg-8 col-sm-8">
                     <ol class="breadcrumb pull-right">
@@ -230,7 +232,7 @@
               
               <div class="col-lg-10 col-sm-10">
                 <h1>
-					<p>Control Statements
+					<p><b>Control Statements</b>
               </h1>
                 <p> The control statements, as the name suggests controls the flow of the program. Depending upon the state ( values of variables, user input etc ) the appropriate code is executed. These help in executing or by passing certain parts of the code, or executing them multiple times or skipping some lines of code etc.,.
                 <p>These control statements in Java can be used together and they can be nested in one other. A program might contain multiple control statements, having them used in the same blocks of code or they can be nested. There is no limitation on the usage of these statements. The control statements in java are of following types .
@@ -239,14 +241,14 @@
                   <li>Jump Statements In Java</li></ol>
                   <p><big><b>i). Selection Statements In Java </b></big>: <br>help in executing or by passing the code blocks. The supported statements are: if-else and switch
                    <p>Using these statements, a piece of code would be executed only if a certain condition(s) is true. These are of 3 types:                 
-                    <p><b><h4>1.if</h4></b>
+                    <p><b><h4 id="id1">1.if</h4></b>
                     <p>Statement(s) between the set of curly braces  &apos;{ } &apos; will be executed only if the condition(s), between the set of brackets  &apos;( ) &apos;after  &apos;if &apos; keyword, is/are true.	
  	<pre>Syntax:	
 if (Condition) 
 {
 	// statements;
 }</pre>
-	<p><b><big>2. if-else</big></b>
+	<p><b><big id="id1">2. if-else</big></b>
 	<p>If the condition(s) between the brackets &apos;( )&apos; after the &apos;if&apos; keyword is/are true then the statement(s) between the immediately following set of curly braces &apos;{ }&apos; will be executed else the statement(s) under, the set of curly braces after the &apos;else&apos; keyword will be executed.
 	<pre>Syntax:	
 if (condition) 
@@ -257,7 +259,7 @@ else
 {
 	// statements;
 }</pre>
-	<p><big><b>3. switch</b></big>
+	<p><big><b id="id1">3. switch</b></big>
 	<p>When there is a long list of cases & conditions, then if/if-else is not a good choice as the code would become complicated.
 	<pre>Syntax:
 switch (expression)
@@ -273,21 +275,21 @@ switch (expression)
 }</pre>
 	<p>In the above piece of code, the user&apos;s choice (add/sub/mul) will be stored in variable &apos;ch&apos;. The moment user enters his choice, it will be matched with the cases&apos; names & program execution will jump to the matching &apos;Case&apos; & the statement under that case will be executed till the keyword &apos;break&apos; comes. It is very important else the other unwanted cases will also get executed. After the last case there is &apos;defaul&apos; keyword. Statements between &apos;default:&apos; and the closing bracket of switch-case region will be executed only if the user has entered any wrong value as his choice i.e. other than the cases&apos; names.
                        <p><big><b>ii). Iteration Statements Or Loops In Java</b></big>:<br>help in executing a block multiple times. The supported statements are : while, do-while and for			  
-	<p><big><b>4. while</b></big>
-	<p>while statement continually executes a block of statements while a particular condition is true. Entry controlled
+	<p><big><b id="id1">4. while</b></big>
+	<p>while statement continually executes a block of statements while a particular condition is true.
 	<pre>Syntax:
 while(conditions)
 {
 	//Loop body
 }</pre>
-	<p><big><b>5. do-while</b></big>
+	<p><big><b id="id1">5. do-while</b></big>
 	<p>It will enter the loop without checking the condition first and checks the condition after the execution of the statements. That is it will execute the statement once and then it will evaluate the result according to the condition. Exit controlled
 	<pre>Syntax:
 do
 {
 	//Loop body
 }while(condition);</pre>
-	<p><big><b>6. for</b></big>
+	<p><big><b id="id1">6. for</b></big>
 	<p>The concept of Iteration has made our life much easier. Repetition of similar tasks is what Iteration is and that too without making any errors. Until now we have learnt how to use selection statements to perform repetition.
 	<pre>Syntax:
 for(initialization;test condition;increment)
@@ -295,7 +297,7 @@ for(initialization;test condition;increment)
 	//Loop body
 }</pre>
                         <p><big><b>iii).   Jump Statements In Java</b></big>: <br>help in jumping or skipping certain parts of the code. The supported statements are: break, continue and return	
-	<p><b><big>7. break</big></b>
+	<p><b><big id="id1">7. break</big></b>
 	<p>Sometimes we use Jumping Statements in Java. Using for, while and do-while loops is not always the right idea to use because they are cumbersome to read. Break statement skips the following code lets the execution jump to point after, where the program execution has jumped from to switch-case region.
 	<pre>Syntax:	
 for(initialization;test condition;increment)
@@ -306,7 +308,7 @@ for(initialization;test condition;increment)
     		break;
     	}
 }</pre>
-	<p><b><big>8. continue</b></big>
+	<p><b><big id="id1">8. continue</b></big>
 	<p>Continue statement is just similar to the break statement in the way that a break statement is used to pass program control immediately after the end of a loop and the continue statement is used to force program control back to the top of a loop.
 	<pre>Example
 for(initialization;test condition;increment)
@@ -336,7 +338,8 @@ for(initialization;test condition;increment)
                   <a href="../../java/corejava/java_installation.html">Java Installation and setup</a><p></p>
                   <a href="../../java/corejava/java_introduction.html">Introduction </a><p></p>
 				  <a href="../../java/corejava/java_control_statements.html">Control Statements</a><p></p>
-				  <a href="../../java/corejava/java_string.html">String and String Tonkeinzer class </a><p></p>
+				  <a href="../../java/corejava/java_string.html">String class </a><p></p>
+				  <a href="../../java/corejava/java_jvm_art.html">JVM architecture</a><p></p>
 				   <a href="../../java/corejava/java_math_date.html">Math & Data and Time Class</a><p></p>
 				  <a href="../../java/corejava/java_method.html">Methods </a><p></p>
 				  
@@ -345,9 +348,12 @@ for(initialization;test condition;increment)
 				  <a href="../../java/corejava/java_inheritacne.html">Inheritance </a><p></p>
 				 <a href="../../java/corejava/java_poly_abstraction.html">Polymorphism, Abstraction </a><p></p>
 				 <a href="../../java/corejava/java_abstract.html">Abstract Classes</a><p></p>
+				  <a href="../../java/corejava/java_enum.html"> Enum Types</a><p></p>
 				 <a href="../../java/corejava/java_io_stream.html">IO Streams </a><p></p>
 				 <a href="../../java/corejava/java_exception.html">Exception Handling</a><p></p>
+				 <a href="../../java/corejava/java_generics.html">Generices</a><p></p>
 				 <a href="../../java/corejava/java_collections.html">Collections</a><p></p>
+				 <a href="../../java/corejava/java_big_o_notation.html">Data Structures</a><p></p>
 				  <a href="../../java/corejava/java_jdbc.html">Jdbc Connection</a><p></p>
               </div>
               </div>
@@ -372,8 +378,9 @@ for(initialization;test condition;increment)
                      <address>
                          <p><i class="fa fa-home pr-10"></i>Address: Madhapur, silicon valley</p>
                          <p><i class="fa fa-globe pr-10"></i>Hyderabad, India</p>
->
-                         <p><i class="fa fa-phone pr-10"></i>Phone : 79899 39242</p>
+                        <p><i class="fa fa-phone pr-10"></i>Phone : 755-733-1102 <br>&nbsp;&nbsp;&nbsp;
+						 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 798-993-9242</p>
                          <p><i class="fa fa-envelope pr-10"></i>Email : <a href="javascript:;">support@BrightITCareer.com</a></p>
                      </address>
                  </div>

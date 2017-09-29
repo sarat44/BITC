@@ -26,7 +26,7 @@
     <link href="../../css/style.css" rel="stylesheet">
 	<link href="../../css/custom.css" rel="stylesheet">
     <link href="../../css/style-responsive.css" rel="stylesheet" />
-
+	<link href="../../css/heading_1.css" rel="stylesheet" type="text/css">
   </head>
 <!--header start-->
     <header class="head-section">
@@ -72,7 +72,9 @@
                           <li>
                               <a href="../../java/java_main.html">Core JAVA</a>
                           </li>
-                          
+                          <li>
+							  <a href="../../java/corejava/java_big_o_notation.html">Data Structures</a>
+						  </li>
                       </ul>
                   </li> 
 				  <!-- JAVA header end-->
@@ -177,7 +179,7 @@
                               <a href="../../testing/testing_main.html">Appium</a>
                           </li>
                           <li>
-                              <a href="../../interview_questions/corejava/programs1.html">Core JAVA</a>
+                              <a href="../../interview_questions/corejava/corejava_programs.html">Core JAVA</a>
                           </li>
 						  <li>
                               <a href="../../interview_questions/sql/interview_sql.html">SQL</a>
@@ -229,28 +231,53 @@
               
               <div class="col-lg-10 col-sm-10">
                 <h1>
-                 <p>Static and Non Static, final
+                 <p><b>Static and Non Static, final</b>
                </h1>
-	<h3>Static Keyword</h3>
-	<p>The static keyword is used in java mainly for memory management. It is used with variables, methods, blocks and nested class. It is a keyword that are used for share the same variable or method of a given class. This is used for a constant variable or a method that is the same for every instance of a class. The main method of a class is generally labeled static.
-	<p>No object needs to be created to use static variable or call static methods, just put the class name before the static variable or method to use them. Static method can not call non-static method.
+	<h3 id="id">Static Keyword</h3>
+	<p>static means that the variable or method marked as such is available at the class level. In other words, you don't need to create an instance of the class to access it.
+	<pre>public class Foo {
+   public static void doStuff(){
+        // does stuff
+    }
+}</pre>
+<p>So, instead of creating an instance of Foo and then calling doStuff like this:
+<br>Foo f = new Foo();
+<br>f.doStuff();
+<br>You just call the method directly against the class, like so:
+<br>Foo.doStuff();
+<p>Static keyword  is used with variables, methods, blocks and nested class. 
+static means, instead of having space allocated for the field in each object, only one instance is created for the class
+It means that only one instance of a static field exists even if you create a million instances of the class. It will be shared by all the instances
+<p>Since static methods also do not belong to a specific instance, they can't refer to instance members. static members can only refer to static members. Instance members can, of course access static members.
+<p>Side note: Of course, static members can access instance members through an object reference.
+<pre>public class Example {
+    private static boolean staticField;
+    private boolean instanceField;
+    public static void main(String[] args) {
+        // a static method can access static fields
+        staticField = true;
+
+        // a static method can access instance fields through an object reference
+        Example instance = new Example();
+        instance.instanceField = true;
+ }</pre>
 	<p><b>In java language static keyword can be used for following</b>
-	 <ol><li>Variable (also known as class variable)</li>
-	  <li>Method (also known as class method)</li>
+	 <ol><li>Variable </li>
+	  <li>Method </li>
 	  <li>Block</li>
 	   <li>Nested class</li></ol>
 		
 	  <p><b>When and why we use static variable.</b>
 	  <p>Suppose we want to store record of all employee of any company, in this case employee id is unique for every employee but company name is common for all. When we create a static variable as a company name then only once memory is allocated otherwise it allocate a memory space each time for every employee.
-                           <p><b>Syntax for declare static variable:</b>
+                           <p><b>Syntax to declare static variable:</b>
 	<pre>public static variableName;</pre>
-	<p><b>Syntax for declare static method:</b>
+	<p><b>Syntax to declare static method:</b>
 	<pre>public static  void methodName()
 {
 .......
 .......
 }</pre>
-<p><b>Syntax for access static methods and static variable</b>
+<p><b>Syntax to access static methods and static variable</b>
 <p>Syntax
 <pre>className.variableName=10;
 className.methodName();
@@ -266,8 +293,8 @@ public static void main(String args[])
 	<pre>package com.java2novice.staticexmp;
  public class MyStaticMethods 
 {
-private String name;
-private static String staticStr = "STATIC-STRING";
+	private String name;
+	private static String staticStr = "STATIC-STRING";
 public MyStaticMethods(String n)
 {
        this.name = n;
@@ -302,36 +329,31 @@ Hey i am in non-static method
 STATIC-STRING
 Name: Java2novice
 </pre>
-	<p><b>Difference between Static and non-static method in Java</b>
-	<p>In case of non-static method memory is allocated multiple time whenever method is calling. But memory for static method is allocated only once at the time of class loading. Method of a class can be declared in two different ways
-		<ol><li>Non-static methods</li>
-		<li>Static methods</li></ol>
-	<p><img src="img/static-keyword-in-java.jpg" border="0">
 	<p><b>Example:</b>
 	<pre>class S
 {
-void fun1()
-{
-System.out.println("Hello I am Non-Static");
-}
-static void fun2()
-{
-System.out.println("Hello I am Static");
-}
+	void fun1()
+	{
+		System.out.println("Hello I am Non-Static");
+	}
+	static void fun2()
+	{
+		System.out.println("Hello I am Static");
+	}
 }
 class Person
 {
-public static void main(String args[])
-{
-S  s=new  S();
-   s.fun1(); // non static method 
-   S.fun2();  // static method
-}
+	public static void main(String args[])
+	{
+		S s=new  S();
+		s.fun1(); // non static method 
+		S.fun2();  // static method
+	}
 }</pre>
 <pre>Output:
 Hello I am Non-Static
 Hello I am Static</pre>
-<h3>Java Final</h3>
+<h3 id="id">Java Final</h3>
 <p><b>Use of final</b>
 <p>It is used in the following three cases:
    	<ol><li>If the final keyword is attached to a variable then the variable becomes constant i.e. its value cannot be changed in the program.</li>
@@ -421,7 +443,8 @@ String - Final String Value
                   <a href="../../java/corejava/java_installation.html">Java Installation and setup</a><p></p>
                   <a href="../../java/corejava/java_introduction.html">Introduction </a><p></p>
 				  <a href="../../java/corejava/java_control_statements.html">Control Statements</a><p></p>
-				  <a href="../../java/corejava/java_string.html">String and String Tonkeinzer class </a><p></p>
+				  <a href="../../java/corejava/java_string.html">String class</a><p></p>
+				  <a href="../../java/corejava/java_jvm_art.html">JVM architecture</a><p></p>
 				   <a href="../../java/corejava/java_math_date.html">Math & Data and Time Class</a><p></p>
 				  <a href="../../java/corejava/java_method.html">Methods </a><p></p>
 				  
@@ -430,9 +453,12 @@ String - Final String Value
 				  <a href="../../java/corejava/java_inheritacne.html">Inheritance </a><p></p>
 				 <a href="../../java/corejava/java_poly_abstraction.html">Polymorphism, Abstraction </a><p></p>
 				 <a href="../../java/corejava/java_abstract.html">Abstract Classes</a><p></p>
+				  <a href="../../java/corejava/java_enum.html"> Enum Types</a><p></p>
 				 <a href="../../java/corejava/java_io_stream.html">IO Streams </a><p></p>
 				 <a href="../../java/corejava/java_exception.html">Exception Handling</a><p></p>
+				 <a href="../../java/corejava/java_generics.html">Generices</a><p></p>
 				 <a href="../../java/corejava/java_collections.html">Collections</a><p></p>
+				 <a href="../../java/corejava/java_big_o_notation.html">Data Structures</a><p></p>
 				 <a href="../../java/corejava/java_jdbc.html">Jdbc Connection</a><p></p> 
               </div>
               </div>
@@ -458,7 +484,9 @@ String - Final String Value
                          <p><i class="fa fa-home pr-10"></i>Address: Madhapur, silicon valley</p>
                          <p><i class="fa fa-globe pr-10"></i>Hyderabad, India</p>
                         
-                         <p><i class="fa fa-phone pr-10"></i>Phone : 79899 39242</p>
+                         <p><i class="fa fa-phone pr-10"></i>Phone : 755-733-1102 <br>&nbsp;&nbsp;&nbsp;
+						 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 798-993-9242</p>
                          <p><i class="fa fa-envelope pr-10"></i>Email : <a href="javascript:;">support@BrightITCareer.com</a></p>
                      </address>
                  </div>

@@ -26,7 +26,10 @@
     <link href="../../css/style.css" rel="stylesheet">
 	<link href="../../css/custom.css" rel="stylesheet">
     <link href="../../css/style-responsive.css" rel="stylesheet" />
-
+	<link href="../../css/heading_1.css" rel="stylesheet" type="text/css">
+	<style>
+	
+</style>
   </head>
 <!--header start-->
     <header class="head-section">
@@ -72,7 +75,9 @@
                           <li>
                               <a href="../../java/java_main.html">Core JAVA</a>
                           </li>
-                          
+                          <li>
+							  <a href="../../java/corejava/java_big_o_notation.html">Data Structures</a>
+						  </li>
                       </ul>
                   </li> 
 				  <!-- JAVA header end-->
@@ -176,8 +181,8 @@
                           <li>
                               <a href="../../testing/testing_main.html">Appium</a>
                           </li>
-                          <li>
-                              <a href="../../interview_questions/corejava/programs1.html">Core JAVA</a>
+                         <li>
+                              <a href="../../interview_questions/corejava/corejava_programs.html">Core JAVA</a>
                           </li>
 						  <li>
                               <a href="../../interview_questions/sql/interview_sql.html">SQL</a>
@@ -229,9 +234,11 @@
               
               <div class="col-lg-10 col-sm-10">
                 <h1> 	                
-					<p>String and String Tokenizer class
+					<p><b>String class</b>
                 </h1>
-                <p>A string in literal terms is a series of characters. Hey, did you say characters, isn&apos;t it a primitive data type in Java. Yes, so in technical terms, the basic Java String is basically an array of characters. 
+                <p>The String class represents character strings. All string literals in Java programs, such as "abc", are implemented as instances of this class.
+				<p>Strings are constant,their values cannot be changed after they are created. String buffers support mutable strings.
+				<p>String str = "abc"; <p> <b>is equivalent to:</b> <p>char data[] = {'a', 'b', 'c'}; <p>  String str = new String(data);
                 <p><b>Creating a String</b>
                 <p>There are two ways to create a string in Java:
 	<p><b>i)  String literal</b>
@@ -240,41 +247,41 @@
 	<p>String s = new String ( &quotBrightITCareer&quot;);
 	<h4>Methods of String </h4>
 	<p>String Methods
-	<p><b>int length():</b><br>Returns the number of characters in the String.
+	<p><b  id="id">int length():</b><br>Returns the number of characters in the String.
 	<p>&quot;BrightITCareer&quot;<i>.length(); </i> // returns 14
-	<p><b>Char charAt(int i):</b><br> Returns the character at ith index.
+	<p><b  id="id">Char charAt(int i):</b><br> Returns the character at ith index.
 	<p>&quot;BrightITCareer&quot;<i>.charAt(3);</i> // returns  &apos;g&apos;
-	<p><b>String substring (int i):</b><br> Return the substring from the ith  index character to end.
+	<p><b  id="id">String substring (int i):</b><br> Return the substring from the ith  index character to end.
 	<p>&quot;BrightITCareer&quot;<i>.substring(3); </i>// returns &quot;ghtITCareer&quot;
-	<p><b>String substring (int i, int j):</b><br> Returns the substring from i to j-1 index.
+	<p><b  id="id">String substring (int i, int j):</b><br> Returns the substring from i to j-1 index.
 	<p>&quot;BrightITCareer&quot;<i>.substring(2, 5);</i> // returns &quot;igh&quot;
-	<p><b>String concat( String str):</b><br> Concatenates specified string to the end of this string.
+	<p><b  id="id">String concat( String str):</b><br> Concatenates specified string to the end of this string.
 	<p>String s1 = &quot;Bright&quot;;
  	<p>String s2 = &quot;ITCareer&quot;;
      	<p>String output =<i> s1.concat(s2);</i> // returns &quot;BrightITCareer&quot;
-	<p><b>int indexOf (String s):</b><br> Returns the index within the string of the first occurrence of the specified string.
+	<p><b  id="id">int indexOf (String s):</b><br> Returns the index within the string of the first occurrence of the specified string.
 	<p>String s = &quot;Learn Share Learn&quot;;
      	<p>int output = <i>s.indexOf(&quot;Share&quot;);</i> // returns 6
-	<p><b>int indexOf (String s, int i):</b><br> Returns the index within the string of the first occurrence of the specified string, starting at the specified index.
+	<p><b  id="id">int indexOf (String s, int i):</b><br> Returns the index within the string of the first occurrence of the specified string, starting at the specified index.
 	<p>String s = &quot;Learn Share Learn&quot;;
      	<p>int output =<i> s.indexOf(&apos;a&apos;,3);</i>// returns 8
-	<p><b>Int lastindexOf( int ch):</b><br> Returns the index within the string of the last occurrence of the specified string.
+	<p><b  id="id">int lastindexOf( int ch):</b><br> Returns the index within the string of the last occurrence of the specified string.
 	<p>String s =&quot;Learn Share Learn&quot;;
      	<p>int output = <i>s.lastindexOf(&apos;a&apos;); </i>// returns 14
-	<p><b>boolean equals( Object otherObj):</b><br> Compares this string to the specified object.
+	<p><b id="id">boolean equals( Object otherObj):</b><br> Compares this string to the specified object.
 	<p>Boolean out = &quot;Bright&quot;<i>.equals(&quot;Bright&quot;);</i> // returns true
      	<p>Boolean out = &quot;Bright&quot;<i>.equals(&quot;bright&quot;);</i> // returns false
-	<p><b>boolean  equalsIgnoreCase (String anotherString): </b><br>Compares string to another string, ignoring case considerations.
+	<p><b  id="id">boolean  equalsIgnoreCase (String anotherString): </b><br>Compares string to another string, ignoring case considerations.
 	<p>Boolean out=&quot;Bright&quot;<i>.equalsIgnoreCase(&quot;Bright&quot;);</i> // returns true
      	<p>Boolean out = &quot;Bright&quot;<i>.equalsIgnoreCase(&quot;bright&quot;);</i> // returns true
-	<p><b>int compareTo( String anotherString): </b><br>Compares two string lexicographically.
-	<p>int out = <i> s1.compareTo(s2);</i>  // where s1 ans s2 are
+	<p><b  id="id">int compareTo( String anotherString): </b><br>Compares two string lexicographically.
+	<p>int out = <i> s1.compareTo(s2);</i>  // where s1 and s2 are
                         <p> // strings to be compared
 	<p>This returns difference s1-s2. If :
      	<p>out < 0  // s1 comes before s2
     	<p> out = 0  // s1 and s2 are equal.
      	<p>out >0   // s1 comes after s2.
-	<p><b>int compareToIgnoreCase( String anotherString):</b> <br>Compares two string lexicographically, ignoring case considerations.
+	<p><b  id="id">int compareToIgnoreCase( String anotherString):</b> <br>Compares two string lexicographically, ignoring case considerations.
 	<p>int out = <i> s1.compareTo(s2); </i> // where s1 ans s2 are 
                          <p>// strings to be compared
 	<p>This returns difference s1-s2. If :
@@ -282,16 +289,16 @@
     	<p> out = 0   // s1 and s2 are equal.
     	<p> out >0   // s1 comes after s2.
 	<p>Note- In this case, it will not consider the case of a letter (it will ignore whether it is uppercase or lowercase).
-    	<p><b>String toLowerCase(): </b><br>Converts all the characters in the String to lower case.
+    	<p><b  id="id">String toLowerCase(): </b><br>Converts all the characters in the String to lower case.
 	<p>String word1 = &quot;HeLLo&quot;;
     	<p>String word3 =<i> word1.toLowerCase();</i> // returns &quot;hello&quot;
-	<p><b>String toUpperCase():</b><br> Converts all the characters in the String to upper case.
+	<p><b  id="id">String toUpperCase():</b><br> Converts all the characters in the String to upper case.
 	<p>String word1 = &quot;HeLLo&quot;;
     	<P>String word2 = <i>word1.toUpperCase();</i> // returns &quot;HELLO&quot;
-	<p><b>String trim():</b> <br>Returns the copy of the String, by removing whitespaces at both ends. It does not affect whitespaces in the middle.
+	<p><b  id="id">String trim():</b> <br>Returns the copy of the String, by removing whitespaces at both ends. It does not affect whitespaces in the middle.
 	<p>String word1 = &quot; Learn Share Learn &quot;;
    	<p>String word2 = <i>word1.trim();</i> // returns &quot;Learn Share Learn&quot;
-	<p><b>String replace (char oldChar, char newChar):</b><br> Returns new string by replacing all occurrences of oldChar with newChar.
+	<p><b id="id">String replace (char oldChar, char newChar):</b><br> Returns new string by replacing all occurrences of oldChar with newChar.
 	<p>String s1 = &quot;feeksforfeeks&quot;;
    	<p> String s2 = <i>&quot;feeksforfeeks&quot;.replace(&apos;f&apos; ,&apos;g&apos;);</i> // returns &quot;geeksgorgeeks&quot;
 	<p><big>Eg:</big>
@@ -340,7 +347,7 @@ searching s1 in targetString: false
 searching s2 in targetString: true
 Size of char array: 4
 Printing last element of array: a</pre>
-	<p><h2>String Tokenizer</h2>
+	<!-- <p><h2>String Tokenizer</h2>
 	<p>The String Tokenizer class is used to break a given string into token(Substrings)(words,numbers,operators or whatever).The Tokens are separated by one or more delimiter(characters).
 	<p>A StringTokenizer constructor takes a string to break into tokens and returns a StringTokenizer object for that String.The java.util.StringTokenizer class allows you to break a string into tokens.
 	<p>There is three StringTokenizer class.
@@ -379,7 +386,7 @@ public class String_Demo
 		}
 	}
 }
-</pre>
+</pre> -->
 	
 	
 	</div>
@@ -401,7 +408,8 @@ public class String_Demo
                   <a href="../../java/corejava/java_installation.html">Java Installation and setup</a><p></p>
                   <a href="../../java/corejava/java_introduction.html">Introduction </a><p></p>
 				  <a href="../../java/corejava/java_control_statements.html">Control Statements</a><p></p>
-				  <a href="../../java/corejava/java_string.html">String and String Tokenizer class </a><p></p>
+				  <a href="../../java/corejava/java_string.html">String class </a><p></p>
+				  <a href="../../java/corejava/java_jvm_art.html">JVM architecture</a><p></p>
 				   <a href="../../java/corejava/java_math_date.html">Math & Data and Time Class</a><p></p>
 				  <a href="../../java/corejava/java_method.html">Methods </a><p></p>
 				  
@@ -410,9 +418,12 @@ public class String_Demo
 				  <a href="../../java/corejava/java_inheritacne.html">Inheritance </a><p></p>
 				 <a href="../../java/corejava/java_poly_abstraction.html">Polymorphism, Abstraction </a><p></p>
 				 <a href="../../java/corejava/java_abstract.html">Abstract Classes</a><p></p>
+				  <a href="../../java/corejava/java_enum.html"> Enum Types</a><p></p>
 				 <a href="../../java/corejava/java_io_stream.html">IO Streams </a><p></p>
 				 <a href="../../java/corejava/java_exception.html">Exception Handling</a><p></p>
+				 <a href="../../java/corejava/java_generics.html">Generices</a><p></p>
 				 <a href="../../java/corejava/java_collections.html">Collections</a><p></p>
+				 <a href="../../java/corejava/java_big_o_notation.html">Data Structures</a><p></p>
 				 <a href="../../java/corejava/java_jdbc.html">Jdbc Connection</a><p></p> 
               </div>
               </div>
@@ -438,7 +449,9 @@ public class String_Demo
                          <p><i class="fa fa-home pr-10"></i>Address: Madhapur, silicon valley</p>
                          <p><i class="fa fa-globe pr-10"></i>Hyderabad, India</p>
                          
-                         <p><i class="fa fa-phone pr-10"></i>Phone : 79899 39242</p>
+                         <p><i class="fa fa-phone pr-10"></i>Phone : 755-733-1102 <br>&nbsp;&nbsp;&nbsp;
+						 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 798-993-9242</p>
                          <p><i class="fa fa-envelope pr-10"></i>Email : <a href="javascript:;">support@BrightITCareer.com</a></p>
                      </address>
                  </div>

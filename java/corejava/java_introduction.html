@@ -26,7 +26,7 @@
     <link href="../../css/style.css" rel="stylesheet">
 	<link href="../../css/custom.css" rel="stylesheet">
     <link href="../../css/style-responsive.css" rel="stylesheet" />
-
+	<link href="../../css/heading_1.css" rel="stylesheet" type="text/css">
   </head>
 <!--header start-->
     <header class="head-section">
@@ -72,7 +72,9 @@
                           <li>
                               <a href="../../java/java_main.html"">Core JAVA</a>
                           </li>
-                          
+                          <li>
+							  <a href="../../java/corejava/java_big_o_notation.html">Data Structures</a>
+						  </li>
                       </ul>
                   </li> 
 				  <!-- JAVA header end-->
@@ -177,8 +179,8 @@
                           <li>
                               <a href="../../testing/testing_main.html">Appium</a>
                           </li>
-                          <li>
-                              <a href="../../interview_questions/corejava/programs1.html">Core JAVA</a>
+                         <li>
+                              <a href="../../interview_questions/corejava/corejava_programs.html">Core JAVA</a>
                           </li>
 						  <li>
                               <a href="../../interview_questions/sql/interview_sql.html">SQL</a>
@@ -230,17 +232,16 @@
               
               <div class="col-lg-10 col-sm-10">
                 <h1>
-						<p>Introduction  
+						<p><b>Introduction  </b>
                 </h1>
                 <ol> <li>What is a Class and an Object</li>
 	<li>Java Comments.</li>
 	<li>Operators.</li>
 	<li>DataTypes in Java.</li>
 	<li>Arrays.</li>
-	<li>Run a java program from command prompt.</li>
 	<li>Type Conversion, Type Casting.</li>
 				  </ol>	  
-<p><h3>1) What is a Class and an Object </h3></p>
+<p><h3 id="id1">1) What is a Class and an Object </h3></p>
 	<big>Class: </big>
 	<p>In Java, everything is encapsulated under classes.The Class is the core of Java language.The Class can be defined as a template/ blueprint that describes the behaviors /states of a particular entity. A class defines the new data type. Once defined this new type can be used to create an object of that type.The Object is an instance of the class. You may also call it as physical existence of a logical template class.
 		A class is declared using class keyword. A class contains both data and code that operate on that data. The data or variables defined within a class are called instance variables and the code that operates on this data is known as methods.</p>
@@ -266,20 +267,20 @@
 		<p><big>SUPER_CLASS_NAME:</big> Name of the class which given class extends.( extends keyword is used for this purpose)</p>
 		<p><big>INTERFACE_NAME:</big> Name of an Interface which above class implements.( implements keyword is used for this purpose)</p>
 	<big><p>Eg: </p></big>
-	<pre>class Student.
+	<pre>class Student
 {
 	String name;
 	int rollno;
 	int age;
 }</pre>
 	<p>	
-	<big>Object: </big>	
+	<big id="id">Object: </big>	
 	
 		
 	<p> There is often confusion on the difference between Class and Objects.The Class is the creation of a prototype and Object is the actual implementation of that prototype. Technically, Class is a template which describes what  state and behavior of an instance this class can have. Object implements the state and behavior in the form of variables and methods and requires some memory allocated. <br></p>
 	<big>How to Create an Object of a Class.</big><br>
 	
-	<p>To create an Object of  a Class <new> Keyword can be used.</p>
+	<p>To create an Object of  a Class new Keyword can be used.</p>
 	<p><h4>Syntax:</h4>
 	<pre> &lt;Class_Name&gt;  ClassObjectReference = new  &lt;Class_Name&gt;();  </pre>
 	<p>Here the constructor of the Class(Class_Name) will be executed and an Object will be created(ClassObjectReference will hold the reference to the created Object in memory).</p>
@@ -293,17 +294,17 @@ public class World
  }// Method (Behavior)
 }</pre>
 	
-	<h4><b>Object Create:</b></h4>
+	<h4><b >Object Creation:</b></h4>
 	<pre>World obj = new World();</pre>
-	<p><h2>2)  Java Comments</h2>
+	<p><h2 id="id1">2)  Java Comments</h2>
 	<p>The java comments are statements that are not executed by the compiler and interpreter. The comments can be used to provide information or explanation about the variable, method, class or any statement. It can also be used to hide program code for specific time.
 	<p><big>Types of Java Comments</big>
 	<p>There are 3 types of comments in Java.
 
-		<ol><li>Single Line Comment.</li>
-		<li>Multi-Line Comment.</li>
+		<ol><li>Single Line Comment</li>
+		<li>Multi-Line Comment</li>
 		<li>Documentation Comment</li></ol>
-	<p><big><b>1)  Java Single Line Comment</b></big>
+	<p><big><b id="id">1)  Java Single Line Comment</b></big>
 	<p>The single line comment is used to comment only one line.
 	<big><p>Syntax:</big>
 	<pre>//This is single line comment</pre>
@@ -318,7 +319,7 @@ public class World
 	}</pre>
 	<pre>Output: 44</pre>
 	<p>
-	<p><big><b>2) Java Multi Line Comment</b></big>
+	<p><big><b id="id">2) Java Multi Line Comment</b></big>
 	<p>The multi-line comment is used to comment multiple lines of code.
 	<p><big>Syntax:</big>
 	<pre>/*
@@ -337,9 +338,9 @@ public static void main(String[] args) {
 	}
  }	</pre>
 	<pre>Output: 44</pre>
-	<big><p><b>3) Java Documentation Comment</b></big>
+	<big><p><b id="id">3) Java Documentation Comment</b></big>
 	<p>The documentation comment is used to create documentation API. To create documentation API, you need to use Javadoc tool.
-	<big>Syntax:</big>
+	<p><big>Syntax:</big>
 	<pre>/**
 This
 is
@@ -360,17 +361,17 @@ public static int sub(int a, int b){return a-b;}
 	<p>javac Calculator.java
 	<p>Create Documentation API by javadoc tool:
 	<p>javadoc Calculator.java<br>
-	<h2>3)   Basic Operators in Java</h2>	
+	<h2 id="id1">3)   Basic Operators in Java</h2>	
 	<p>Java provides a rich operator environment. We can classify the basic operators in java in following groups:</p>
-		<ol><li>Assignment Operators.</li>
-		<li>Arithmetic Operators.</li>
-		<li>Relational Operators.</li>
-		<li>Logical Operators.</li>
-		<li>Bit wise Operator .</li>
+		<ol><li>Assignment Operators</li>
+		<li>Arithmetic Operators</li>
+		<li>Relational Operators</li>
+		<li>Logical Operators</li>
+		<li>Bit wise Operator</li>
 		<li>Compound Assignment Operators</li></ol></b>
 		      
 		<p>Let us now learn about each of these operators in details.
-		<p><b>Arithmetic Operators:</b>  Arithmetic operators are used to perform arithmetic/mathematical operations on operands.
+		<p><b id="id">Arithmetic Operators:</b> <p> Arithmetic operators are used to perform arithmetic/mathematical operations on operands.
 		<p><b>Addition (+) : </b>  Adds two operands
 		<p><b>Subtraction (-):  </b> Subtracts two operands
 		<p><b>Multiplication (*): </b>  Multiplies two operands
@@ -390,7 +391,7 @@ Conditional Operator &nbsp;  ? : </b></pre>
 		
 		  <img  border="0"  src="img/operators.png">
 		<br>
-		   <p><big><b>ASSIGNMENT OPERATORS</b></big>
+		   <p><big><b id="id">ASSIGNMENT OPERATORS</b></big>
 		   <p>The java assignment operator statement has the following syntax:
 		 <p>  variable> = <expression>
 		   <p>If the value already exists in the variable it is overwritten by the assignment operator (=).
@@ -424,7 +425,7 @@ public static void main(String args[])
 	new AssignmentOperatorsDemo();
 }
 }</pre>
-		<big><p><b>ARITHMETIC OPERATORS</b></big>
+		<big><p><b id="id">ARITHMETIC OPERATORS</b></big>
 		<p>Java provides eight Arithmetic operators. They are for addition, subtraction, multiplication, division, modulo (or remainder), increment (or add 1), decrement (or subtract 1), and negation. An example program is shown below that demonstrates the different arithmetic operators in java.
 		The binary operator + is overloaded in the sense that the operation performed is determined by the type of the operands. When one of the operands is a String object, the other operand is implicitly converted to its string representation and string concatenation is performed.
 		<br>
@@ -472,7 +473,7 @@ public static void main(String args[])
 }
 }
 		</pre>
-		<big><p><b>RELATIONAL OPERATORS</b></big>
+		<big><p><b id="id">RELATIONAL OPERATORS</b></big>
 		<p>Relational operators in Java are used to compare 2 or more objects. Java provides six relational operators:
 		greater than (>), less than (<), greater than or equal (>=), less than or equal (<=), equal (==), and not equal (!=).
 		All relational operators are binary operators, and their operands are numeric expressions.
@@ -495,7 +496,7 @@ public static void main(String args[])
 		new RelationalOperatorsDemo();
 } 
 }</pre>
-		<p><big><b>LOGICAL OPERATORS</b></big>
+		<p><big><b id="id">LOGICAL OPERATORS</b></big>
 		<p>Logical operators return a true or false value based on the state of the Variables. There are six logical, or boolean, operators. They are AND, conditional AND, OR, conditional OR, exclusive OR, and NOT. Each argument to a logical operator must be a boolean data type, and the result is always a boolean data type. An example program is shown below that demonstrates the different Logical operators in java.
 		<p><h4>Eg:</h4>
 		<pre>public class LogicalOperatorsDemo
@@ -524,7 +525,7 @@ public static void main(String args[])
 		<tr><td>false</td><td>true</td><td>true</td><td>false</td><td>true</td><td>true</td></tr>
 		<tr><td>false</td><td>true</td><td>true</td><td>false</td><td>false</td><td>false</td></tr>
 		</table>	<br>
-		<p><big><b>BITWISE OPERATORS</b></big>
+		<p><big><b id="id">BITWISE OPERATORS</b></big>
 		<p>Java provides Bitwise operators to manipulate the contents of variables at the bit level.
 		   These variables must be of numeric data type ( char, short, int, or long). Java provides seven bitwise
 		operators. They are AND, OR, Exclusive-OR, Complement, Left-shift, Signed Right-shift, and Unsigned Right-shift. An example program is shown below that demonstrates the different Bitwise operators in java.</p>
@@ -558,7 +559,7 @@ public static void main(String args[])
 		<tr><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td></tr>
 		<tr><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>
 		</table>	<br>
-		<p><big><b>COMPOUND OPERATORS</b></big>
+		<p><big><b id="id">COMPOUND OPERATORS</b></big>
 		<p>compound operators perform shortcuts in common programming operations. Java has eleven compound assignment operators.
 		<p>Syntax:
 		<p> = argument2.
@@ -582,8 +583,8 @@ public static void main(String args[])
 	CompoundOperatorsDemo cop=new CompoundOperatorsDemo();
 }
 }</pre>
-		<p><big><b>CONDITIONAL OPERATORS</b></big>	
-		<p>The Conditional Operator is the only ternary (operator takes three arguments) operator in Java. The operator evaluates the first argument and, if true, evaluates the second argument. If the first argument evaluates to false, then the third argument is evaluated. The conditional operator is the expression equivalent of the if-else statement. The conditional expression can be nested and the conditional operator associates from right to left: (a?b?c?d:e:f:g) evaluates as (a?(b?(c?d:e):f):g)
+		<p><big><b id="id">CONDITIONAL OPERATORS</b></big>	
+		<p>The Conditional Operator is the only ternary (operator takes three arguments) operator in Java. The operator evaluates the first argument and, if true, evaluates the second argument. If the first argument evaluates to false, then the third argument is evaluated. The conditional operator is the expression equivalent of the if-else statement.
 		An example program is shown below that demonstrates the Ternary operator in java.
 		<h4>Eg:</h4>
 		<pre>public class TernaryOperatorsDemo 
@@ -598,29 +599,28 @@ public static void main(String args[])
 	new TernaryOperatorsDemo();
 }
 }</pre>
-		<h2>5)   DataTypes in Java</h2><br>
+		<h2 id="id1">4)   DataTypes in Java</h2><br>
 		<p>Data type specifies the size and type of values that can be stored in an identifier. The Java language is rich in its data types. Different data types allow you to select the type appropriate to the needs of the application.
 		Data types in Java are classified into two types:
-		<p>1) Primitive: which include Integer, Character, Boolean, and Floating Point.
-		<p>2) Non-primitive: which include Classes, Interfaces, and Arrays.
+		<p>1) Primitive: boolean, char, byte, short, int, long, float, double
+		<p>2) Non-primitive:  Classes, Interfaces, and Arrays.
 
 
 		
-		<p><b><h4>Primitive Data Types</b></h4><br><br>
+		<p><b><h4 id="id">Primitive Data Types</b></h4><br><br>
 		<p><img src="img/java_data.gif" border="0" widht=><br><br>
-		<p><big><b>1.  Integer java data types</b></big>
+		<p><big><b id="id">1.  Integer java data types</b></big>
 		<p>Integer types can hold whole numbers such as 123 and -96. The size of the values that can be stored depends on the integer type that we choose.
 		<p><img src="img/java_data2.png" ><br>
-		<p><big><b>2. Floating Point</b></big>
+		<p><big><b id="id">2. Floating Point</b></big>
 		<p>Floating point data types are used to represent numbers with a fractional part. Single precision floating point numbers occupy 4 bytes and Double precision floating point numbers occupy 8 bytes. There are two subtypes:
 		<p> <img src="img/floatdatatypes.png" border="0" width="500" height="200">
-        		<p><big><b>3.  Character</b></big>
+        		<p><big><b id="id">3.  Character</b></big>
 		<p>It stores character constants in the memory. It assumes a size of 2 bytes, but basically, it can hold only a single character because char stores Unicode character sets. It has a minimum value of  <b>&apos;u0000&apos;</b> (or 0) and a maximum value of <b>&apos;uffff&apos;</b>  (or 65,535, inclusive).<br>
-		<p><big>4. Boolean </big>
+		<p><big id="id">4. Boolean </big>
 		<p>Boolean data types are used to store values with two states: true or false.
-		<h2>4)  Arrays in Java</h2>
-		<p>The Concept of Array in Java
-		An array is a collection of similar data types.An Array is a container object that holds values of the homogeneous type. It is also known as static data structure because the size of an array must be specified at the time of its declaration.
+		<p><b><big id="id">4)  Arrays in Java</big></b>
+		<p>An array is a collection of similar data types.An Array is a container object that holds values of the homogeneous type. It is also known as static data structure because the size of an array must be specified at the time of its declaration.
 		An array can be either primitive or reference type. It gets memory in heap area. Index of an array starts from zero to size-1.
 		<p><img src="img/array.gif" border="0" width="600" height="200">
 		<pre>Array Declaration</pre>
@@ -696,114 +696,7 @@ for(int i=0;i<3;i++)
 1 2 3
 2 3 4
 3 4 5</big></pre>
-		<h2><b>6. Run a java program from command Prompt.</b></h2>		
-		<p>This instructable will teach you how to: 
-		<p><b>1. Install the Java Development Kit.
-		<p>2. Set system variables to easily be able to compile and execute java files.
-		<p>3.  Compile and execute a Java file from Command Prompt.</b>
-		</p>
-		<h4>Step 1: Download Latest JDK</h4><br>
-
-		<ol><img src="img/command.jpg" border="0">
-		<li>Follow this link: http://www.oracle.com/technetwork/java/javase/downloads/index.html</li>
-		<li>Click Download JDK under the download Java Standard Edition panel.</li>
-		<li>Choose your Operating System and agree to the terms of service. **</li>
-		<li>** This will  probably be Windows since your using Command Prompt.</li></ol>
-
-		<h4>Step 2: Setting Path for Command Prompt</h4><br>
-		<ol><img src="img/cmd1.png" border="0 " width="700" height="350"><br><br>
-		<img src="img/cmd2.png" border="0" widht="800" height="350"><br><br>	
-		<li>Open the Command Prompt.</li>
-		<li>Type "set Path=C:\Program Files\Javajdk1.8.0_121\bin" .*</li>
-		<li>Type  " set HomePath= C:\Program Files\Java\ jdk1.8.0_121 *</li> </ol>
-		<pre>* If you have a later JDK ( i.e. JDK 1.6.0_22) replace the portion that says jdk1.6.0 with it.
-** If you don't know which jdk you have to go to start pane( at bottom left corner of your screen)>click run> click browse>Then  go to C:\Program Files\Java.
-*** Do not type quotation marks in steps 1-3  at the command prompt.</pre>
-		<h4>Step 3: Creating a Simple Java Program</h4><br>
-		<ol><img src="img/cmd3.jpg" border="0" width="700" height="350"><br><br>
-		<li>Create Program</li>
-		<li>Go to Start pane>All Programs > Accessories> Notepad.exe</li>
-		<li>Copy and paste the following exactly:</li> </ol>
-		<pre>public class helloworld
-{
-public static void main(String[] args)
-{
-	System.out.println("Hello World!");
-}
-}
-		</pre>
-		<p>Save the file as helloworld.java 
-		<p> Make sure "Save as type" under where you typed the file name as "All Files" (as opposed to the default "Text-File").
-      		<p>You want to save your java file where  the Command Prompt  is set to open at.*
-		<p>*Such as C:\Users\Home 
-		<h4>Step 4: Compiling and Executing the Program</h4><br>
-		<ol><img src="img/cmd5.png" border="0" width="700" height="350"><br><br>
-		<li>First compile file by going to Command Prompt and typing javac  helloworld.java.</li>
-		<li>This will create a class file which you can execute by typing java helloworld.</li>
-		<li>It should print "Hello World!" to show your done.</li></ol>
-		<h2><b>7. Type Conversion, Type Casting</b></h2>
-		<p><b>Summary:</b> By the end of this tutorial "Java Data Type Casting Type Conversion", you will be comfortable with converting one data type to another either implicitly or explicitly.
-		Java supports two types of castings – primitive data type casting and reference type casting. Reference type casting is nothing but assigning one Java object to another object. It comes with very strict rules and is explained clearly in Object Casting. Now let us go for data type casting.
-		<p>Java data type casting comes with 3 flavors.
-		<ol><li> Implicit casting.</li>
-    		<li>Explicit casting.</li>
-    		<li>Boolean casting.</li></ol>
-		<p><b>1. Implicit casting(widening conversion)</b>
-		<p>A data type of lower size (occupying less memory) is assigned to a data type of higher size. This is done implicitly by the JVM. The lower size is widened to higher size. This is also named as automatic type conversion.
-		<pre>int x = 30;                    // occupies 4 bytes
-double y = x;                  // occupies 8 bytes
-System.out.println(y);         // prints 10.0</pre>
-		<p>In the above code 4 bytes integer value is assigned to 8 bytes double value.
-		<p><b>2. Explicit casting (narrowing conversion)</b>             
-		<p>A data type of higher size (occupying more memory) cannot be assigned to a data type of lower size. This is not done implicitly by the JVM and requires explicit casting; a casting operation to be performed by the programmer. The higher size is narrowed to lower size.
-		<pre>double x = 30.5;             // 8 bytes
- int y = x;                   // 4 bytes ;  raises compilation error
-</pre>
-		<p>In the above code, 8 bytes double value is narrowed to 4 bytes int value. It raises error. Let us explicitly type cast it.
-		<pre>double x = 30.5;                  
-int y = (int) x; </pre>
-		<p>The double x is explicitly converted to int y. The thumb rule is, on both sides, the same data type should exist.
-		<p><b>3. Boolean casting</b>
-		<p>A boolean value cannot be assigned to any other data type. Except boolean, all the remaining 7 data types can be assigned to one another either implicitly or explicitly; but boolean cannot. We say, boolean is incompatible for conversion. Maximum we can assign a boolean value to another boolean.
-		<p>Following raises error.
-			<pre>boolean x = true;
-int y = x;                    // error
-boolean x = true;
-int y = (int) x;           // error
-</pre><br>
-		<img src="img/Type_cast1.png" border="0" widht="200" height="200"><br>
-		<p>In the above statement, left to right can be assigned implicitly and right to left requires explicit casting. That is, byte can be assigned to short implicitly but short to byte requires explicit casting.
-Following char operations are possible	
-		<pre>public ClassDemo1
-{
- public static void main(String args[]) 
-	{
-	char ch1 = 'A';
-	double d1 = ch1;
-	System.out.println(d1);        // prints 65.0
-	System.out.println(ch1 * ch1);  // prints 4225 , 65 * 65
-	double d2 = 66.0;
-	char ch2 = (char) d2;
-	System.out.println(ch2);      // prints B
-}
-}</pre>
-		<h4><b>All the data type conversions</b></h4>
 		
-		<table  border="1">
-		<tr><th>byte TO</th> <td>short</td> <td>int</td> <td>long</td> <td>float</td> <td>double</td> <td>char</td> <td>boolean</td> </tr>
-		<tr><th>short TO </th> <td>byte </td> <td>int </td> <td>long </td> <td>float </td> <td>double </td><td>char </td> <td>boolean</td> </tr>
-		<tr><th>int TO</th> <td>byte</td> <td>short</td> <td>long</td> <td>float</td> <td>double</td><td>char</td> <td>boolean</td> </tr>
-		<tr><th>float TO </th> <td>byte </td> <td>short </td> <td>int </td> <td>long </td> <td>double </td><td>char </td> <td>boolean</td> </tr>
-		<tr><th>double TO </th> <td>byte </td> <td>short </td> <td>int </td> <td>long </td><td>float </td> <td>char </td><td>boolean</td> </tr>
-		<tr><th>char TO </th><td>byte </td><td> short </td> <td>int </td> <td>long </td> <td>float </td> <td>double </td> <td>boolean</td> </tr>
-		<tr><th>boolean TO</th> <td>byte </td> <td>short </td> <td>int </td> <td>long </td> <td>float </td> <td>ouble </td><td>char</td> </tr>
-		</table>
-		<h4>String and data type conversions</h4>
-		
-		<table  border="1">
-		<tr><th>String TO  </th> <td>byte</td>  <td>short</td>  <td>int</td> <td>long</td> <td>float</td> <td>double</td> <td>char</td> <td>boolean</td></tr>
-		<tr><th>byte    </th> <td>short</td> <td>int</td>  <td>long</td> <td>float</td>  <td>double</td>  <td>char</td>  <td>boolean</td> <td>TO String</tr></tr>
-		</table>
 	</div>
             </div>
           </div>
@@ -823,7 +716,8 @@ Following char operations are possible
                   <a href="../../java/corejava/java_installation.html">Java Installation and setup</a><p></p>
                   <a href="../../java/corejava/java_introduction.html">Introduction </a><p></p>
 				  <a href="../../java/corejava/java_control_statements.html">Control Statements</a><p></p>
-				  <a href="../../java/corejava/java_string.html">String and String Tonkeinzer class </a><p></p>
+				  <a href="../../java/corejava/java_string.html">String class</a><p></p>
+				   <a href="../../java/corejava/java_jvm_art.html">JVM architecture</a><p></p>
 				   <a href="../../java/corejava/java_math_date.html">Math & Data and Time Class</a><p></p>
 				  <a href="../../java/corejava/java_method.html">Methods </a><p></p>
 				  <a href="../../java/corejava/java_interface_package.html">Interface, package, Access Modifiers</a><p></p>
@@ -831,9 +725,12 @@ Following char operations are possible
 				  <a href="../../java/corejava/java_inheritacne.html">Inheritance </a><p></p>
 				 <a href="../../java/corejava/java_poly_abstraction.html">Polymorphism, Abstraction </a><p></p>
 				 <a href="../../java/corejava/java_abstract.html">Abstract Classes</a><p></p>
+				  <a href="../../java/corejava/java_enum.html"> Enum Types</a><p></p>
 				 <a href="../../java/corejava/java_io_stream.html">IO Streams </a><p></p>
 				 <a href="../../java/corejava/java_exception.html">Exception Handling</a><p></p>
+				 <a href="../../java/corejava/java_generics.html">Generices</a><p></p>
 				 <a href="../../java/corejava/java_collections.html">Collections</a><p></p>
+				 <a href="../../java/corejava/java_big_o_notation.html">Data Structures</a><p></p>
 				 <a href="../../java/corejava/java_jdbc.html">Jdbc Connection</a><p></p> 
               </div>
               </div>
@@ -859,7 +756,9 @@ Following char operations are possible
                          <p><i class="fa fa-home pr-10"></i>Address: Madhapur, silicon valley</p>
                          <p><i class="fa fa-globe pr-10"></i>Hyderabad, India</p>
                          
-                         <p><i class="fa fa-phone pr-10"></i>Phone :79899 39242</p>
+                         <p><i class="fa fa-phone pr-10"></i>Phone : 755-733-1102 <br>&nbsp;&nbsp;&nbsp;
+						 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 798-993-9242</p>
                          <p><i class="fa fa-envelope pr-10"></i>Email : <a href="javascript:;">support@BrightITCareer.com</a></p>
                      </address>
                  </div>

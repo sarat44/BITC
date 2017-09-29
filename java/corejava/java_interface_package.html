@@ -20,13 +20,13 @@
     <link href="../../assets/bxslider/jquery.bxslider.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/animate.css">
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-
+	
 
     <!-- Custom styles for this template -->
     <link href="../../css/style.css" rel="stylesheet">
 	<link href="../../css/custom.css" rel="stylesheet">
     <link href="../../css/style-responsive.css" rel="stylesheet" />
-
+	<link href="../../css/heading_1.css" rel="stylesheet" type="text/css">
   </head>
 <!--header start-->
     <header class="head-section">
@@ -72,7 +72,9 @@
                           <li>
                               <a href="../../java/java_main.html"">Core JAVA</a>
                           </li>
-                          
+                          <li>
+							  <a href="../../java/corejava/java_big_o_notation.html">Data Structures</a>
+						  </li>
                       </ul>
                   </li> 
 				  <!-- JAVA header end-->
@@ -176,8 +178,8 @@
                           <li>
                               <a href="../../testing/testing_main.html">Appium</a>
                           </li>
-                          <li>
-                             <a href="../../interview_questions/corejava/programs1.html">Core JAVA</a>
+                           <li>
+                              <a href="../../interview_questions/corejava/corejava_programs.html">Core JAVA</a>
                           </li>
 						  <li>
                               <a href="../../interview_questions/sql/interview_sql.html">SQL</a>
@@ -229,18 +231,18 @@
               
               <div class="col-lg-10 col-sm-10">
                 <h1>
-					<p>Interface, package and Access Modifiers
+					<p><b>Interface, package and Access Modifiers</b>
                 </h1>
-	<h3>Java Interface</h3>
-	<p>the Interface is a pure abstract class.They are syntactically similar to classes, but you cannot create an instance of an Interface and their methods are declared without anybody.The Interface is used to achieve complete abstraction in Java. When you create an interface it defines what a class can do without saying anything about how the class will do it. 
+	<h3 id="id1">Java Interface</h3>
+	<p>The Interface is a pure abstract class.They are syntactically similar to classes, but you cannot create an instance of an Interface and their methods are declared without anybody.The Interface is used to achieve complete abstraction in Java. When you create an interface it defines what a class can do without saying anything about how the class will do it. 
 	<p><b>Syntax :</b>
 	<pre>interface interface_name { }</pre>
 	<p>Java Interface Example
-	<p>In this example, show table interface has only one method, its implementation is provided in the A class.
+	<p>In this example, show table interface has only one method, its implementation is provided in the class.
 	<pre>interface showtable{  
 void show();  
 }  
-class A7 implements printable
+class A7 implements showtable
 {  
 public void show()
 {
@@ -254,8 +256,7 @@ public static void main(String args[])
 }</pre>
 <pre>Output:
 Hello</pre>
-<p><big>we know facts about Interfaces</big>
-	<p>Let's discover some more facts about "Interface and Class."
+<p>Let's discover some more facts about "Interface and Class."
 <p>1) Difference between Class and Interface-
        	<ol><li>In class, you can instantiate variable and create an object. In an interface,you can't.</li>
 		<li>The interface cannot contain concrete(with implementation) methods.</li>
@@ -312,9 +313,9 @@ public void Draw2()
 	Drawing Circle here:shape3
 	Drawing Circle here:shape3
 </pre>
-<h3>Java Package </h3>
-<p>Java is an Object-Oriented programming language. We know that the object oriented programming provides the different types of advantages.one of the most important advantage is Encapsulation. Encapsulation is a technique that supports no outside world data access (directly) and also multiple related objects can be grouped under one object. Java programing also implements this type of process by the use of Package Programming. The Java classes which is created in the same file or each in its own file. The file that contains the class needs to maintain the protocol that file name and class name both are same.
-<p>package programming is one of the major skills in Java. In the situation where different developer or programmer are working with their different project across in the different department as well as different city, countries then each developer take a choice to create classes which is based on the requirement. In the above consequence the project should be completed with classes with the same name. Packages are classified into two types. The first category is known as java API (Application Programming Interface) packages and the second one is known as user defines packages. Java API provides a large number of classes grouped into different package according to their functionality. This classification is given below.
+<h3 id="id1">Java Package </h3>
+<p>To make types easier to find and use, to avoid naming conflicts, and to control access, programmers bundle groups of related types into packages.
+<p>A package is a grouping of related types providing access protection and name space management. Note that types refers to classes, interfaces, enumerations, and annotation types. Enumerations and annotation types are special kinds of classes and interfaces, respectively, 
 <br><p><img src="img/package-in-java.jpg" bordr="0"><br>
 <p><b>Advantage of package</b>
 	<pre>Package is used to categorize the classes and interfaces so that they can be easily maintained
@@ -373,7 +374,7 @@ public class Hello
 }</pre>
 
 </pre>
-	<h3>Java Access Modifiers</h3>
+	<h3 id="id1">Java Access Modifiers</h3>
 	<p> A Java access modifier specifies which classes can access a given class and its fields, constructors and methods. Access modifiers can be specified separately for a class, its constructors, fields, and methods. Java access modifiers are also sometimes referred to in daily speech as Java access specifiers, but the correct name is Java access modifiers. Classes, fields, constructors, and methods can have one of four different Java access modifiers:
 	<ol><li>private</li>
     	<li>default (package)</li>
@@ -514,7 +515,8 @@ Compile time error
                   <a href="../../java/corejava/java_installation.html">Java Installation and setup</a><p></p>
                   <a href="../../java/corejava/java_introduction.html">Introduction </a><p></p>
 				  <a href="../../java/corejava/java_control_statements.html">Control Statements</a><p></p>
-				  <a href="../../java/corejava/java_string.html">String and String Tonkeinzer class</a><p></p>
+				  <a href="../../java/corejava/java_string.html">String class</a><p></p>
+				  <a href="../../java/corejava/java_jvm_art.html">JVM architecture</a><p></p>
 				   <a href="../../java/corejava/java_math_date.html">Math & Data and Time Class</a><p></p>
 				  <a href="../../java/corejava/java_method.html">Methods </a><p></p>
 				  
@@ -523,9 +525,12 @@ Compile time error
 				  <a href="../../java/corejava/java_inheritacne.html">Inheritance </a><p></p>
 				 <a href="../../java/corejava/java_poly_abstraction.html">Polymorphism, Abstraction </a><p></p>
 				 <a href="../../java/corejava/java_abstract.html">Abstract Classes</a><p></p>
+				  <a href="../../java/corejava/java_enum.html"> Enum Types</a><p></p>
 				 <a href="../../java/corejava/java_io_stream.html">IO Streams </a><p></p>
 				 <a href="../../java/corejava/java_exception.html">Exception Handling</a><p></p>
+				 <a href="../../java/corejava/java_generics.html">Generices</a><p></p>
 				 <a href="../../java/corejava/java_collections.html">Collections</a><p></p>
+				 <a href="../../java/corejava/java_big_o_notation.html">Data Structures</a><p></p>
 				  <a href="../../java/corejava/java_jdbc.html">Jdbc Connection</a><p></p>
               </div>
               </div>
@@ -551,7 +556,9 @@ Compile time error
                          <p><i class="fa fa-home pr-10"></i>Address: Madhapur, silicon valley</p>
                          <p><i class="fa fa-globe pr-10"></i>Hyderabad, India</p>
                          
-                         <p><i class="fa fa-phone pr-10"></i>Phone :79899 39242</p>
+                         <p><i class="fa fa-phone pr-10"></i>Phone : 755-733-1102 <br>&nbsp;&nbsp;&nbsp;
+						 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 798-993-9242</p>
                          <p><i class="fa fa-envelope pr-10"></i>Email : <a href="javascript:;">support@BrightITCareer.com</a></p>
                      </address>
                  </div>
