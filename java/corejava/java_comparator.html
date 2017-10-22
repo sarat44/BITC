@@ -8,7 +8,7 @@
     <meta name="keywords" content="IT Career, JOBS, Training, Selenium, JAVA, webdriver,testing, automation, Appium, SQL, Career,guarantee,ETL Testing, Mobile, SOAP,Hyderabad, interview, questions,Part time,Fresher, experienced,ISTQB,OCJP, SCJP, dumps,certifications  ">
     <link rel="shortcut icon" href="../../img/favicon.png">
 
-    <title>BrightITCareer |JAVA I/O stream</title>
+    <title>BrightITCareer |JAVA String,math function</title>
 	
     <!-- Bootstrap core CSS -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +26,10 @@
     <link href="../../css/style.css" rel="stylesheet">
 	<link href="../../css/custom.css" rel="stylesheet">
     <link href="../../css/style-responsive.css" rel="stylesheet" />
-
+	<link href="../../css/heading_1.css" rel="stylesheet" type="text/css">
+	<style>
+	
+</style>
   </head>
 <!--header start-->
     <header class="head-section">
@@ -56,9 +59,9 @@
                           <li>
                               <a href="../../index.html">Career Counselling</a>
                           </li>
-						  	   <li>
+						 	   <li>
 								<a href="../../course/details/coursedetails.html">Course Details</a>
-						  </li>
+						  </li> 
                       </ul>
                   </li>
 				  
@@ -70,7 +73,7 @@
                       </a>
                       <ul class="dropdown-menu">
                           <li>
-                              <a href="../../java/java_main.html"">Core JAVA</a>
+                              <a href="../../java/java_main.html">Core JAVA</a>
                           </li>
                           <li>
 							  <a href="../../java/corejava/java_big_o_notation.html">Data Structures</a>
@@ -98,7 +101,7 @@
 						  <li>
 								<a href="../../testing/testNG/testing_introduction.html">TestNG</a>
 						  </li>
-						  <!-- <li>
+						<!--   <li>
                               <a href="../../testing/testing_main.html">Appium</a>
                           </li> -->
 						   <li>
@@ -159,26 +162,26 @@
 				  
 				  <!-- Testing header end-->
 				  
-				 <!-- Interview Questions header start-->
+				  <!-- Interview Questions header start-->
 				  
                   <li class="dropdown">
                       <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
                       "dropdown" data-toggle="dropdown" href="#">Interview Questions <i class="fa fa-angle-down"></i>
                       </a>
                       <ul class="dropdown-menu">
-                         <li>
+                          <li>
                               <a href="../../interview_questions/manul_testing/interview_manul_testing.html">Manual Testing</a>
                           </li>
 						   <li>
 								<a href="../../interview_questions/soap_ui/interview_soap_ui.html">SOAP UI</a>
 						  </li>
-                         <li>
+                          <li>
                               <a href="../../interview_questions/selenium/interview_Selenium.html">Selenium</a>
                           </li>
                           <li>
                               <a href="../../testing/testing_main.html">Appium</a>
                           </li>
-                           <li>
+                         <li>
                               <a href="../../interview_questions/corejava/corejava_programs.html">Core JAVA</a>
                           </li>
 						  <li>
@@ -227,241 +230,140 @@
         <div class="col-lg-9">
           <div class="blog-item">
             
-            <div class="row">
+            <div class="row">	
               
               <div class="col-lg-10 col-sm-10">
-                <h1>          
-					<p><b>IO Streams in Java</b></h1>
-	
-		<p>Java I/O  is used to process the input and produce the output.
-		<p>Java uses the concept of the stream to make I/O operation fast. The java.io package contains all the classes required for input and output operations.
-		<p>A Stream is linked to a physical layer by java I/O system to make input and output operation in java. In general, a stream means the continuous flow of data. Streams are a clean way to deal with input/output without having every part of your code understand the physical. 
-		<p>Java defines two types of streams. They are,
-		<p> <b>1. Byte Stream:</b> It provides a convenient means for handling input and output of byte.
-		<p> <b>2.Character Stream:</b> It provides a convenient means for handling input and output of characters. Character stream uses Unicode and therefore can be internationalized.
-		<img src="img/stream1.jpg" border="0" widht="400" height="400">
-		<pre>Byte Stream Classes:</pre>
-		<pre>Byte stream is defined by using two abstract class at the top of hierarchy, they are InputStream and OutputStream.</pre>
-		<pre>Character Stream Classes</pre>
-		<pre>Character stream is also defined by using two abstract class at the top of hierarchy, they are Reader and Writer.</pre>
-		<p><b>Reading Characters</b>
-		<p>read() method is used with BufferedReader object to read characters. As this function returns integer type value has we need to use typecasting to convert it into char type.
-		<pre>int read() throws IOException</pre>
-		<p>Below is a simple example explaining character input.
-	<pre>class CharReadDemo
-{
-        public static void main( String args[])
-       {
-               BufferedReader br = new Bufferedreader(new InputstreamReader(System.in));
-               char c = (char)br.read();       //Reading character  
-       }
-}</pre>
-<p><b>Reading Strings</b>
-<p>To read string we have to use readLine() function with BufferedReader class's object.
-<pre>String readLine() throws IOException</pre>
-<p>Program to take String input from Keyboard in Java</p>
-<pre>import java.io.*;
-class MyInputDemo
-{
-     public static void main(String[] args)
-     {
-     String text;
-     InputStreamReader isr = new InputStreamReader(System.in);
-     BufferedReader br = new BufferedReader(isr);
-     text = br.readLine();          //Reading String  
-     System.out.println(text);
- }
-}</pre>
-<p><b>How to create a file in Java</b>
-<p>The File.createNewFile() method is used to create a file in Java, and return a boolean value : true if the file is created successful; false if the file is already exists or the operation failed.
-<pre>import java.io.File;
-import java.io.IOException;
-public class CreateFileExample
-{
-    public static void main( String[] args )
-    {
-    	try {
-	      File file = new File("CharDemo.java");
+                <h1> 	                
+					<p><b>Comparator</b>
+                </h1>
+				<ul><li>Comparator is in java.util.package.</li>
+					<li>Comparator provides two methods compare() and equals() methods.</li>
+					<li>It provides multiple sorting sequence.</li>
+				</ul>
+					<pre>package com.sort;
+public class Price {
+int price;
+String brand;
+Price(int price, String brand) {
+	this.price = price;
+	this.brand = brand;
+}
+public String getBrand() {
+	return brand;
+}
+public void setBrand(String brand) {
+	this.brand = brand;
+}
+public void setPrice(int price) {
+	this.price = price;
+}
+public int getPrice() {
+	return price;
+}
+}
 
-	      if (file.createNewFile()){
-	        System.out.println("File is created!");
-	      }else{
-	        System.out.println("File already exists.");
-	      }
-
-    	} catch (IOException e) {
-	      e.printStackTrace();
+package com.sort;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+public class PriceComparator {
+public static void main(String[] args) {
+	naturalOrderingNumbers();
+	naturalOrderingStrings();
+	comparatorSortIntegers();
+    comparatorSortStrings();
+}
+// Sorting the Strings using comparable, Natural ordering
+private static void naturalOrderingNumbers() {
+	List<Integer> intList = new ArrayList<Integer>();
+	intList.add(10);
+	intList.add(23);
+	intList.add(11);
+	intList.add(19);
+	intList.add(23);
+	Collections.sort(intList);
+	System.out.println("Sort in order of Price -Natural Ordering ");
+	for (Integer i : intList) {
+		System.out.println(i);
 	}
-    }
-}</pre>
-<p><b>How to read file in Java-BufferedInputStream</b>
-<pre>import java.io.*;
-public class ReadFileDemo 
-{
-   public static void main(String[] args) 
-   {         
-      //Specify the path of the file here
-      File file = new File("C://ReadDemo.java");
-      BufferedInputStream bis = null;
-      FileInputStream  fis= null;
-   try
-      {
-          //FileInputStream to read the file
-          fis = new FileInputStream(file);
-
-          /*Passed the FileInputStream to BufferedInputStream
-           *For Fast read using the buffer array.*/
-          bis = new BufferedInputStream(fis);
-
-          while( bis.available() > 0 ){             	
-              System.out.print((char)bis.read());
-          }
-
-       }catch(FileNotFoundException fn)
-        {
-            System.out.println("The specified file not found" + fn);
-        }
-        catch(IOException io)
-        {
-            System.out.println("I/O Exception: " + io); 
-        }
-        finally
-        {
-            try{
-               if(bis != null && fis!=null)
-               {
-       	          fis.close();
-                  bis.close();
-               }      
-             }catch(IOException io)
-              {
-                  System.out.println("Error in InputStream close(): " + io);
-              }         
-        }
-   } </pre>   
-<p><b>Append content to File using FileWriter and BufferedWriter</b>
-<pre>import java.io.File;
-import java.io.FileWriter;
-import java.io.BufferedWriter;
-import java.io.IOException;
-
-class AppendFileDemo
-{
-   public static void main( String[] args )
-   {	
-      try{
-    	String content = "This is my content which would be appended " +
-        	"at the end of the specified file";
-        //Specify the file name and path here
-    	File file =new File("ReadDemo.java");
-
-    	/* This logic is to create the file if the
-    	 * file is not already present
-    	 */
-    	if(!file.exists()){
-    	   file.createNewFile();
-    	}
-    	//Here true is to append the content to file
-    	FileWriter fw = new FileWriter(file,true);
-    	//BufferedWriter writer give better performance
-    	BufferedWriter bw = new BufferedWriter(fw);
-    	bw.write(content);
-    	//Closing BufferedWriter Stream
-    	bw.close();
-	System.out.println("Data successfully appended at the end of file");
-      }catch(IOException ioe){
-         System.out.println("Exception occurred:");
-    	 ioe.printStackTrace();
-       }
-   }
-}</pre>
-<p><b>Append content to File using PrintWriter</b>
-<p>PrintWriter gives you more flexibility. Using this you can easily format the content which is to be appended to the File.
-<pre>import java.io.File;
-import java.io.FileWriter;
-import java.io.PrintWriter;
-import java.io.BufferedWriter;
-import java.io.IOException;
-
-class FileDemo
-{
-   public static void main( String[] args )
-   {	
-      try{
-          File file =new File("ReadDemo.java");
-    	  if(!file.exists()){
-    	 	file.createNewFile();
-    	  }
-    	  FileWriter fw = new FileWriter(file,true);
-    	  BufferedWriter bw = new BufferedWriter(fw);
-    	  PrintWriter pw = new PrintWriter(bw);
-          //This will add a new line to the file content
-    	  pw.println("");
-          /* Below three statements would add three 
-           * mentioned Strings to the file in new lines.
-           */
-    	  pw.println("This is first line");
-    	  pw.println("This is the second line");
-    	  pw.println("This is third line");
-    	  pw.close();
-
-	  System.out.println("Data successfully appended at the end of file");
-
-       }catch(IOException ioe){
-    	   System.out.println("Exception occurred:");
-    	   ioe.printStackTrace();
-      }
-   }
-}</pre>
-<pre>Output:
-Data successfully appended at the end of file
-</pre><b>write to file in Java -FileOutputStream</b>
-<p>In Java, FileOutputStream is a bytes stream class that&apos;s used to handle raw binary data. To write the data to file, you have to convert the data into bytes and save it to file. See below full example.
-<pre>import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-
-public class WriteFileDemo 
-{
-           public static void main(String[] args) 
-           {
-
-	FileOutputStream fop = null;
-	File file;
-	String content = "This is the text content";
-
-	try {
-		file = new File("c:/newfile.txt");
-		fop = new FileOutputStream(file);
-
-		// if file doesnt exists, then create it
-		if (!file.exists()) {
-			file.createNewFile();
-		}
-
-		// get the content in bytes
-		byte[] contentInBytes = content.getBytes();
-
-		fop.write(contentInBytes);
-		fop.flush();
-		fop.close();
-
-		System.out.println("Done");
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				if (fop != null) {
-					fop.close();
-				}
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
+	System.out.println("\n");
+}
+// Sorting the numbers using comparable, Natural ordering
+private static void naturalOrderingStrings() {
+	List<String> strList = new ArrayList<String>();
+	strList.add("Audi");
+	strList.add("BMW");
+	strList.add("Hyndai");
+	strList.add("Suzuki");
+	strList.add("BMW");
+	strList.add("Ford");
+	System.out.println("Sort in order of Make -Natural Ordering ");
+	Collections.sort(strList);
+	for (String str : strList) {
+		System.out.println(str);
+	}
+	System.out.println("\n");
+}
+// Sorting in order of price using Comparator and anonymous inner class
+private static void comparatorSortIntegers() {
+	List<Price> plist = new ArrayList<Price>();
+	plist.add(new Price(10, "Audi"));
+	plist.add(new Price(20, "BMW"));
+	plist.add(new Price(36, "Hyundai"));
+	plist.add(new Price(23, "Audi"));
+	plist.add(new Price(27, "Benz"));
+	Collections.sort(plist, new Comparator<Price>() {
+		@Override
+		public int compare(Price p1, Price p2) {
+			if (p1 == null || p2 == null) {
+			throw new NullPointerException("Objects are null");
+			} else if (!p1.getClass().equals(p2.getClass())) {
+				throw new ClassCastException("Objects are not of the same Type, Not mutually comparable");
+			} else if (p1.getPrice() > p2.getPrice()) {
+				return 1;
+			} else if (p1.getPrice() < p2.getPrice()) {
+				return -1;
+			} else
+				return 0;
+		}});
+	System.out.println("Sort in order of Price -Comparator and anonymous Inner class ");
+	for (Price i : plist) {
+			System.out.println(i.getPrice());
+	}
+	System.out.println("\n");
+}
+	// Sorting in order of Make using Comparator and anonymous inner class
+private static void comparatorSortStrings() {
+	List<Price> plist = new ArrayList<Price>();
+	Price p1 = new Price(10, "Audi");
+	plist.add(new Price(20, "BMW"));
+	plist.add(new Price(36, "Hyundai"));
+	plist.add(new Price(23, "Audi"));
+	plist.add(new Price(27, "Benz"));
+	plist.add(p1);
+	Collections.sort(plist, new Comparator<Price>() {
+	@Override
+	public int compare(Price p1, Price p2) {
+		if (p1 == null || p2 == null)
+			throw new NullPointerException("Object is null");
+		else if (!p1.getClass().equals(p2.getClass()))
+			throw new ClassCastException("Objects are not mutually comparable");
+		else
+			return (p1.getBrand().compareTo(p2.getBrand()));
+		}});
+	System.out.println("Sort in order of Make -Comparator and anonymous Inner class ");
+	for (Price p : plist)
+		System.out.println(p.getBrand());
+	System.out.println("\n");
 	}
 }</pre>
-             </div>
+					
+					
+					
+					
+					
+				</div>
             </div>
           </div>
 
@@ -480,10 +382,10 @@ public class WriteFileDemo
                   <a href="../../java/corejava/java_installation.html">Java Installation and setup</a><p></p>
                   <a href="../../java/corejava/java_introduction.html">Introduction </a><p></p>
 				  <a href="../../java/corejava/java_control_statements.html">Control Statements</a><p></p>
-				  <a href="../../java/corejava/java_string.html">String class</a><p></p>
+				  <a href="../../java/corejava/java_string.html">String class </a><p></p>
+				  <a href="../../java/corejava/java_jvm_art.html">JVM architecture</a><p></p>
 				   <a href="../../java/corejava/java_math_date.html">Math & Data and Time Class</a><p></p>
 				  <a href="../../java/corejava/java_method.html">Methods </a><p></p>
-				  
 				  <a href="../../java/corejava/java_interface_package.html">Interface, package, Access Modifiers</a><p></p>
 				  <a href="../../java/corejava/java_static_final.html">Static and Non Static, final</a><p></p>
 				  <a href="../../java/corejava/java_inheritacne.html">Inheritance </a><p></p>
