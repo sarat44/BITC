@@ -26,7 +26,7 @@
     <link href="../../css/style.css" rel="stylesheet">
 	<link href="../../css/custom.css" rel="stylesheet">
     <link href="../../css/style-responsive.css" rel="stylesheet" />
-
+	<link href="../../css/heading_1.css" rel="stylesheet" type="text/css">
   </head>
 <!--header start-->
     <header class="head-section">
@@ -56,12 +56,12 @@
                           <li>
                               <a href="../../index.html">Career Counselling</a>
                           </li>
-						  	   <li>
+<!-- 	   <li>
 								<a href="../../course/details/coursedetails.html">Course Details</a>
 						  </li>
-						  <li>
+						   <li>
 								<a href="../../course/details/experienced_jobs.html">Jop Openings</a>
-						  </li>
+						  </li> -->
                       </ul>
                   </li>
 				  <!-- JAVA header start-->
@@ -74,9 +74,9 @@
                           <li>
                               <a href="../../java/java_main.html">Core JAVA</a>
                           </li>
-                            <li>
+                      <!--      <li>
 							  <a href="../../java/corejava/java_big_o_notation.html">Data Structures</a>
-						  </li>
+						  </li>  -->
                       </ul>
                   </li>
 				  <!-- JAVA header end-->
@@ -238,89 +238,52 @@
                   </b>
                 </h1>
                <p>Selenium Webdriver uses locators to find the web elements on web page. The following are the list of the locators used by selenium.
-               <p><b>1. Locating a Web Element by ID: </b>The most efficient way to locate a web element on a web page is By ID. IDs are the fastest locator.
-               <big>Example 1:</big>
-               <pre>&lt;div class="tab-content"&gt;
-&lt;div class="tab-pane fade in active" id="a">
-&lt;div class="form-group">...&lt;/div&gt;
-&lt;div class="form-group">...&lt;/div&gt;
-&lt;div class="from-group">
-<b>&lt;input type="submit" name="btnLogin" value="LOGIN" id="btnLogin" class="btn btn-info"&gt;&lt;/div&gt;</b>
-&lt;div id="fpass" class="form-group">...&lt;/div&gt;
-&lt;/div&gt;
-&lt;div clas="tab-pane-fade" id="b" >...&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+			   <p><br><img src="img/html4.png"> <br>
+               <p><b id="id">1. Locating a Web Element by ID: </b>The most efficient way to locate a web element on a web page is By ID. IDs are the fastest locator.
+               <pre>&lt;div class="from-group">
+	<b>&lt;input type="submit" name="btnLogin" value="LOGIN" id="btnLogin"&gt;&lt;/div&gt;</b>
 &lt;/div&gt;
 </pre>	
 <p><b>Selenium code:</b>
 <p><i>driver.findElement(By.id("btnLogin"));</i>
 <p><b>Note:</b> If in source code with ID other locators are given, always use ID as it is fastest compared to other locators.
-<p><b>2. Locating a Web Element by Class Name: When there is no ID, locate the element by className.</b>
+<p><b id="id">2. Locating a Web Element by Class Name: When there is no ID, locate the element by className.</b>
 <pre>&lt;div class="tab-content"&gt;
-&lt;div class="tab-pane fade in active" id="a">
-&lt;div class="form-group">...&lt;/div&gt;
-&lt;div class="form-group">...&lt;/div&gt;
 &lt;div class="from-group">
-<b>&lt;input type="submit" name="btnLogin" value="LOGIN" id="btnLogin" class="btn btn-info"&gt;&lt;/div&gt;</b>
-&lt;div id="fpass" class="form-group">...&lt;/div&gt;
-&lt;/div&gt;
-&lt;div clas="tab-pane-fade" id="b" >...&lt;/div&gt;
-&lt;/div&gt;
+	<b>&lt;input type="submit" name="btnLogin" value="LOGIN" id="btnLogin" &gt;&lt;/div&gt;</b>
 &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 <p>Selenium script to locate an element on the page by className
 <p><i>driver.findElement (By.className (&quot;btn btn-info&quot;));</i>
-<p><b>3. Locating a Web Element by Name:</b>
+<p><b id="id">3. Locating a Web Element by Name:</b>
 <p>If there is no Id to use in HTML code, then next preferred way to locate the web element is name attribute.
 <pre>&lt;div class="tab-content"&gt;
-&lt;div class="tab-pane fade in active" id="a">
-&lt;div class="form-group">...&lt;/div&gt;
-&lt;div class="form-group">...&lt;/div&gt;
 &lt;div class="from-group">
-<b>&lt;input type="submit" name="btnLogin" value="LOGIN" id="btnLogin" class="btn btn-info"&gt;&lt;/div&gt;</b>
-&lt;div id="fpass" class="form-group">...&lt;/div&gt;
-&lt;/div&gt;
-&lt;div clas="tab-pane-fade" id="b" >...&lt;/div&gt;
-&lt;/div&gt;
+	<b>&lt;input type="submit" name="btnLogin" value="LOGIN" id="btnLogin" &gt;&lt;/div&gt;</b>
 &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 <p><b>Selenium script to locate an element by name</b>
 <p><i>driver.findElement(By.name(&quot;btnLogin&quot;));</i>
-<p><b>4. Locating an Web Element by LinkText:</b>
+<p><b id="id">4. Locating an Web Element by LinkText:</b>
 <p> If there is Links present on Web page it is very easy to locate them but make sure, there is only one unique link on the web page. If the specified locator is duplicate then it returns first matching web element.
 
 <pre>&lt;div clas="storycont1"&gt;
-&lt;div id="breadcrumbs_brdcrm" clas="gad_breadcrums"&gt;
-&lt;div id="breadcrum1" itemref="2" itemtype="http://data-vocabulary.org" font-wight:normal"&gt;  &lt;/div&gt;
-&lt;div id="breadcrum2" itemref="3" itemtype="child" itemtype="http://data-vocabulary.org" style="float:left;font-weight:normal"&gt;   &lt;/div&gt;
-<b>&lt;a itemprop="url" href="/tags"></b>
-&lt;span itemprop="title" style="font-weight:normal"&gt;Tags&lt;/span&gt;
+	<b>&lt;a itemprop="url" href="/tags"></b>
+	&lt;span itemprop="title" style="font-weight:normal"&gt;Tags&lt;/span&gt;
 &lt;/a&gt;
-&lt;/div&gt;
-&lt;div id="breadcrum3" itemprop="child" itemtype="http:///data-vocabulary.org" style="float:left;font-weight:normal" &gt;
 &lt;/div&gt;
 </pre>
 <p><b>Selenium script for above html code is:</b>
 <p><i>driver.findElement (By.linkText (&quot;Tags&quot;));</i>
-<b>4. Locating an Web Element by Partial LinkText: </b>
+<br><b id="id">5. Locating an Web Element by Partial LinkText: </b>
 <p>PartialLinkText also works in the same way as Link Text. To handle dynamic links (links which keep on changing) we can use Partial Link Text. User can provide partial link text to locate an web element.
 <pre>
 &lt;div class="LrBjie"&gt;
-&lt;div class="TK"&gt;
-&lt;div class="aim ain" /div&gt;
-&lt;div class="aim" /div&gt;
-&lt;div class="aim"&gt;
-&lt;div id=":i9" class="TO"&gt;
-&lt;div class="TN GLujEb" style="margin-left:0px"&gt;
-&lt;div class="aio UKr6le"&gt;
 &lt;span class="nU"&gt;
-<b>href="https://mail.google.com/male" Sent Male</b>
+	<b>href="https://mail.google.com/male" Sent Male</b>
 &lt;span&gt;
-&lt;/div&gt;
-&lt;/div class="nL aif" /div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </pre>
@@ -328,35 +291,20 @@
 <p><i>driver.findElement (By.partilaLinkText (&quot;Mail&quot;));</i>
 <p><b>PROS:</b>  It will select any link elements if we give partial text and useful when testing navigation
 <p><b>Note:</b> Both Link Text and Partial Link Text locators can be used only on hyper link, other locators can be used on any web element on web page.
-<p><b>5. Locating an Web Element by TagName: </b>
+<p><b id="id">6. Locating an Web Element by TagName: </b>
 <p>TagName can be used with Group elements like, Select and check-boxes / dropdowns.
-<b>Example:</b>
-<pre>&lt;tr&gt;
-&lt;td colspan="3"&gt;
-<b>&lt;select class="blacktext" style="widht:180" name="webcategory"&gt;</b>
-&lt;option value=""  place select /option&gt;
-&lt;option value="Activex" activex /option&gt;
-&lt;option value="Adultcontent" adultcontent /option&gt;
-&lt;option value="Advertisements" advertisements /option&gt;
-</pre>
 <p><b>Selenium script for above html code is:</b>
 <i><p>Select select = new Select(driver.findElement(By.tagName(&quot;select&quot;)));
 <p>select.selectByVisibleText(&quot;Applets&quot;);
 <p>Or  
 <p>Select.selectByValue(&quot;Applets&quot;);
 </i>
-<p><b>6. Locating an Web Element By CSS Selector:  </b>
+<p><b id="id">7. Locating an Web Element By CSS Selector:  </b>
 <p> CSS Locator is another alternative of ID or Name locator or any other element locators in selenium webdriver software automation testing tool. Full form of CSS is "Cascading Style Sheets" and it define that how to display HTML elements on webpage of software web application
 <pre>&lt;head&gt;
 &lt;body id="www.wikipedia-org"&gt;
-&lt;div class="centeral-textlogo"&gt;
-&lt;div class="centeral-featured"&gt;
 &lt;div class"search-container" style="background-color: transparent;"&gt;
 <b>&lt;input id="searchInput" type="search" accesskey="f" autofocus="autofocus" size="20" name="search" resulsts="10" style="background-color: rgb(255,225,255);"&gt;</b>
-<b>&lt;input id="searchLanguage" type="submit" name="go" value="-" style="background-color: rgb(255,225,255);"&gt;</b>
-&lt;input type="didden name="go" value="Go"&gt;
-&lt;/fieldset&gt;
-&lt;/form&gt;
 &lt;/div&gt;
 </pre>
 <p><b>CSS locator Examples</b>
@@ -370,39 +318,7 @@
 <p><b>Note:</b> All above CSS path examples given above will locate Search text box
 <p><b>ii. Selenium CSS locator using Tag and ID attribute:</b>
 <p><i>css=input#searchInput</i>  //Here, '#' sign is specially used for "id" attribute only. It will find "input" tag node which contains "id=searchInput" attribute. This syntax will locate Search text box
-<p><b>iii. Selenium CSS locator using Tag and class attribute:</b>
-<p><i>css=input.formBtn </li> // Here, '.' is specially used for "class" attribute only. It will find "input" tag node which contains "class=formBtn" attribute. This syntax will locate Search button (go).
-<p><b>iv.  Selenium CSS locator using tag, class, and any attribute:</b>
-<p><i>css=input.formBtn[name=go]</i>  //It will find "input" tag node which contains "class=formBtn" class and "name=go" attribute. This syntax will locate Search button (go).
-<p><b>v. Tag and multiple Attribute CSS locator:</b>
-<p><i>css=input[type=search][name=search]</i>//It will find "input" tag node which contains "type=search" attribute and "name=search" attribute. This syntax will locate Search text box
-<p><b>vi. CSS Locator using Sub-string matches(Start, end and containing text) in selenium:</b>
-<p><i>css=input[id^='search']</i>  //It will find input node which contains 'id' attribute starting with 'search' text.(Here, ^ describes the starting text).
-<p><i>css=input[id$='chInput']</i>  //It will find input node which contains 'id' attribute starting with 'chInput' text. (Here, $ describes the ending text).
-<p><i>css=input[id*='archIn'] </i> //  It will find input node which contains 'id' attribute containing 'archIn' text. (Here, * describes the containing text)
-<p><b>Note :</b> All three CSS path examples given above will locate Search text box on page of software web application
-<p><b>vii. CSS Element locator syntax using child Selectors:</b>
-<p><i>css=div.search-container>form>fieldset>input[id=searchInput]</i>  //  First it will find div tag with "class = search-container" and then it will follow remaining path to locate child node. This syntax will locate Search text box.
-<p><b>viii. CSS Element locator syntax using adjacent selectors</b>
-<p><i>css=input + input</i> //  It will locate "input" node where another "input" node is present before it on page.(for search tect box).
-<p><i>css=input + select or css=input + input + select</i> //  It will locate "select" node, where "input" node is present before it on page(for language drop down).
-<p><b>ix. CSS Element locator using contains keyword</b>
-<p><i>css=strong:contains("English")</i>  // It will looks for the element containing text "English" as a value on the page.
-<p><b>8. Locating an Web Element by XPATH : </b>It is type of locator and it is an expression. XPATH is the path of the element in HTML tree.
-<p><b>Example: </b> 
-<pre>&lt;html&gt;
-&lt;body&gt;
-&lt;input&gt; First Name
-&lt;input&gt; Last Name
-</pre>
-<p><b>Selenium script for above tree is:</b>
-<i><pre>{
-            WebDriver driver = new firefoxDriver();
-            driver.get(&quot;http://www.google.com/&quot;);
-            driver.findElement(By.tagName(&quot;input&quot;)).sendKeys(&quot;UserName&quot;)
-            String xpath=&quot;/html/body/input[2]&quot;;
-            driver.findElement(By.xpath(xpath)).sendKeys( &quot;Password&quot;)
-}</pre></i>
+<p><b id="id">8. Locating an Web Element by XPATH : </b>It is type of locator and it is an expression. XPATH is the path of the element in HTML tree.
 <p>While writing XPATH expression we use forward slash &apos;/&apos;. The first &apos;/&apos; represents beginning of the html tree which is called as root. After every &apos;/&apos; we should specify tagName of the immediate child element only. In xpath we can use index by default. It starts with 1. The index changes only if there is any duplicate sibling (same tagName under same parent).
 <p>If we do not specify any index then it matches with all the elements but in selenium it performs action on first element.
 <p>In order to verify whether the XPATH expression is correct or not we use firefox. In order to install it in firefox
@@ -446,31 +362,6 @@
 </pre>
 <p>Below is the HTML tree with Independent and Dependent element.
 <img src="img/html.png">
-<p>XPATH navigating from table to subject,
-<p><i>//table[@id=&apos;t1&apos;]/tbody/tr[1]/td[1]</i>
-<p>XPATH navigating from table to Java,
-<p><i>//table[@id=&apos;t1&apos;]/tbody/tr[2]/td[1]</i>
-<p><b>a.Backward Traversing:</b> Navigating from child node to its parent node is called as backward traversing. In order to do this we use forward slash followed by double dot.
-<p>Example: XPATH navigating from subject to table,
-<i>
-<p>//td[text()=&apos;Subject&apos;]/../../..
- 
- <p>XPATH navigating from java to table,
- <p>//td[text()=Java]/../../..</i>
-<p><b>Note:</b>In Backward Traversing we do not use index
-<p><b>vii. Independent dependent XPATH:</b> If we cannot use any of the previously used XPATH such as XPATH by attribute, XPATH by text() etc. We can use this Independent dependent concept. Refer the above code
-<p><img src="img/html1.png">
-<p><b>In order to use this concept we should follow below mentioned steps.</b>
-<p>For the given requirement note down the independent element and dependent element.    Independent element will be unique whereas dependent element will be duplicate or dynamic.
-<p>Example: Derive XPATH to identify cost of Java
-<p>Independent element is Java in above
-<p>Dependent element is cost
-<p>1.Create HTML tree which should contain independent element, common parent and dependent element. Steps to execute,
-<p>a.Inspect the independent element and note down its code
-<p>b.Right click on dependent element open source code, place the mouse pointer on source code of independent element and move the mouse pointer in the upward direction till both independent and dependent elements are highlighted. It will be the common parent adding to the tree.
-<p>c.Select common parent use arrow keys to navigate till the dependent element and add it to the HTML tree.
-<p><b>Below is the HTML tree with Independent and Dependent element.</b>
-<p><img src="img/html2.png">
 <p>XPATH for dependent element.
 <p><i>//td[text()=&apos;Java&apos;]</i>
 <p>XPATH for common parent
@@ -502,6 +393,7 @@
               <div class="media">
              <a href="../../testing/selenium/selenium_installation.html">selenium installation</a><p></p>
                   <a href="../../testing/selenium/selenium_intro.html">Selenium Introduction </a><p></p>
+				  <a href="../../testing/selenium/selenium_dom.html">DOM, CSS, XPath, HTML </a><p></p>
                   <a href="../../testing/selenium/selenium_page_factory.html">Selenium Page Factory</a><p></p>
                   <a href="../../testing/selenium/selenium_locators.html">Selenium Locators</a><p></p>			  
                 <a href="../../testing/selenium/selenium_driver_comm.html">Selenium WebDriver commands</a><p></p>	

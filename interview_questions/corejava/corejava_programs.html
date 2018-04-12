@@ -73,9 +73,9 @@
                           <li>
                               <a href="../../java/java_main.html">Core JAVA</a>
                           </li>
-                          <li>
+                      <!--    <li>
 							  <a href="../../java/corejava/java_big_o_notation.html">Data Structures</a>
-						  </li>
+						  </li> -->
                       </ul>
                   </li> 
 				  <!-- JAVA header end-->
@@ -2931,21 +2931,87 @@ public class GetLinkedDemo {
                                 </div>
                             </div>
                         </div>
-                         <!-- <div class="panel panel-default">
+                         <div class="panel panel-default">
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseeighty">
-								 How to delete elements of a LinkedList?   
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapsexeighty">
+										Write a Program to Sort the salary by using the Comprator interface.
                                     </a>
                                 </h4>
                             </div>
 
-                            <div id="collapseeighty" class="panel-collapse collapse">
+                            <div id="collapsexeighty" class="panel-collapse collapse">
                                 <div class="panel-body panel-faq">
-                                    <p></p>
+                                    <p>
+									<pre>import java.util.*;
+class Company{
+
+	//Enter the values
+	String name;
+	int id;
+	double salary;
+	
+	public Company(int id,String name,double salary){
+		this.name = name;
+		this.id = id;
+		this.salary = salary;
+	}
+	
+	public String getName(){
+		return name;
+	}
+	public int getId(){
+		return id;
+	}
+	public double getSalary(){
+		return salary;
+	}
+	public String toString(){
+		return "ID: "+id+" Name: "+name+" Salary: "+salary +"\n";
+	}
+}
+//Sorting the Id using the Comparator interface
+class Two implements Comparator<Company>{
+
+	public int compare(Company a,Company b){
+		return a.id-b.id;
+	}
+}
+//Sorting the Name using the Comparator interface
+class Three implements Comparator<Company>{
+	public int compare(Company a,Company b){
+		return a.name.compareTo(b.name);
+	}
+}
+//Sorting the Salary using the comparator interface
+class Four implements Comparator<Company>{
+	public int compare(Company a, Company b){
+		return (int)(a.salary-b.salary);
+	}
+}
+public class JALATechnologies{
+	public static void main(String ar[]){
+		//Creating the ArrayList Object
+		List<Company> o = new ArrayList<Company>();
+		o.add(new Company(44,"sarat",55.33));
+		o.add(new Company(14,"tarat",50.33));
+		o.add(new Company(4,"arat",68.303));
+		o.add(new Company(3,"rat",95.33));
+		o.add(new Company(8,"karat",85.33));
+		o.add(new Company(2,"varat",75.33));
+		o.add(new Company(9,"earat",35.33));
+		Collections.sort(o,new Two());
+		System.out.println(o);
+		Collections.sort(o,new Three());
+		System.out.println(o);
+		Collections.sort(o,new Four());
+		System.out.println(o);
+	}
+}</pre>
+									</p>
                                 </div>
                             </div>
-                        </div>-->
+                        </div>
                           <div class="panel panel-default">
                             <div class="panel-heading panel-heading-faq">
                                 <h4 class="panel-title">
